@@ -1,0 +1,3475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style
+      data-href="/docs/styles.be0bb4511f1bf8b745fd.css"
+      data-identity="gatsby-global-css"
+    >
+      @media only screen and (min-width: 641px) {
+        .block-items {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -1.5vw;
+          margin-right: -1.5vw;
+        }
+        .block-item {
+          display: flex;
+          flex-direction: column;
+        }
+        .block-item-inside {
+          flex: 1 1 auto;
+          margin-left: 1.5vw;
+          margin-right: 1.5vw;
+        }
+        .docs-block .block-item,
+        .showcase-block .block-item {
+          flex: 0 0 50%;
+        }
+        .features-block .block-item {
+          flex: 1 1 280px;
+          flex: 1 1 274px;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 680px;
+        }
+        .features-block .block-item:first-child:nth-last-child(2),
+        .features-block .block-item:first-child:nth-last-child(2) ~ .block-item,
+        .features-block .block-item:first-child:nth-last-child(4),
+        .features-block
+          .block-item:first-child:nth-last-child(4)
+          ~ .block-item {
+          flex: 0 0 50%;
+        }
+      }
+      .home-footer {
+        color: #3d404c;
+        z-index: 5;
+      }
+      @media (min-width: 768px) {
+        .home-footer {
+          padding-top: 2.5em;
+        }
+      }
+      .home-footer a {
+        color: inherit;
+      }
+      .home-footer a:hover {
+        color: #207bea;
+      }
+      .home-footer .home-footer-inside {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      @media (min-width: 801px) {
+        .home-footer .home-footer-inside {
+          margin-left: 14em;
+        }
+      }
+      .home-footer .footer-nav {
+        font-size: 12px;
+        margin-bottom: 0.75em;
+      }
+      .home-footer .footer-nav .menu-item {
+        display: inline-block;
+        font-weight: 500;
+        margin: 0 20px 0.5em 0;
+        text-transform: uppercase;
+      }
+      @media (min-width: 768px) {
+        .home-footer .footer-nav .menu-item {
+          margin-bottom: 0;
+        }
+      }
+      .home-footer .footer-nav a {
+        border: 0;
+      }
+      .home-footer .site-info {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
+      .home-footer .copyright {
+        margin: 0 20px 1em 0;
+      }
+      .home-footer .footer-links {
+        margin: 0 10px 0.5em 0;
+      }
+      .home-footer .footer-links a {
+        margin: 0 10px 0.5em 0;
+        text-decoration: underline;
+      }
+      .home-footer .footer-links a,
+      .home-footer .home-footer-social-link {
+        border: 0;
+        display: inline-block;
+      }
+      .home-footer .home-footer-social-link .icon {
+        fill: currentColor;
+        color: inherit;
+        display: inline-block;
+        font-size: 20px;
+        height: 1em;
+        line-height: 1;
+        width: 1em;
+      }
+      .home-footer .home-footer-social-link + .home-footer-social-link {
+        margin-left: 15px;
+      }
+      .home-footer .home-footer-logo {
+        margin-right: 30px;
+        margin-top: 20px;
+        width: 116px;
+      }
+      .home-footer .home-footer-content {
+        margin-top: 18px;
+      }
+      .home-footer .home-footer-content .menu {
+        margin: 0;
+        padding: 0;
+      }
+      @media only screen and (min-width: 641px) {
+        .block-items {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -1.5vw;
+          margin-right: -1.5vw;
+        }
+        .block-item {
+          display: flex;
+          flex-direction: column;
+        }
+        .block-item-inside {
+          flex: 1 1 auto;
+          margin-left: 1.5vw;
+          margin-right: 1.5vw;
+        }
+        .docs-block .block-item,
+        .showcase-block .block-item {
+          flex: 0 0 50%;
+        }
+        .features-block .block-item {
+          flex: 1 1 280px;
+          flex: 1 1 274px;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 680px;
+        }
+        .features-block .block-item:first-child:nth-last-child(2),
+        .features-block .block-item:first-child:nth-last-child(2) ~ .block-item,
+        .features-block .block-item:first-child:nth-last-child(4),
+        .features-block
+          .block-item:first-child:nth-last-child(4)
+          ~ .block-item {
+          flex: 0 0 50%;
+        }
+      }
+      .button-component {
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 1px;
+        box-sizing: border-box;
+        display: inline-block;
+        font-weight: 500;
+        outline: 0;
+        padding: 10px 25px;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .button-component > * {
+        vertical-align: middle;
+      }
+      .button-component-disabled {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+      .button-component-with-arrow {
+        padding-right: 55px;
+      }
+      .button-component-theme-accent {
+        background-color: #207bea;
+        border-color: #207bea;
+        color: #fff;
+      }
+      .button-component-theme-accent:focus,
+      .button-component-theme-accent:hover {
+        color: #fff;
+      }
+      .button-component-theme-accent.button-component-hollow {
+        background-color: transparent;
+        color: #000;
+      }
+      .button-component-theme-accent.button-component-hollow:hover {
+        background-color: #207bea;
+        color: #fff;
+      }
+      .button-component-theme-accent.button-component-hollow:focus {
+        color: #fff;
+      }
+      .button-component-theme-white {
+        background-color: #fff;
+        border-color: #fff;
+      }
+      .button-component-theme-white:not(.button-component-hollow) {
+        color: #207bea;
+      }
+      .button-component-theme-white:not(.button-component-hollow):hover {
+        background-color: transparent;
+      }
+      .button-component-theme-white.button-component-hollow {
+        background-color: transparent;
+        color: #fff;
+      }
+      .button-component-theme-white.button-component-hollow:hover {
+        background-color: #fff;
+        color: #207bea;
+      }
+      .button-component-size-small {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .button-component-size-small.button-component-with-arrow {
+        padding-right: 50px;
+      }
+      .button-component-cta-arrow {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 25px;
+      }
+      .site-header {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+      }
+      .site-header-inside {
+        padding: 0 3vw;
+      }
+      @media (min-width: 1024px) {
+        .site-header-inside {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 25px;
+          padding-top: 25px;
+        }
+      }
+      @media (min-width: 1500px) {
+        .site-header-inside {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+      }
+      .site-header-controls {
+        align-items: center;
+        display: flex;
+      }
+      @media (max-width: 1023px) {
+        .site-header-controls {
+          padding-bottom: 20px;
+          padding-top: 20px;
+        }
+      }
+      .site-header-logo-link,
+      .site-header-logo-wrapper {
+        border: 0;
+        color: #3d404c;
+        flex-shrink: 0;
+        font-weight: 500;
+        margin-right: 15px;
+        text-decoration: none;
+      }
+      .site-header-logo {
+        width: 129px;
+      }
+      .site-header-logo-link {
+        color: #207bea;
+        font-size: 20px;
+      }
+      .site-header-logo-sep {
+        border-left: 1px solid #67758d;
+        height: 30px;
+        margin-right: 15px;
+      }
+      .site-header-nav-toggle {
+        display: none;
+      }
+      @media (max-width: 1023px) {
+        .site-header-nav-toggle {
+          background: 0;
+          border: 0;
+          color: #3d404c;
+          display: block;
+          height: 30px;
+          margin-left: auto;
+          padding: 0;
+          position: relative;
+          width: 30px;
+        }
+        .site-header-nav-toggle:active,
+        .site-header-nav-toggle:focus,
+        .site-header-nav-toggle:hover {
+          color: #3d404c;
+        }
+      }
+      .site-header-nav-icon {
+        background-color: currentColor;
+        height: 2px;
+        left: 50%;
+        margin-left: -12px;
+        margin-top: -1px;
+        position: absolute;
+        top: 50%;
+        transition-duration: 75ms;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        width: 24px;
+      }
+      .site-header-nav-icon:after,
+      .site-header-nav-icon:before {
+        background-color: currentColor;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+      .site-header-nav-icon:before {
+        top: -7px;
+        transition: top 75ms ease 0.12s, opacity 75ms ease;
+      }
+      .site-header-nav-icon:after {
+        bottom: -7px;
+        transition: bottom 75ms ease 0.12s,
+          -webkit-transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: bottom 75ms ease 0.12s,
+          transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: bottom 75ms ease 0.12s,
+          transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19),
+          -webkit-transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+      @media (max-width: 1023px) {
+        .site-header-nav {
+          background-color: #fff;
+          display: none;
+          padding-bottom: 10vh;
+          padding-top: 10vh;
+        }
+      }
+      .site-header-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      @media (min-width: 1024px) {
+        .site-header-menu {
+          align-items: center;
+          display: flex;
+          text-align: left;
+        }
+      }
+      .site-header-menu-item {
+        color: #3d404c;
+        font-weight: 500;
+        padding: 3vmin 0;
+        text-transform: uppercase;
+      }
+      @media (min-width: 1024px) {
+        .site-header-menu-item {
+          font-size: 14px;
+          margin: 0 0 0 40px;
+          padding: 0;
+        }
+      }
+      .site-header-menu-item a {
+        border: 0;
+        color: inherit;
+        text-decoration: none;
+      }
+      .site-header-menu-item a:hover {
+        color: #207bea;
+      }
+      .site-header-menu-action {
+        padding: 3vmin 0;
+        text-transform: uppercase;
+      }
+      @media (min-width: 1024px) {
+        .site-header-menu-action {
+          margin: 0 0 0 20px;
+          padding: 0;
+        }
+        .site-header-menu-action .button-component {
+          font-size: 14px;
+          line-height: 1.25;
+        }
+      }
+      @media (max-width: 1023px) {
+        .js-nav-expanded {
+          height: 100%;
+          overflow: hidden;
+        }
+        .js-nav-expanded .site-header {
+          background: #fff;
+          bottom: 0;
+          left: 0;
+          position: fixed;
+          right: 0;
+          top: 0;
+        }
+        .js-nav-expanded .site-header-inside {
+          height: 100%;
+          overflow-y: auto;
+          position: relative;
+        }
+        .js-nav-expanded .site-header-nav-icon {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          transition-delay: 0.12s;
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .js-nav-expanded .site-header-nav-icon:before {
+          opacity: 0;
+          top: 0;
+          transition: top 75ms ease, opacity 75ms ease 0.12s;
+        }
+        .js-nav-expanded .site-header-nav-icon:after {
+          bottom: 0;
+          -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          transition: bottom 75ms ease,
+            -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+          transition: bottom 75ms ease,
+            transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+          transition: bottom 75ms ease,
+            transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s,
+            -webkit-transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        }
+        .js-nav-expanded .site-header-nav {
+          display: block;
+        }
+      }
+      html {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      main,
+      nav,
+      section {
+        display: block;
+      }
+      summary {
+        display: list-item;
+      }
+      figure {
+        margin: 0;
+      }
+      audio,
+      canvas,
+      video {
+        display: inline-block;
+      }
+      audio:not([controls]) {
+        display: none;
+        height: 0;
+      }
+      [hidden],
+      template {
+        display: none;
+      }
+      a {
+        -webkit-text-decoration-skip: objects;
+        background-color: transparent;
+      }
+      a:focus {
+        outline: thin dotted;
+      }
+      a:active,
+      a:hover {
+        outline: 0;
+      }
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      b,
+      strong {
+        font-weight: 500;
+      }
+      dfn {
+        font-style: italic;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      img {
+        border: 0;
+        vertical-align: middle;
+      }
+      svg:not(:root) {
+        overflow: hidden;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:after,
+      blockquote:before,
+      q:after,
+      q:before {
+        content: "";
+        content: none;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font: inherit;
+        margin: 0;
+      }
+      button,
+      input {
+        overflow: visible;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      [type="reset"],
+      [type="submit"],
+      button,
+      html [type="button"] {
+        -webkit-appearance: button;
+        cursor: pointer;
+      }
+      button[disabled],
+      html input[disabled] {
+        cursor: default;
+      }
+      button::-moz-focus-inner,
+      input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+      [type="checkbox"],
+      [type="radio"] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      [type="number"]::-webkit-inner-spin-button,
+      [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      [type="search"]::-webkit-search-cancel-button,
+      [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      textarea {
+        overflow: auto;
+      }
+      optgroup {
+        font-weight: 500;
+      }
+      progress {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 400;
+        src: local(""),
+          url(/assets/fonts/rubik-v14-latin-regular.woff2) format("woff2"),
+          url(/assets/fonts/rubik-v14-latin-regular.woff) format("woff");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        src: local(""),
+          url(/assets/fonts/rubik-v14-latin-500.woff2) format("woff2"),
+          url(/assets/fonts/rubik-v14-latin-500.woff) format("woff");
+      }
+      html {
+        font-family: Rubik, Helvetica, Arial, sans-serif;
+        font-size: 100%;
+        font-weight: 400;
+      }
+      body {
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background: #f7f9fb;
+        color: #3d404c;
+        line-height: 1.875;
+      }
+      a {
+        border-bottom: 1px solid;
+        color: #207bea;
+        text-decoration: none;
+        transition: border-color 0.3s ease, color 0.3s ease;
+      }
+      a:focus,
+      a:hover {
+        color: #3d404c;
+      }
+      a img {
+        border: none;
+      }
+      a.gatsby-resp-image-link {
+        border-bottom: none;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        color: #3d404c;
+        font-weight: 500;
+        line-height: 1.2;
+        margin: 2.25rem 0 1.125rem;
+      }
+      h1:first-child,
+      h2:first-child,
+      h3:first-child,
+      h4:first-child,
+      h5:first-child,
+      h6:first-child {
+        margin-top: 0;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2.25rem;
+      }
+      h3 {
+        font-size: 1.875rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+      h5 {
+        font-size: 1.25rem;
+      }
+      h6 {
+        font-size: 1.125rem;
+      }
+      p {
+        margin: 0 0 1.4em;
+      }
+      address {
+        font-style: italic;
+        margin: 0 0 1.875em;
+      }
+      ins,
+      mark {
+        background: #fff7e6;
+        color: #3d404c;
+        padding: 0 3px;
+        text-decoration: none;
+      }
+      blockquote {
+        border-left: 5px solid #207bea;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin: 1.5em 0;
+        padding-left: 1em;
+      }
+      blockquote:first-child {
+        margin-top: 0;
+      }
+      blockquote p {
+        margin-bottom: 0.5em;
+      }
+      blockquote p:last-child {
+        margin-bottom: 0;
+      }
+      blockquote cite,
+      blockquote small {
+        color: #67758d;
+        display: block;
+        font-size: 0.75em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-top: 1em;
+      }
+      blockquote cite:last-child,
+      blockquote small:last-child {
+        margin-bottom: 0;
+      }
+      dl {
+        margin: 0;
+      }
+      dt {
+        font-weight: 500;
+      }
+      dd,
+      ol,
+      ul {
+        margin: 0 0 1.875em;
+      }
+      ol,
+      ul {
+        padding: 0 0 0 1.5em;
+      }
+      li > ol,
+      li > ul {
+        margin-bottom: 0;
+      }
+      hr {
+        border: 0;
+        border-bottom: 1px solid #dbe8f0;
+        margin: 1.875em 0;
+      }
+      table {
+        line-height: 1.5;
+        margin: 0 0 1.875em;
+        width: 100%;
+      }
+      caption,
+      table {
+        text-align: left;
+      }
+      caption {
+        color: #67758d;
+        font-size: 0.875rem;
+        font-style: normal;
+        margin-bottom: 0.75rem;
+      }
+      td,
+      th {
+        border-bottom: 1px solid #dbe8f0;
+        padding: 0.5em 5px;
+      }
+      th {
+        color: #3d404c;
+        font-weight: 500;
+      }
+      .post-content table {
+        -webkit-overflow-scrolling: touch;
+        display: block;
+        overflow-x: auto;
+      }
+      .post-content tbody,
+      .post-content thead,
+      .post-content tr {
+        width: 100%;
+      }
+      .post-content td {
+        min-width: 140px;
+      }
+      label {
+        font-weight: 500;
+      }
+      input[type="checkbox"] + label,
+      input[type="radio"] + label {
+        cursor: pointer;
+        padding-left: 0.25em;
+        padding-right: 1em;
+      }
+      input[type="email"],
+      input[type="password"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="text"],
+      input[type="url"],
+      select,
+      textarea {
+        background: transparent;
+        border: 1px solid #dbe8f0;
+        border-radius: 3px;
+        box-shadow: none;
+        box-sizing: border-box;
+        color: inherit;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        max-width: 100%;
+        padding: 0.5em 15px;
+        width: 100%;
+      }
+      input[type="email"]:focus,
+      input[type="password"]:focus,
+      input[type="search"]:focus,
+      input[type="tel"]:focus,
+      input[type="text"]:focus,
+      input[type="url"]:focus,
+      select:focus,
+      textarea:focus {
+        outline: 0;
+      }
+      input[type="email"],
+      input[type="password"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="text"],
+      input[type="url"],
+      select {
+        height: 3em;
+      }
+      a.button,
+      button,
+      input[type="button"],
+      input[type="reset"],
+      input[type="submit"] {
+        background-color: #207bea;
+        border: 3px solid #207bea;
+        border-radius: 25px;
+        box-sizing: border-box;
+        color: #fff;
+        display: inline-block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        height: 3.25em;
+        letter-spacing: 0.025em;
+        line-height: 1.5;
+        padding: 0.25em 20px;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+      }
+      a.button:active,
+      a.button:focus,
+      a.button:hover,
+      button:active,
+      button:focus,
+      button:hover,
+      input[type="button"]:active,
+      input[type="button"]:focus,
+      input[type="button"]:hover,
+      input[type="reset"]:active,
+      input[type="reset"]:focus,
+      input[type="reset"]:hover,
+      input[type="submit"]:active,
+      input[type="submit"]:focus,
+      input[type="submit"]:hover {
+        background-color: transparent;
+        color: #207bea;
+        outline: 0;
+      }
+      a.button {
+        height: auto;
+        padding-bottom: 0.64285em;
+        padding-top: 0.64285em;
+      }
+      .button.secondary {
+        background: transparent;
+        border-color: #fff;
+        color: #fff;
+      }
+      .button.secondary:active,
+      .button.secondary:focus,
+      .button.secondary:hover {
+        background-color: #fff;
+        color: #207bea;
+      }
+      #menu-close,
+      #menu-open,
+      .docs-nav .docs-nav-toggle,
+      .docs-nav .submenu-toggle {
+        background: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        color: inherit;
+        height: 30px;
+        padding: 0;
+        position: relative;
+        width: 30px;
+      }
+      ::-webkit-input-placeholder {
+        color: #67758d;
+      }
+      :-moz-placeholder {
+        color: #67758d;
+      }
+      ::-moz-placeholder {
+        color: #67758d;
+        opacity: 1;
+      }
+      :-ms-input-placeholder {
+        color: #67758d;
+      }
+      embed,
+      iframe,
+      object,
+      video {
+        max-width: 100%;
+      }
+      .js-reframe {
+        margin: 0 0 1.875em;
+      }
+      .responsive-video {
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+      }
+      .responsive-video iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+      .note {
+        background: #fff7e6;
+        border-left: 5px solid #fcb41d;
+        border-radius: 5px;
+        color: #3d404c;
+        margin-bottom: 1.875em;
+        padding: 1em 1.125em;
+      }
+      .note :last-child {
+        margin-bottom: 0;
+      }
+      .note-important {
+        background: #ffe9e6;
+        border-left: 5px solid #fc381d;
+        border-radius: 5px;
+        color: #3d404c;
+        margin-bottom: 1.875em;
+        padding: 1em 1.125em;
+      }
+      .bg-gradient {
+        background: #207bea;
+        background: linear-gradient(90deg, #4498ff, #207bea);
+      }
+      .bg-img {
+        -webkit-animation: fadeIn 0.75s ease-in-out;
+        animation: fadeIn 0.75s ease-in-out;
+        background-position: 50%;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+        opacity: 0.15;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .line-left {
+        position: relative;
+      }
+      .line-left:before {
+        background: #207bea;
+        content: "";
+        height: 100%;
+        left: -1px;
+        position: absolute;
+        top: 0;
+        width: 5px;
+      }
+      .screen-reader-text,
+      .site-logo + .site-title {
+        clip: rect(1px, 1px, 1px, 1px);
+        border: 0;
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute !important;
+        width: 1px;
+      }
+      .post-content:after {
+        clear: both;
+      }
+      .post-content:after,
+      .post-content:before {
+        content: "";
+        display: table;
+      }
+      .icon-close,
+      .icon-menu {
+        background: currentColor;
+        border-radius: 1px;
+        color: inherit;
+        height: 2px;
+        margin-left: -12px;
+        margin-top: -1px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 24px;
+      }
+      .icon-close:after,
+      .icon-close:before,
+      .icon-menu:after,
+      .icon-menu:before {
+        background: currentColor;
+        border-radius: 1px;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+      .icon-menu:before {
+        top: -6px;
+      }
+      .icon-menu:after {
+        bottom: -6px;
+      }
+      .icon-close {
+        background: 0;
+        margin-left: -15px;
+        width: 30px;
+      }
+      .icon-close:before {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .icon-close:after {
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .icon-arrow-left,
+      .icon-arrow-right {
+        background: currentColor;
+        color: inherit;
+        height: 2px;
+        left: 50%;
+        margin-top: -1px;
+        position: absolute;
+        top: 50%;
+        width: 12px;
+      }
+      .icon-arrow-left:before,
+      .icon-arrow-right:before {
+        content: "";
+        height: 0;
+        margin-top: -4px;
+        position: absolute;
+        top: 50%;
+        width: 0;
+      }
+      .icon-arrow-left {
+        margin-left: -4px;
+      }
+      .icon-arrow-left:before {
+        border-bottom: 4px solid transparent;
+        border-right: 4px solid;
+        border-top: 4px solid transparent;
+        left: -4px;
+      }
+      .icon-arrow-right {
+        margin-left: -8px;
+      }
+      .icon-arrow-right:before {
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid;
+        border-top: 4px solid transparent;
+        right: -4px;
+      }
+      .block-item-cta a,
+      .read-more-link {
+        display: inline-block;
+        padding-right: 24px;
+        position: relative;
+      }
+      .block-item-cta a .icon-arrow-right,
+      .read-more-link .icon-arrow-right {
+        left: 100%;
+        margin-left: -16px;
+        transition: width 0.3s ease;
+      }
+      .block-item-cta a:focus .icon-arrow-right,
+      .block-item-cta a:hover .icon-arrow-right,
+      .read-more-link:focus .icon-arrow-right,
+      .read-more-link:hover .icon-arrow-right {
+        width: 18px;
+      }
+      .pagination .button {
+        position: relative;
+      }
+      @media only screen and (min-width: 481px) {
+        .pagination .newer-posts {
+          padding-right: 20px;
+        }
+        .pagination .icon-arrow-left {
+          left: 20px;
+          margin-left: 0;
+        }
+        .pagination .older-posts {
+          padding-left: 20px;
+        }
+        .pagination .icon-arrow-right {
+          left: auto;
+          margin-left: 0;
+          right: 20px;
+        }
+      }
+      .icon-angle-right {
+        background: 0;
+        border-color: currentcolor;
+        border-style: solid;
+        border-width: 1px 1px 0 0;
+        box-sizing: border-box;
+        height: 8px;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -4px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        width: 8px;
+      }
+      .docs-nav-toggle .icon-angle-right {
+        height: 12px;
+        left: auto;
+        margin-left: 0;
+        margin-right: 9px;
+        margin-top: -6px;
+        right: 0;
+        width: 12px;
+      }
+      .docs-section-item .icon-angle-right {
+        left: auto;
+        margin-left: 0;
+        margin-right: 15px;
+        right: 0;
+      }
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        to {
+          opacity: 0.15;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        to {
+          opacity: 0.15;
+        }
+      }
+      .outer {
+        padding-left: 3vw;
+        padding-right: 3vw;
+      }
+      .inner {
+        max-width: 1200px;
+      }
+      .inner,
+      .inner-medium {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .inner-medium {
+        max-width: 800px;
+      }
+      .inner-small {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 680px;
+      }
+      .site {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+      }
+      .site-content {
+        margin-top: 4.375em;
+      }
+      @media (min-width: 1024px) {
+        .site-content {
+          margin-top: 5.625em;
+        }
+      }
+      .post {
+        margin-bottom: 2.5em;
+      }
+      .post.post-full:last-child {
+        margin-bottom: 5.625em;
+      }
+      .page-header,
+      .post-full .post-header {
+        color: #fff;
+        padding-bottom: 9.5em;
+        padding-top: 3.75em;
+        position: relative;
+        text-align: center;
+      }
+      .page-title,
+      .post-full .post-title {
+        color: inherit;
+        font-size: 3rem;
+        margin: 0;
+        position: relative;
+      }
+      .post-title a {
+        border: 0;
+        color: inherit;
+      }
+      .post-title a:focus,
+      .post-title a:hover {
+        color: #67758d;
+      }
+      .page-subtitle,
+      .post-subtitle {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        margin: 0.75rem 0 0;
+        position: relative;
+      }
+      .post-feed,
+      .post-full .post-content {
+        margin-top: -5em;
+        position: relative;
+      }
+      .post-feed .post,
+      .post-full .post-content,
+      .read-next {
+        background: #fff;
+        border: 1px solid #dbe8f0;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+      }
+      .post-full .post-content {
+        padding: 2.5em 7%;
+      }
+      .post-full .post-meta {
+        color: inherit;
+        font-size: 1.125rem;
+        margin: 0 0 0.75rem;
+        position: relative;
+      }
+      .post-feed:last-child {
+        margin-bottom: 5.625em;
+      }
+      .post-feed .post {
+        padding: 0 0 2.5em;
+      }
+      @media only screen and (max-width: 1200px) {
+        .post-feed .post {
+          margin-bottom: 3vw;
+        }
+      }
+      .post-feed .post-thumbnail {
+        border: 0;
+        border-radius: 5px 5px 0 0;
+        display: block;
+        margin: 0 0 1.875em;
+      }
+      .post-feed .thumbnail {
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+      }
+      .post-feed .post-header {
+        margin: 0 0 1.25em;
+        padding-top: 1.875em;
+      }
+      .post-feed .post-thumbnail + .post-header {
+        padding-top: 0;
+      }
+      .post-feed .post-meta {
+        color: #67758d;
+        font-size: 0.875rem;
+        margin: 0 0 0.375rem;
+        padding: 0 7%;
+      }
+      .post-feed .post-title {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0 7%;
+      }
+      .post-feed .post-excerpt {
+        margin-bottom: 1.125rem;
+        padding: 0 7%;
+      }
+      .post-feed .read-more {
+        margin: 0;
+        padding: 0 7%;
+      }
+      .post-feed .read-more-link {
+        border: 0;
+        color: #207bea;
+      }
+      .pagination {
+        margin: 0 0 5.625em;
+      }
+      .pagination .nav-links {
+        align-items: center;
+        display: flex;
+      }
+      .pagination .page-number {
+        color: #67758d;
+        flex-grow: 1;
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+      .pagination .button {
+        border-width: 2px;
+        flex: 0 0 auto;
+        height: 40px;
+        margin-left: 20px;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+      }
+      .pagination .newer-posts {
+        padding-right: 20px;
+      }
+      @media only screen and (max-width: 480px) {
+        .pagination .button {
+          border-radius: 50%;
+          padding: 0;
+          width: 40px;
+        }
+        .pagination .button-text {
+          clip: rect(1px, 1px, 1px, 1px);
+          border: 0;
+          height: 1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute !important;
+          width: 1px;
+        }
+      }
+      .read-next {
+        margin: 0 0 5.625em;
+        padding: 1.875em 0 2.5em;
+      }
+      .read-next .read-next-title {
+        font-size: 1.125rem;
+        margin: 0 0 1.875rem;
+        padding: 0 7%;
+      }
+      .read-next .post {
+        margin-bottom: 1.875em;
+        padding: 0 7%;
+      }
+      .read-next .post-title {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+      .read-next .post-meta {
+        color: #67758d;
+        font-size: 0.875rem;
+        margin: 0 0 0.375rem;
+      }
+      @media only screen and (max-width: 600px) {
+        .page-title,
+        .post-full .post-title {
+          font-size: 2.25rem;
+        }
+        .post-feed .post-excerpt,
+        .post-feed .post-meta,
+        .post-feed .post-title,
+        .post-feed .read-more,
+        .post-full .post-content,
+        .read-next .post,
+        .read-next .read-next-title {
+          padding-left: 2.25rem;
+          padding-right: 2.25rem;
+        }
+      }
+      .docs-content {
+        padding-top: 1.875em;
+      }
+      .post.type-docs {
+        margin-bottom: 3.75em;
+        max-width: 800px;
+      }
+      .post.type-docs h1 {
+        font-size: 1.875rem;
+      }
+      .post.type-docs h2 {
+        font-size: 1.5rem;
+      }
+      .post.type-docs h3 {
+        font-size: 1.25rem;
+      }
+      .post.type-docs h4 {
+        font-size: 1.125rem;
+      }
+      .post.type-docs h5,
+      .post.type-docs h6 {
+        font-size: 1rem;
+      }
+      .post.type-docs .hash-link {
+        border: 0;
+        color: #67758d;
+        display: inline-block;
+        margin-left: -21px;
+        opacity: 0;
+        padding-right: 5px;
+        transition: opacity 0.3s ease;
+      }
+      .post.type-docs .hash-link .icon-copy {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%2367758d' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='prefix__feather prefix__feather-link' viewBox='0 0 24 24'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E");
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+      }
+      .post.type-docs h2:focus .hash-link,
+      .post.type-docs h2:hover .hash-link,
+      .post.type-docs h3:focus .hash-link,
+      .post.type-docs h3:hover .hash-link {
+        opacity: 1;
+      }
+      .post.type-docs .post-inside {
+        background: #fff;
+        border: 1px solid #dbe8f0;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        padding: 2.5em 0;
+      }
+      .post.type-docs .post-title {
+        font-size: 1.875rem;
+        margin: 0 0 2.5rem;
+        padding: 0 7%;
+      }
+      .post.type-docs .post-content,
+      .post.type-docs .post-footer {
+        padding: 0 7%;
+      }
+      .docs-section-items {
+        list-style: none;
+        padding: 0;
+      }
+      .docs-section-items .docs-section-item {
+        margin: 0 0 0.9375em;
+      }
+      .docs-section-items .docs-item-link {
+        border: 1px solid #dbe8f0;
+        border-radius: 3px;
+        color: #3d404c;
+        display: block;
+        padding: 0.9375em 1.875em 0.9375em 0.9375em;
+        position: relative;
+      }
+      .docs-section-items .docs-item-link .docs-item-link-title {
+        font-weight: 500;
+      }
+      .docs-section-items .docs-item-link:hover {
+        border-color: #207bea;
+        color: #207bea;
+      }
+      .docs-nav {
+        margin-bottom: 1.875em;
+      }
+      .docs-nav .docs-nav-toggle {
+        color: #3d404c;
+        font-size: 1.125rem;
+        height: 30px;
+        margin: 0;
+        padding-right: 30px;
+        position: relative;
+        text-align: left;
+        width: 100%;
+      }
+      .docs-nav .submenu-toggle {
+        width: 30px;
+      }
+      .docs-nav .search-icon,
+      .docs-nav .submenu-toggle {
+        color: #67758d;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .docs-nav .search-icon {
+        align-items: center;
+        background: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0;
+      }
+      .docs-nav .search-icon .search-shortcut {
+        border: 1px solid #67758d;
+        border-radius: 3px;
+        font-size: 1rem;
+        padding: 0 2px;
+      }
+      .docs-nav .search-icon svg {
+        height: 20px;
+        margin-left: 6px;
+        width: 20px;
+      }
+      .docs-toc {
+        color: #3d404c;
+        font-weight: 500;
+        line-height: 1.5;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .docs-toc > .toc-item > a {
+        padding: 0.1875rem 0;
+      }
+      .docs-toc a {
+        border: 0;
+        color: inherit;
+        display: block;
+      }
+      .docs-toc a:focus,
+      .docs-toc a:hover {
+        color: #207bea;
+      }
+      .toc-submenu {
+        border-left: 1px solid #dbe8f0;
+        color: #3d404c;
+        display: none;
+        font-size: 0.875rem;
+        font-weight: 400;
+        list-style: none;
+        margin-top: 0.625rem;
+        padding-left: 1.25rem;
+      }
+      .toc-item {
+        color: inherit;
+        margin-bottom: 0.625rem;
+      }
+      .toc-item.current,
+      .toc-item.current-parent {
+        color: #207bea;
+      }
+      .toc-item.has-children,
+      .toc-item.root-item {
+        padding-right: 0;
+        position: relative;
+      }
+      .toc-item.has-children .toc-item.has-children > .submenu-toggle {
+        top: -6px;
+      }
+      .toc-item.has-children.active > .toc-submenu {
+        display: block;
+      }
+      .toc-item.has-children.active > .submenu-toggle .icon-angle-right {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+      .page-nav {
+        display: none;
+      }
+      .page-nav .page-nav-title {
+        font-size: 1rem;
+        margin: 0 0 0.625rem;
+      }
+      .page-nav .page-nav-title:only-child {
+        display: none;
+      }
+      .page-nav ul {
+        font-size: 0.8125rem;
+        line-height: 1.5;
+        list-style: none;
+        padding: 0;
+      }
+      .page-nav ul ul {
+        border-left: 1px solid #dbe8f0;
+        margin-top: 0.625rem;
+        padding-left: 1.25rem;
+      }
+      .page-nav li {
+        margin-bottom: 0.625rem;
+      }
+      .page-nav li.active > a {
+        color: #207bea;
+      }
+      .page-nav a {
+        border: 0;
+        color: #3d404c;
+        display: block;
+      }
+      .page-nav a:focus,
+      .page-nav a:hover {
+        color: #207bea;
+      }
+      @media only screen and (min-width: 801px) {
+        .docs-content {
+          display: flex;
+          padding-top: 2.5em;
+        }
+        .post.type-docs {
+          flex: 1 1 auto;
+          overflow: hidden;
+        }
+        .post.type-docs img {
+          border: 1px solid #dbe8f0;
+          box-sizing: border-box;
+          padding: 0.3125em;
+        }
+        .docs-nav,
+        .page-nav {
+          flex-shrink: 0;
+          margin-bottom: 5.625em;
+        }
+        .docs-nav .sticky,
+        .page-nav .sticky {
+          position: sticky;
+          top: 1.875rem;
+        }
+        .docs-nav {
+          padding-right: 1.5em;
+          width: 12.5em;
+        }
+        .page-nav {
+          padding-left: 1.5em;
+          width: 9.5em;
+        }
+        .docs-nav-toggle {
+          display: none;
+        }
+      }
+      @media only screen and (min-width: 1091px) {
+        .page-nav {
+          display: block;
+        }
+      }
+      @media only screen and (max-width: 800px) {
+        .docs-nav {
+          background: #fff;
+          border: 1px solid #dbe8f0;
+          border-radius: 5px;
+          box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+          box-sizing: border-box;
+          margin-bottom: 5%;
+          padding: 0.75em 1em;
+        }
+        .docs-toc-wrap {
+          display: none;
+        }
+        .toc--opened .docs-toc-wrap {
+          display: block;
+        }
+        .toc--opened .docs-nav-toggle .icon-angle-right {
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+        }
+        .docs-toc {
+          border-top: 1px solid #dbe8f0;
+          margin-top: 1.25rem;
+          padding-top: 1.25rem;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .post.type-docs .post-content,
+        .post.type-docs .post-footer,
+        .post.type-docs .post-title {
+          padding: 0 2.25rem;
+        }
+      }
+      .block:not(.hero-block) {
+        background: #f7f9fb;
+        margin-bottom: 3.75em;
+      }
+      .block:not(.hero-block):last-child {
+        padding-bottom: 1.875em;
+      }
+      .block:not(.hero-block):first-child {
+        padding-top: 3.75em;
+      }
+      .block-preview {
+        margin-bottom: 1.875em;
+      }
+      .block-title {
+        font-size: 2.25rem;
+        margin: 0 0 1.875rem;
+      }
+      .block-text {
+        font-size: 1.125rem;
+        line-height: 1.66667;
+      }
+      .block-cta .button {
+        margin: 0 15px 1.875rem;
+        white-space: nowrap;
+      }
+      .hero-block {
+        color: #fff;
+        padding-bottom: 7.625em;
+        padding-top: 3.75em;
+        position: relative;
+        text-align: center;
+      }
+      .hero-block:last-child {
+        padding-bottom: 3.75em;
+      }
+      .hero-block .block-content {
+        position: relative;
+      }
+      .hero-block .block-title {
+        color: inherit;
+        font-size: 3em;
+        margin: 0;
+      }
+      @media only screen and (max-width: 600px) {
+        .hero-block .block-title {
+          font-size: 2.25rem;
+        }
+      }
+      .hero-block .block-text {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        margin: 0.9375rem 0 0;
+      }
+      .hero-block + .block {
+        margin-top: -5em;
+        padding-top: 3.75em;
+        position: relative;
+      }
+      .text-block {
+        text-align: center;
+      }
+      @media only screen and (min-width: 801px) {
+        .text-block .block-inside {
+          align-items: center;
+          display: flex;
+          margin: 0 -1.5vw;
+        }
+        .text-block .block-preview {
+          box-sizing: border-box;
+          flex: 4 1;
+          padding-left: 1.5vw;
+          padding-right: 1.5vw;
+          text-align: left;
+        }
+        .text-block .block-preview .thumbnail {
+          border-radius: 3px;
+        }
+        .text-block .block-content {
+          box-sizing: border-box;
+          flex: 5 1;
+          padding-left: 1.5vw;
+          padding-right: 1.5vw;
+          text-align: left;
+        }
+        .text-block .block-content:only-child {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 800px;
+          padding: 0;
+          text-align: center;
+        }
+        .text-block .block-content:not(:only-child) .button {
+          margin-left: 0;
+        }
+      }
+      @media only screen and (min-width: 1201px) {
+        .text-block .block-inside {
+          margin-left: -1.125em;
+          margin-right: -1.125em;
+        }
+        .text-block .block-content,
+        .text-block .block-preview {
+          padding-left: 1.125em;
+          padding-right: 1.125em;
+        }
+      }
+      .cta-block {
+        text-align: center;
+      }
+      @media only screen and (min-width: 641px) {
+        .cta-block {
+          padding-bottom: 1.875em;
+        }
+      }
+      .cta-block .block-outside {
+        border-radius: 5px;
+        color: #fff;
+        padding: 2.5em 5% 1.25em;
+      }
+      .cta-block .block-title {
+        color: inherit;
+        font-size: 1.875rem;
+        margin: 0 0 0.5rem;
+      }
+      .cta-block .block-title:last-child {
+        margin-bottom: 1.875rem;
+      }
+      @media only screen and (min-width: 801px) {
+        .cta-block .block-inside {
+          align-items: center;
+          display: flex;
+          margin: 0 -1.125em;
+        }
+        .cta-block .block-content {
+          flex: 5 1;
+          text-align: left;
+        }
+        .cta-block .block-content,
+        .cta-block .block-cta {
+          box-sizing: border-box;
+          padding-left: 1.125em;
+          padding-right: 1.125em;
+        }
+        .cta-block .block-cta {
+          flex: 2 1;
+        }
+      }
+      .features-block:not(.has-header) {
+        background: 0;
+        padding-top: 0;
+      }
+      .features-block .block-header {
+        margin-bottom: 1.875em;
+        text-align: center;
+      }
+      .features-block .block-title {
+        font-size: 1.875rem;
+        margin: 0 0 0.5rem;
+      }
+      .docs-block,
+      .showcase-block {
+        margin: -5em 0 3.75em;
+        position: relative;
+      }
+      .docs-block:last-child,
+      .showcase-block:last-child {
+        padding-bottom: 1.875em;
+      }
+      .block-item-inside {
+        background: #fff;
+        border: 1px solid #dbe8f0;
+        border-radius: 3px;
+        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3vw;
+        padding-bottom: 2.5em;
+      }
+      .block-item-preview {
+        border: 0;
+        border-radius: 3px 3px 0 0;
+        display: block;
+      }
+      .block-item-preview .thumbnail {
+        border-radius: 3px 3px 0 0;
+        width: 100%;
+      }
+      .block-item-title {
+        font-size: 1.5rem;
+        margin: 0 0 0.9375rem;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+      }
+      .block-item-title a {
+        border: 0;
+        color: inherit;
+      }
+      .block-item-title a:focus,
+      .block-item-title a:hover {
+        color: #67758d;
+      }
+      .block-item-text {
+        margin: 0 0 1.25rem;
+      }
+      .block-item-cta,
+      .block-item-text {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+      }
+      .block-item-cta a {
+        border: 0;
+        color: #207bea;
+      }
+      .block-item-cta:last-child,
+      .block-item-text:last-child,
+      .block-item-title:last-child {
+        margin-bottom: 0;
+      }
+      .docs-block .block-item-inside,
+      .features-block .block-item-inside {
+        padding-top: 1.875em;
+      }
+      .showcase-block .block-item-title {
+        font-size: 1.25rem;
+        margin: 0;
+        padding-top: 1.875em;
+      }
+      .showcase-block .block-item-title + .block-item-text {
+        margin-top: 0.5rem;
+      }
+      .showcase-block .block-item-preview + .block-item-text,
+      .showcase-block .block-item-preview + .block-item-title {
+        padding-top: 1.25em;
+      }
+      @media only screen and (min-width: 641px) {
+        .block-items {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -1.5vw;
+          margin-right: -1.5vw;
+        }
+        .block-item {
+          display: flex;
+          flex-direction: column;
+        }
+        .block-item-inside {
+          flex: 1 1 auto;
+          margin-left: 1.5vw;
+          margin-right: 1.5vw;
+        }
+        .docs-block .block-item,
+        .showcase-block .block-item {
+          flex: 0 0 50%;
+        }
+        .features-block .block-item {
+          flex: 1 1 280px;
+          flex: 1 1 274px;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 680px;
+        }
+        .features-block .block-item:first-child:nth-last-child(2),
+        .features-block .block-item:first-child:nth-last-child(2) ~ .block-item,
+        .features-block .block-item:first-child:nth-last-child(4),
+        .features-block
+          .block-item:first-child:nth-last-child(4)
+          ~ .block-item {
+          flex: 0 0 50%;
+        }
+      }
+      @media only screen and (min-width: 861px) {
+        .docs-block .block-item,
+        .showcase-block .block-item {
+          flex: 0 0 33.333%;
+        }
+      }
+      @media only screen and (min-width: 1101px) {
+        .features-block .block-item {
+          flex: 1 1 340px;
+        }
+      }
+      @media only screen and (min-width: 1201px) {
+        .block-items {
+          margin-left: -1.125em;
+          margin-right: -1.125em;
+        }
+        .block-item-inside {
+          margin-bottom: 2.25em;
+          margin-left: 1.125em;
+          margin-right: 1.125em;
+        }
+      }
+      pre {
+        word-wrap: normal;
+        background: #07335c;
+        border-radius: 0.3em;
+        color: #3eb0fd;
+        font-size: 0.875rem;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        line-height: 1.5;
+        margin: 0.5em 0 1.4em;
+        overflow: auto;
+        padding: 1em;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        text-align: left;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+        white-space: pre-wrap;
+        word-break: break-word;
+        word-spacing: normal;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New,
+          monospace;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-weight: 400;
+      }
+      :not(pre) > code {
+        background: #eee;
+        border-radius: 3px;
+        color: #3d404c;
+        font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New,
+          monospace;
+        font-size: 0.875em;
+        padding: 2px 4px;
+        white-space: normal;
+      }
+      a > code {
+        border-bottom: inherit;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: inherit;
+      }
+      .search-outer {
+        background-color: rgba(0, 0, 0, 0.25);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1100;
+      }
+      .search-outer .search-inner {
+        margin: 90px auto 0;
+        max-width: 800px;
+      }
+      .search-outer .search-inner .algolia-autocomplete {
+        display: block !important;
+      }
+      .search-outer .search-inner .algolia-autocomplete #search-input {
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: block;
+        font-size: 1.5rem;
+        outline: none;
+        padding: 0 8px;
+        width: 100%;
+      }
+      .search-outer
+        .search-inner
+        .algolia-autocomplete
+        .ds-dropdown-menu:before {
+        display: none;
+      }
+      .search-outer .search-inner .algolia-autocomplete .ds-dropdown-menu {
+        left: auto !important;
+        margin: 0;
+        max-width: 100%;
+        min-width: auto;
+        position: static !important;
+        right: auto !important;
+        top: auto !important;
+      }
+      .search-outer
+        .search-inner
+        .algolia-autocomplete
+        .algolia-docsearch-suggestion {
+        border-color: #ddd;
+        padding-bottom: 8px;
+      }
+      code[class*="language-"],
+      pre[class*="language-"] {
+        word-wrap: normal;
+        background: none;
+        color: #ccc;
+        font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+        font-size: 1em;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        line-height: 1.5;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        text-align: left;
+        white-space: pre;
+        word-break: normal;
+        word-spacing: normal;
+      }
+      pre[class*="language-"] {
+        margin: 0.5em 0;
+        overflow: auto;
+        padding: 1em;
+      }
+      :not(pre) > code[class*="language-"],
+      pre[class*="language-"] {
+        background: #2d2d2d;
+      }
+      :not(pre) > code[class*="language-"] {
+        border-radius: 0.3em;
+        padding: 0.1em;
+        white-space: normal;
+      }
+      .token.block-comment,
+      .token.cdata,
+      .token.comment,
+      .token.doctype,
+      .token.prolog {
+        color: #999;
+      }
+      .token.punctuation {
+        color: #ccc;
+      }
+      .token.attr-name,
+      .token.deleted,
+      .token.namespace,
+      .token.tag {
+        color: #e2777a;
+      }
+      .token.function-name {
+        color: #6196cc;
+      }
+      .token.boolean,
+      .token.function,
+      .token.number {
+        color: #f08d49;
+      }
+      .token.class-name,
+      .token.constant,
+      .token.property,
+      .token.symbol {
+        color: #f8c555;
+      }
+      .token.atrule,
+      .token.builtin,
+      .token.important,
+      .token.keyword,
+      .token.selector {
+        color: #cc99cd;
+      }
+      .token.attr-value,
+      .token.char,
+      .token.regex,
+      .token.string,
+      .token.variable {
+        color: #7ec699;
+      }
+      .token.entity,
+      .token.operator,
+      .token.url {
+        color: #67cdcc;
+      }
+      .token.bold,
+      .token.important {
+        font-weight: 700;
+      }
+      .token.italic {
+        font-style: italic;
+      }
+      .token.entity {
+        cursor: help;
+      }
+      .token.inserted {
+        color: green;
+      }
+      div.code-toolbar {
+        position: relative;
+      }
+      div.code-toolbar > .toolbar {
+        opacity: 0;
+        position: absolute;
+        right: 0.2em;
+        top: 0.3em;
+        transition: opacity 0.3s ease-in-out;
+      }
+      div.code-toolbar:hover > .toolbar {
+        opacity: 1;
+      }
+      div.code-toolbar:focus-within > .toolbar {
+        opacity: 1;
+      }
+      div.code-toolbar > .toolbar .toolbar-item {
+        display: inline-block;
+      }
+      div.code-toolbar > .toolbar a {
+        cursor: pointer;
+      }
+      div.code-toolbar > .toolbar button {
+        background: none;
+        border: 0;
+        color: inherit;
+        font: inherit;
+        line-height: normal;
+        overflow: visible;
+        padding: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+      div.code-toolbar > .toolbar a,
+      div.code-toolbar > .toolbar button,
+      div.code-toolbar > .toolbar span {
+        background: #f5f2f0;
+        background: rgba(224, 224, 224, 0.2);
+        border-radius: 0.5em;
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+        color: #bbb;
+        font-size: 0.8em;
+        padding: 0 0.5em;
+      }
+      div.code-toolbar > .toolbar a:focus,
+      div.code-toolbar > .toolbar a:hover,
+      div.code-toolbar > .toolbar button:focus,
+      div.code-toolbar > .toolbar button:hover,
+      div.code-toolbar > .toolbar span:focus,
+      div.code-toolbar > .toolbar span:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+      pre.diff-highlight > code .token.deleted:not(.prefix),
+      pre > code.diff-highlight .token.deleted:not(.prefix) {
+        background-color: rgba(255, 0, 0, 0.1);
+        color: inherit;
+        display: block;
+      }
+      pre.diff-highlight > code .token.inserted:not(.prefix),
+      pre > code.diff-highlight .token.inserted:not(.prefix) {
+        background-color: rgba(0, 255, 128, 0.1);
+        color: inherit;
+        display: block;
+      }
+      code[class*="language-"],
+      pre[class*="language-"] {
+        font-size: 0.875rem;
+      }
+      pre[class*="language-"] {
+        margin: 0 0 1.4rem;
+      }
+      div.code-toolbar > .toolbar {
+        opacity: 1;
+        right: 4px;
+        top: 4px;
+        transition: none;
+      }
+      div.code-toolbar > .toolbar .toolbar-item > a,
+      div.code-toolbar > .toolbar .toolbar-item > button,
+      div.code-toolbar > .toolbar .toolbar-item > span {
+        background: #2d2d2d;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        box-shadow: none;
+        box-sizing: border-box;
+        color: #6985a3;
+        display: inline-block;
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 1em;
+        transition: 0.3s ease-in-out;
+        transition-property: border, color;
+      }
+      div.code-toolbar > .toolbar .toolbar-item > :hover {
+        border: 1px solid #3eb0fd;
+        color: #3eb0fd;
+      }
+      div.code-toolbar > .toolbar .toolbar-item > * > span {
+        background-color: inherit;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        color: inherit;
+        font: inherit;
+        padding: 0;
+        transition: none;
+      }
+      .feedback-form {
+        background-color: #f7f9fb;
+        border-radius: 5px;
+        margin-top: 2.5em;
+        padding: 5%;
+        text-align: center;
+      }
+      .feedback-form h2.feedback-form-title {
+        font-size: 1.25rem;
+      }
+      .feedback-form button {
+        margin: 0 0.25em;
+        padding: 0.2em 20px;
+      }
+      .feedback-yes {
+        background-color: transparent;
+        border-color: #0c0;
+        color: #0c0;
+      }
+      .feedback-yes:hover {
+        background-color: #0c0;
+        color: #fff;
+      }
+      .feedback-no {
+        background-color: transparent;
+        border-color: #f05753;
+        color: #f05753;
+      }
+      .feedback-no:hover {
+        background-color: #f05753;
+        color: #fff;
+      }
+    </style>
+    <meta name="generator" content="Gatsby 3.10.2" />
+    <title data-react-helmet="true">
+      Using Stackbit To Edit Your Jamstack Site - Documentation
+    </title>
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="mask-icon"
+      href="/images/favicon/safari-pinned-tab.svg"
+      color="#0495f3"
+    />
+    <link
+      data-react-helmet="true"
+      rel="shortcut icon"
+      href="/images/favicon/favicon.ico"
+    />
+    <link
+      data-react-helmet="true"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.css"
+    />
+    <meta data-react-helmet="true" charset="utf-8" />
+    <meta data-react-helmet="true" name="google" content="notranslate" />
+    <meta
+      data-react-helmet="true"
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      data-react-helmet="true"
+      name="apple-mobile-web-app-title"
+      content="Stackbit Docs"
+    />
+    <meta
+      data-react-helmet="true"
+      name="application-name"
+      content="Stackbit Docs"
+    />
+    <meta
+      data-react-helmet="true"
+      name="msapplication-config"
+      content="/images/favicon/browserconfig.xml"
+    />
+    <meta data-react-helmet="true" name="theme-color" content="#ffffff" />
+    <meta
+      data-react-helmet="true"
+      name="description"
+      content="You can choose to deploy and host your website using Microsoft Azure."
+    />
+    <meta data-react-helmet="true" property="og:type" content="website" />
+    <meta
+      data-react-helmet="true"
+      property="og:title"
+      content="Stackbit | Studio Guides"
+    />
+    <meta
+      data-react-helmet="true"
+      property="og:description"
+      content="You can choose to deploy and host your website using Microsoft Azure."
+    />
+    <meta data-react-helmet="true" name="twitter:card" content="summary" />
+    <meta
+      data-react-helmet="true"
+      name="twitter:title"
+      content="Stackbit | Studio Guides"
+    />
+    <meta
+      data-react-helmet="true"
+      name="twitter:description"
+      content="You can choose to deploy and host your website using Microsoft Azure."
+    />
+    <meta data-react-helmet="true" name="twitter:site" content="@stackbit" />
+    <meta data-react-helmet="true" name="twitter:creator" content="@stackbit" />
+    <meta
+      data-react-helmet="true"
+      property="og:site_name"
+      content="Stackbit Documentation"
+    />
+    <script
+      data-react-helmet="true"
+      src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js"
+    ></script>
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || []);
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error("Segment snippet included twice.");
+          else {
+            analytics.invoked = !0;
+            analytics.methods = [
+              "trackSubmit",
+              "trackClick",
+              "trackLink",
+              "trackForm",
+              "pageview",
+              "identify",
+              "reset",
+              "group",
+              "track",
+              "ready",
+              "alias",
+              "debug",
+              "page",
+              "once",
+              "off",
+              "on",
+              "addSourceMiddleware",
+              "addIntegrationMiddleware",
+              "setAnonymousId",
+              "addDestinationMiddleware",
+            ];
+            analytics.factory = function (e) {
+              return function () {
+                var t = Array.prototype.slice.call(arguments);
+                t.unshift(e);
+                analytics.push(t);
+                return analytics;
+              };
+            };
+            for (var e = 0; e < analytics.methods.length; e++) {
+              var key = analytics.methods[e];
+              analytics[key] = analytics.factory(key);
+            }
+            analytics.load = function (key, e) {
+              var t = document.createElement("script");
+              t.type = "text/javascript";
+              t.async = !0;
+              t.src = "https://analytics.stackbit.com/analytics.prod.js";
+              var n = document.getElementsByTagName("script")[0];
+              n.parentNode.insertBefore(t, n);
+              analytics._loadOptions = e;
+            };
+            analytics.SNIPPET_VERSION = "4.13.1";
+            analytics.load("x9OuLbWwPvT0ewad7vvt4Wy1S7bq9vLt");
+          }
+      })();
+      window.AnalyticsInit = window.AnalyticsInit || { queue: [] };
+      window.AnalyticsInit.ready =
+        window.AnalyticsInit.ready ||
+        function (f) {
+          window.AnalyticsInit.queue.push(f);
+        };
+      var u = document.createElement("script");
+      u.type = "text/javascript";
+      u.async = !0;
+      u.src = "https://assets.stackbit.com/js/analytics_init.js";
+      var n = document.getElementsByTagName("script")[0];
+      n.parentNode.insertBefore(u, n);
+    </script>
+    <link
+      as="script"
+      rel="preload"
+      href="/docs/webpack-runtime-a496a73b363e6d6a3ce7.js"
+    />
+    <link
+      as="script"
+      rel="preload"
+      href="/docs/framework-0f73fd0e9c9a78a97167.js"
+    />
+    <link
+      as="script"
+      rel="preload"
+      href="/docs/commons-e74d1eca4fc202fcef82.js"
+    />
+    <link as="script" rel="preload" href="/docs/app-3000561a62d42ef5bbe8.js" />
+    <link
+      as="script"
+      rel="preload"
+      href="/docs/29107295-de14d6b1a45612ae5247.js"
+    />
+    <link
+      as="script"
+      rel="preload"
+      href="/docs/component---src-templates-docs-js-a3f396263783d10f9a9e.js"
+    />
+    <link
+      as="fetch"
+      rel="preload"
+      href="/docs/page-data/developer-guides/integrations/azure/page-data.json"
+      crossorigin="anonymous"
+    />
+    <link
+      as="fetch"
+      rel="preload"
+      href="/docs/page-data/app-data.json"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="">
+    <noscript id="gatsby-noscript"
+      >This app works best with JavaScript enabled.</noscript
+    >
+    <div id="___gatsby">
+      <div style="outline: none" tabindex="-1" id="gatsby-focus-wrapper">
+        <div id="page" class="site">
+          <header id="masthead" class="site-header">
+            <div class="site-header-inside">
+              <div class="site-header-controls">
+                <a
+                  href="https://www.stackbit.com/"
+                  class="site-header-logo-wrapper"
+                  ><img
+                    class="site-header-logo"
+                    alt="Stackbit logo"
+                    src="https://www.stackbit.com/images/logo_alt.svg"
+                    width="187"
+                    height="29" /></a
+                ><span class="site-header-logo-sep"></span
+                ><a class="site-header-logo-link" href="/docs/">Docs</a
+                ><button
+                  class="site-header-nav-toggle"
+                  aria-label="Show Navigation Menu"
+                  aria-controls="nav-menu"
+                >
+                  <span class="screen-reader-text">Show Menu</span
+                  ><span class="site-header-nav-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+              <nav
+                id="nav-menu"
+                class="site-header-nav"
+                aria-label="Navigation Menu"
+              >
+                <div class="site-header-nav-inside">
+                  <ul class="site-header-menu">
+                    <li class="site-header-menu-item">
+                      <a
+                        href="https://www.stackbit.com/docs/"
+                        class="site-header-menu-item-link"
+                        >Documentation</a
+                      >
+                    </li>
+                    <li class="site-header-menu-item">
+                      <a
+                        href="https://www.stackbit.com/blog/"
+                        class="site-header-menu-item-link"
+                        >Blog</a
+                      >
+                    </li>
+                    <li class="site-header-menu-item">
+                      <a
+                        href="https://www.stackbit.com/pricing/"
+                        class="site-header-menu-item-link"
+                        >Pricing</a
+                      >
+                    </li>
+                    <li class="site-header-menu-item">
+                      <a
+                        href="https://app.stackbit.com/"
+                        class="site-header-menu-item-link"
+                        >Sign In</a
+                      >
+                    </li>
+                    <li class="site-header-menu-action">
+                      <a
+                        href="https://app.stackbit.com/create"
+                        class="button-component button-component-theme-accent"
+                        ><span>Get Started</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </header>
+          <main id="content" class="site-content">
+            <div class="outer">
+              <div class="inner">
+                <div class="docs-content">
+                  <nav id="docs-nav" class="docs-nav">
+                    <div id="docs-nav-inside" class="docs-nav-inside sticky">
+                      <button id="docs-nav-toggle" class="docs-nav-toggle">
+                        <span>Navigate Docs</span
+                        ><span
+                          class="icon-angle-right"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                      <div class="docs-toc-wrap">
+                        <ul id="docs-toc" class="docs-toc">
+                          <li class="toc-item root-item">
+                            <a href="/docs/">Stackbit Docs</a
+                            ><button class="search-icon">
+                              <span class="screen-reader-text">Submenu</span
+                              ><span class="search-shortcut">⌘K</span
+                              ><svg
+                                aria-hidden="true"
+                                focusable="false"
+                                data-prefix="fas"
+                                data-icon="search"
+                                class="svg-inline--fa fa-search fa-w-16"
+                                role="img"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                                ></path>
+                              </svg>
+                            </button>
+                          </li>
+                          <li class="toc-item has-children">
+                            <a href="/docs/getting-started/">Getting Started</a
+                            ><button class="submenu-toggle">
+                              <span class="screen-reader-text">Submenu</span
+                              ><span
+                                class="icon-angle-right"
+                                aria-hidden="true"
+                              ></span>
+                            </button>
+                            <ul class="toc-submenu">
+                              <li class="toc-item">
+                                <a href="/docs/getting-started/create-site/"
+                                  >Create a New Site</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a
+                                  href="/docs/getting-started/connect-services/"
+                                  >Connect Services</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/getting-started/live-previews/"
+                                  >Live &amp; Shareable Previews</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/getting-started/content-sync/"
+                                  >GitHub Sync</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/getting-started/edit-code/"
+                                  >Local Development</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/getting-started/drag-and-drop/"
+                                  >Drag-and-Drop Components</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a
+                                  href="/docs/getting-started/content-modeling/"
+                                  >Content Modeling</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/getting-started/production/"
+                                  >Publish to Production</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/getting-started/next-steps/"
+                                  >Continue Your Journey</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="toc-item has-children">
+                            <a href="/docs/studio-guides/">Studio Guides</a
+                            ><button class="submenu-toggle">
+                              <span class="screen-reader-text">Submenu</span
+                              ><span
+                                class="icon-angle-right"
+                                aria-hidden="true"
+                              ></span>
+                            </button>
+                            <ul class="toc-submenu">
+                              <li class="toc-item">
+                                <a href="/docs/studio-guides/editing-content/"
+                                  >Editing Content</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/studio-guides/adding-pages/"
+                                  >Adding Pages</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/studio-guides/managing-seo/"
+                                  >Managing SEO</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/studio-guides/publishing/"
+                                  >Publishing</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/studio-guides/modeling-content/"
+                                  >Modeling Content</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/studio-guides/sharing/"
+                                  >Sharing and Collaborators</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/studio-guides/settings/"
+                                  >Project Settings</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/studio-guides/logs/"
+                                  >Debugging and Logs</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="toc-item has-children active">
+                            <a href="/docs/developer-guides/"
+                              >Developer Guides</a
+                            ><button class="submenu-toggle">
+                              <span class="screen-reader-text">Submenu</span
+                              ><span
+                                class="icon-angle-right"
+                                aria-hidden="true"
+                              ></span>
+                            </button>
+                            <ul class="toc-submenu">
+                              <li class="toc-item has-children">
+                                <a href="/docs/developer-guides/basics/"
+                                  >The Basics</a
+                                ><button class="submenu-toggle">
+                                  <span class="screen-reader-text">Submenu</span
+                                  ><span
+                                    class="icon-angle-right"
+                                    aria-hidden="true"
+                                  ></span>
+                                </button>
+                                <ul class="toc-submenu">
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/basics/local-development/"
+                                      >Local Development</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/basics/deploy/"
+                                      >Deploy Your Site</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/basics/custom-domain/"
+                                      >Adding a Custom Domain</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/basics/import-your-site/"
+                                      >Import an Existing Site into Stackbit</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="toc-item has-children active">
+                                <a href="/docs/developer-guides/integrations/"
+                                  >Integrations</a
+                                ><button class="submenu-toggle">
+                                  <span class="screen-reader-text">Submenu</span
+                                  ><span
+                                    class="icon-angle-right"
+                                    aria-hidden="true"
+                                  ></span>
+                                </button>
+                                <ul class="toc-submenu">
+                                  <li class="toc-item current active">
+                                    <a
+                                      aria-current="page"
+                                      class=""
+                                      href="/docs/developer-guides/integrations/azure/"
+                                      >Azure</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/integrations/digital-ocean/"
+                                      >DigitalOcean</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/integrations/netlify/"
+                                      >Netlify</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="toc-item has-children">
+                                <a
+                                  href="/docs/developer-guides/content-modeling/"
+                                  >Content Modeling</a
+                                ><button class="submenu-toggle">
+                                  <span class="screen-reader-text">Submenu</span
+                                  ><span
+                                    class="icon-angle-right"
+                                    aria-hidden="true"
+                                  ></span>
+                                </button>
+                                <ul class="toc-submenu">
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/content-modeling/building-with-components/"
+                                      >Building Sites with Components</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/content-modeling/adding-tailwind-components/"
+                                      >Tailwind Components</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/content-modeling/adding-sections-existing-theme/"
+                                      >Sectioning a Theme</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="toc-item has-children">
+                                <a href="/docs/developer-guides/api-cms/"
+                                  >API-Based CMS</a
+                                ><button class="submenu-toggle">
+                                  <span class="screen-reader-text">Submenu</span
+                                  ><span
+                                    class="icon-angle-right"
+                                    aria-hidden="true"
+                                  ></span>
+                                </button>
+                                <ul class="toc-submenu">
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/api-cms/validation/"
+                                      >Ensure Validation on the CMS Side</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/api-cms/code-defensively/"
+                                      >Code Defensively</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/api-cms/leverage-ecosystem/"
+                                      >Leverage the Existing Ecosystem</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="toc-item has-children">
+                                <a href="/docs/developer-guides/git-cms/"
+                                  >Git-Based CMS</a
+                                ><button class="submenu-toggle">
+                                  <span class="screen-reader-text">Submenu</span
+                                  ><span
+                                    class="icon-angle-right"
+                                    aria-hidden="true"
+                                  ></span>
+                                </button>
+                                <ul class="toc-submenu">
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/git-cms/why-relationships-git/"
+                                      >Understanding Content Relationships</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/git-cms/relationships-netlify-cms/"
+                                      >Relationships in Netlify CMS</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/git-cms/relationships-forestry/"
+                                      >Relationships in Forestry</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="toc-item has-children">
+                                <a href="/docs/developer-guides/gatsby/"
+                                  >Gatsby</a
+                                ><button class="submenu-toggle">
+                                  <span class="screen-reader-text">Submenu</span
+                                  ><span
+                                    class="icon-angle-right"
+                                    aria-hidden="true"
+                                  ></span>
+                                </button>
+                                <ul class="toc-submenu">
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/gatsby/favicon/"
+                                      >Adding a Favicon</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/gatsby/analytics/"
+                                      >Adding Analytics</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/gatsby/sitemap/"
+                                      >Adding a Sitemap</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/developer-guides/gatsby/site-search/"
+                                      >Adding Site Search</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="toc-item has-children">
+                            <a href="/docs/reference/">Reference</a
+                            ><button class="submenu-toggle">
+                              <span class="screen-reader-text">Submenu</span
+                              ><span
+                                class="icon-angle-right"
+                                aria-hidden="true"
+                              ></span>
+                            </button>
+                            <ul class="toc-submenu">
+                              <li class="toc-item has-children">
+                                <a href="/docs/reference/stackbit-yaml/"
+                                  >stackbit.yaml</a
+                                ><button class="submenu-toggle">
+                                  <span class="screen-reader-text">Submenu</span
+                                  ><span
+                                    class="icon-angle-right"
+                                    aria-hidden="true"
+                                  ></span>
+                                </button>
+                                <ul class="toc-submenu">
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/properties/"
+                                      >Properties</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/import/"
+                                      >Import</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/assets/"
+                                      >Assets</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/logic-fields/"
+                                      >Logic Fields</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/models/"
+                                      >Models</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/page-models/"
+                                      >Page models</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/data-models/"
+                                      >Data models</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/object-models/"
+                                      >Object models</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/fields/"
+                                      >Model Fields</a
+                                    >
+                                  </li>
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/stackbit-yaml/examples/"
+                                      >Examples</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/reference/stackbit-cli/"
+                                  >Stackbit CLI</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/reference/create-button/"
+                                  >Create Button</a
+                                >
+                              </li>
+                              <li class="toc-item has-children">
+                                <a href="/docs/reference/examples/"
+                                  >Example Projects</a
+                                ><button class="submenu-toggle">
+                                  <span class="screen-reader-text">Submenu</span
+                                  ><span
+                                    class="icon-angle-right"
+                                    aria-hidden="true"
+                                  ></span>
+                                </button>
+                                <ul class="toc-submenu">
+                                  <li class="toc-item">
+                                    <a
+                                      href="/docs/reference/examples/simple-nextjs/"
+                                      >Simple Next.js Example</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="toc-item has-children">
+                            <a href="/docs/conceptual-guides/"
+                              >Conceptual Guides</a
+                            ><button class="submenu-toggle">
+                              <span class="screen-reader-text">Submenu</span
+                              ><span
+                                class="icon-angle-right"
+                                aria-hidden="true"
+                              ></span>
+                            </button>
+                            <ul class="toc-submenu">
+                              <li class="toc-item">
+                                <a
+                                  href="/docs/conceptual-guides/how-stackbit-works/"
+                                  >How Stackbit Works</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/conceptual-guides/site-preview/"
+                                  >Site Preview</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/conceptual-guides/content-model/"
+                                  >Content Model</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a
+                                  href="/docs/conceptual-guides/api-versus-git-based-cms/"
+                                  >API-based vs. Git-based CMS</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a
+                                  href="/docs/conceptual-guides/file-based-cms/"
+                                  >File-Based CMS</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/conceptual-guides/api-based-cms/"
+                                  >API-based CMS</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a href="/docs/conceptual-guides/site-creation/"
+                                  >Site Creation</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a
+                                  href="/docs/conceptual-guides/content-presentation-separation/"
+                                  >Separating Content from Presentation</a
+                                >
+                              </li>
+                              <li class="toc-item">
+                                <a
+                                  href="/docs/conceptual-guides/best-practices-slug/"
+                                  >Content Slug Best Practices</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <img
+                          src="/docs/images/stackbit-crane-sm.png"
+                          alt="Stackbit"
+                          style="margin-top: 30px"
+                        />
+                      </div>
+                    </div>
+                  </nav>
+                  <article class="post type-docs">
+                    <div class="post-inside">
+                      <header class="post-header">
+                        <h1 class="post-title line-left">Azure Integration</h1>
+                      </header>
+                      <div class="post-content">
+                        <div>
+                          <p>
+                            Azure is Microsoft&#x27;s cloud computing platform.
+                            It&#x27;s
+                            <a
+                              href="https://azure.microsoft.com/en-us/services/app-service/static/#overview"
+                              >Static Web Apps service</a
+                            >
+                            is a great option to build, deploy, and host
+                            Jamstack websites.
+                          </p>
+                          <p>
+                            These guides will help you integrate your Stackbit
+                            site with Azure.
+                          </p>
+                          <p>
+                            For more information on configuring and accessing
+                            Stackbit integrations, see
+                            <a href="/docs/studio-guides/settings"
+                              >the studio guide</a
+                            >.
+                          </p>
+                        </div>
+                        <ul class="docs-section-items">
+                          <li class="docs-section-item">
+                            <a
+                              class="docs-item-link"
+                              href="/docs/developer-guides/integrations/azure/deploy/"
+                              ><div class="docs-item-link-title">
+                                Deploy to Azure
+                              </div>
+                              <span
+                                class="icon-angle-right"
+                                aria-hidden="true"
+                              ></span>
+                              <div class="docs-item-link-excerpt">
+                                Deploy your Stackbit site using Azure
+                              </div></a
+                            >
+                          </li>
+                          <li class="docs-section-item">
+                            <a
+                              class="docs-item-link"
+                              href="/docs/developer-guides/integrations/azure/custom-domain/"
+                              ><div class="docs-item-link-title">
+                                Add a Custom Domain
+                              </div>
+                              <span
+                                class="icon-angle-right"
+                                aria-hidden="true"
+                              ></span>
+                              <div class="docs-item-link-excerpt">
+                                Add a custom domain to a site deployed with
+                                Azure
+                              </div></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="post-footer">
+                        <div
+                          style="
+                            width: 100%;
+                            text-align: center;
+                            margin-top: 2.5em;
+                          "
+                        >
+                          <h2 style="font-size: 1.25rem">
+                            Ready to get started?
+                          </h2>
+                          <div class="block-cta">
+                            <a
+                              href="https://app.stackbit.com/create"
+                              class="button primary"
+                              >Create your Jamstack site</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <nav id="page-nav" class="page-nav">
+                    <div id="page-nav-inside" class="page-nav-inside sticky">
+                      <h2 class="page-nav-title">Jump to Section</h2>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </main>
+          <footer id="colophon" class="home-footer outer">
+            <div class="inner">
+              <div class="home-footer-inside">
+                <img
+                  class="home-footer-logo"
+                  src="https://www.stackbit.com/images/logo_alt.svg"
+                  alt="Stackbit logo"
+                  width="187"
+                  height="29"
+                />
+                <div class="home-footer-content">
+                  <nav class="footer-nav">
+                    <ul class="menu">
+                      <li class="menu-item">
+                        <a href="https://docs.stackbit.com/">Documentation</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="https://www.stackbit.com/pricing/">Pricing</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="https://app.stackbit.com/create"
+                          >Site Builder</a
+                        >
+                      </li>
+                      <li class="menu-item">
+                        <a href="https://stackbit.com/blog">Blog</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="https://stackbit.com/about">About</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="https://stackbit.com/contact">Contact</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div class="site-info">
+                    <p class="copyright">
+                      Copyright © 2021 Stackbit. Made with Stackbit
+                    </p>
+                    <p class="footer-links">
+                      <a href="https://stackbit.com/tos">Terms</a
+                      ><a href="https://stackbit.com/privacy">Privacy</a
+                      ><a href="https://stackbit.com/license">License</a>
+                    </p>
+                    <div>
+                      <a
+                        href="https://github.com/stackbit"
+                        class="home-footer-social-link"
+                        target="_blank"
+                        rel="noopener"
+                        ><span class="screen-reader-text">GitHub</span
+                        ><svg
+                          class="icon"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                          ></path></svg></a
+                      ><a
+                        href="https://twitter.com/stackbit"
+                        class="home-footer-social-link"
+                        target="_blank"
+                        rel="noopener"
+                        ><span class="screen-reader-text">Twitter</span
+                        ><svg
+                          class="icon"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"
+                          ></path></svg
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div
+        id="gatsby-announcer"
+        style="
+          position: absolute;
+          top: 0;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        "
+        aria-live="assertive"
+        aria-atomic="true"
+      ></div>
+    </div>
+    <script>
+      if (true) {
+        (function (i, s, o, g, r, a, m) {
+          i["GoogleAnalyticsObject"] = r;
+          (i[r] =
+            i[r] ||
+            function () {
+              (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+          (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m);
+        })(
+          window,
+          document,
+          "script",
+          "https://www.google-analytics.com/analytics.js",
+          "ga"
+        );
+      }
+      if (typeof ga === "function") {
+        ga("create", "UA-122379868-2", "auto", {});
+      }
+    </script>
+    <script src="/docs/assets/js/crisp.js"></script>
+    <script src="/docs/assets/js/plugins.js"></script>
+    <script src="/docs/assets/js/prism.js" data-manual="true"></script>
+    <script id="gatsby-script-loader">
+      /*<![CDATA[*/ window.pagePath =
+        "/developer-guides/integrations/azure/"; /*]]>*/
+    </script>
+    <script id="gatsby-chunk-mapping">
+      /*<![CDATA[*/ window.___chunkMapping = {
+        polyfill: ["/polyfill-5232f6c46a051bd04f54.js"],
+        app: ["/app-3000561a62d42ef5bbe8.js"],
+        "component---src-templates-docs-js": [
+          "/component---src-templates-docs-js-a3f396263783d10f9a9e.js",
+        ],
+      }; /*]]>*/
+    </script>
+    <script src="/docs/polyfill-5232f6c46a051bd04f54.js" nomodule=""></script>
+    <script
+      src="/docs/component---src-templates-docs-js-a3f396263783d10f9a9e.js"
+      async=""
+    ></script>
+    <script src="/docs/29107295-de14d6b1a45612ae5247.js" async=""></script>
+    <script src="/docs/app-3000561a62d42ef5bbe8.js" async=""></script>
+    <script src="/docs/commons-e74d1eca4fc202fcef82.js" async=""></script>
+    <script src="/docs/framework-0f73fd0e9c9a78a97167.js" async=""></script>
+    <script
+      src="/docs/webpack-runtime-a496a73b363e6d6a3ce7.js"
+      async=""
+    ></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2703040533152181");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2703040533152181&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <script
+      src="https://staging.widget.stackbit.com/init.js"
+      id="stackbit-widget-init"
+      data-stackbit-project-id="5ede1cce09cc5f1572cf9161"
+    ></script>
+  </body>
+</html>
