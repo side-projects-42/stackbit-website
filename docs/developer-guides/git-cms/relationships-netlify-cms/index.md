@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Managing Content Relationships in Netlify CMS
-=============================================
+# Managing Content Relationships in Netlify CMS
 
 [Netlify CMS](https://www.netlifycms.org/) is an open source, git-based CMS. It can be deployed to Netlify, but this is not a requirement. Let's look at how to set up an example with posts that have a one-to-one relationship to authors and a one-to-many relationship to related posts. This will focus on defining and managing the relationships rather than the nuts and bolts of getting Netlify CMS up and running.
 
@@ -141,23 +114,6 @@ Because of this, we need an additional field named `slug` in both the `post` and
 
 The issue with this is, as you can imagine, that it is very fragile. First, the code loading the page assumes that the slug and filename match. Since `slug` is just a textfield in the CMS, it is prone to easy typos.
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
-
-
-
-
-Jump to Section
----------------
-
-
-
-
-
-
-
-
-
-
-
+## Jump to Section

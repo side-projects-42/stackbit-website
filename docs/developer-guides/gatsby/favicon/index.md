@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Adding a Favicon to Your Stackbit Gatsby Site
-=============================================
+# Adding a Favicon to Your Stackbit Gatsby Site
 
 A favicon is a small icon that will display typically in the tab next to the site's name within the browser, next to the bookmark if the page is bookmarked or on the shortcut if a user saves a shortcut to the site to the desktop of a mobile device. In order to create a favicon, it is best to have multiple versions of the image to match the various sizes needed on differing devices. There are sites that will help you create these such as [favicon.io](https://favicon.io). Let's walk through the steps.
 
@@ -70,23 +43,6 @@ Now when you run `gatsby develop` from the command-line/terminal, you should see
 
 ![a favicon in Chrome](/docs/images/favicon.png)
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
-
-
-
-
-Jump to Section
----------------
-
-
-
-
-
-
-
-
-
-
-
+## Jump to Section

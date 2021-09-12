@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Adding a Sitemap to Your Stackbit Gatsby Site
-=============================================
+# Adding a Sitemap to Your Stackbit Gatsby Site
 
 A `sitemap.xml` is useful for submitting to search engines like Google that use this to assist in properly crawling your site. Having a sitemap is another way to improve your site SEO. In this case, we will be utilizing a Gatsby plugin called simply [gatsby-plugin-sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/)
 
@@ -67,23 +40,6 @@ Then navigate to `http://localhost:9000/sitemap.xml` to view your sitemap.
 
 It's worth noting that the gatsby-plugin-sitemap plugin is configurable. By default it includes every page on your site. Check the [documentation](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/) for customization options.
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
-
-
-
-
-Jump to Section
----------------
-
-
-
-
-
-
-
-
-
-
-
+## Jump to Section

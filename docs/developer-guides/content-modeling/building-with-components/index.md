@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Make Fast, Versatile Jamstack Themes with Page Builder Components
-=================================================================
+# Make Fast, Versatile Jamstack Themes with Page Builder Components
 
 When creating a theme for any website, one may typically take into account the importing of existing content, creation of new pages, and ongoing editing. These classic content updates can be done by developers, editors, customers, and other stakeholders responsible for the finished product. To them, the limits of any given page are defined first and foremost by the flexibility of your theme: What does your content model make available to them and what level of flexibility lies therein.
 
@@ -37,9 +10,9 @@ Sometimes, the day-to-day realities of your clients, your marketing team, or you
 
 In this tutorial, we’ll learn how to incorporate drag-and-drop-ready content models that will empower your clients and editors to spin-up spontaneous sections and pages using your Jamstack theme, with the versatility of a visual page builder.
 
-If you've read about the virtues of content management systems -- particularly headless API-based CMS that promise easy reuse of content across multiple media -- you've probably seen a million tutorials about modeling a movie database, an e-commerce store, or a [conference schedule](https://www.stackbit.com/blog/content-modeling-headless/). These are *data-driven* content models where you can use domain knowledge from the real world to imagine what properties you'll need to store about each record without overthinking the fact that the data might eventually end up on a web page.
+If you've read about the virtues of content management systems -- particularly headless API-based CMS that promise easy reuse of content across multiple media -- you've probably seen a million tutorials about modeling a movie database, an e-commerce store, or a [conference schedule](https://www.stackbit.com/blog/content-modeling-headless/). These are _data-driven_ content models where you can use domain knowledge from the real world to imagine what properties you'll need to store about each record without overthinking the fact that the data might eventually end up on a web page.
 
-But we can't entirely ignore the world's expectations of how web pages are "*supposed to work*" these days, can we? Page builders like Squarespace and Wix let content authors drag visual components onto and off of a screen, typing content straight into them. With Stackbit, you can provide this experience on the [Jamstack](https://jamstack.org/what-is-jamstack/). You'll just need to model a few extra content types -- ones whose properties model the way they should *look*, rather than what they represent in the real world.
+But we can't entirely ignore the world's expectations of how web pages are "_supposed to work_" these days, can we? Page builders like Squarespace and Wix let content authors drag visual components onto and off of a screen, typing content straight into them. With Stackbit, you can provide this experience on the [Jamstack](https://jamstack.org/what-is-jamstack/). You'll just need to model a few extra content types -- ones whose properties model the way they should _look_, rather than what they represent in the real world.
 
 We'll let you in on a little secret: most web pages are 1-dimensional (lines), not 2-dimensional (flat surfaces). You look at them on screens, so they feel 2-D, but no one likes horizontal scrolling, so for all practical purposes, they're 1-D.
 
@@ -70,8 +43,7 @@ Start imagining web sites as vertical lists of user-interface components stacked
 
 There's a structure to components in these tools, too. You can't simply add a 2nd photo to a testimonial in a "testimonials" section because you're indecisive about which photo best represents the quote. Page builders have a predefined set of properties that go with each component type. Some component types are very flexible, nesting lists inside lists under the covers, but at some point, the flexibility stops.
 
-<a href="#build_your_own_theme" class="hash-link"><span class="icon-copy"></span></a>Build your own theme
----------------------------------------------------------------------------------------------------------
+## <a href="#build_your_own_theme" class="hash-link"><span class="icon-copy"></span></a>Build your own theme
 
 Let's model and build a simple theme of our own that includes a flexible page builder. We'll make it visually editable with Stackbit Studio. We'll use Git file-based data storage, but we'll touch on a few examples of API-based data storage as well.
 
@@ -102,7 +74,7 @@ Our theme will have 5 components across 3 levels of nesting:
 
 We'll build the theme in 3 phases, corresponding to these levels.
 
-In the static site generator ("SSG"), level 1 holds everything else together. Every `flexible_page` record needs to be transformed into a full `<html>...</html>` web page with its own URL. In phase 1, we'll build the `flexible_page` content type and template, without worrying about the details within. The remaining content types' templates only output *fragments* of HTML used within these pages. We'll flesh them out, one level at a time, in phases 2 and 3.
+In the static site generator ("SSG"), level 1 holds everything else together. Every `flexible_page` record needs to be transformed into a full `<html>...</html>` web page with its own URL. In phase 1, we'll build the `flexible_page` content type and template, without worrying about the details within. The remaining content types' templates only output _fragments_ of HTML used within these pages. We'll flesh them out, one level at a time, in phases 2 and 3.
 
 <span class="gatsby-resp-image-wrapper" style="
                                 position: relative;
@@ -127,8 +99,7 @@ In the static site generator ("SSG"), level 1 holds everything else together. Ev
                                   /docs/static/6272f953ecf2da6bbda3b09af5db3d34/2bcd1/all-phases.png 1561w
                                 " /></span>
 
-<a href="#phase_1" class="hash-link"><span class="icon-copy"></span></a>Phase 1
--------------------------------------------------------------------------------
+## <a href="#phase_1" class="hash-link"><span class="icon-copy"></span></a>Phase 1
 
 ### <a href="#cms_models" class="hash-link"><span class="icon-copy"></span></a>CMS models
 
@@ -140,11 +111,11 @@ In the data model for this project, any given `flexible_page` has the following 
 
 Right now, we'll make `sections` a list of plaintext strings. Later, we'll update it to be a list of `section_cta` and `section_cards` components.
 
-Using Git-based data storage, we don't strictly need a content management system *("CMS")*, but using one is a great way to help you think in data models while designing a theme.
+Using Git-based data storage, we don't strictly need a content management system _("CMS")_, but using one is a great way to help you think in data models while designing a theme.
 
 There are many ways to configure a schema to make a CMS aware of your data model. If you'd like, take a look at examples for [Stackbit](https://github.com/stackbit/components-tutorial/blob/main/stackbit.yaml), [Netlify CMS](https://github.com/stackbit/components-tutorial/blob/main/example-cms-schemas/netlifycms/phase1/PARTIAL-config.yml), and [Sanity.io](https://github.com/stackbit/components-tutorial/blob/main/example-cms-schemas/sanity/phase1/flexible_page.js).
 
-*(Stackbit can infer your data model from a Stackbit schema, a headless CMS schema, or from your existing data, so you may not need to write an explicit schema at all.)*
+_(Stackbit can infer your data model from a Stackbit schema, a headless CMS schema, or from your existing data, so you may not need to write an explicit schema at all.)_
 
 ### <a href="#data_entry" class="hash-link"><span class="icon-copy"></span></a>Data entry
 
@@ -204,8 +175,7 @@ Adding a second page is as simple as clicking **Add Page** toward the top of the
 
 ![Fireworks](/docs/a0c40dec7215b3d0a624a2b5f3a98408/fireworks-transparent.svg)
 
-<a href="#phase_2" class="hash-link"><span class="icon-copy"></span></a>Phase 2
--------------------------------------------------------------------------------
+## <a href="#phase_2" class="hash-link"><span class="icon-copy"></span></a>Phase 2
 
 Now let's build out our two section types: `section_cta` and `section_cards`.
 
@@ -344,12 +314,11 @@ Commit your changes and push them to the remote `preview` branch:
     git commit -m "tutorial phase 2"
     git push
 
-Go back to Stackbit Studio, you should now be able to add new Actions to the "Call to Action" section and new cards to the "Card Gallery" section. To add a section in Stackbit Studio, beneath **Sections** within the page you'd like to edit, in the left-hand navigation panel, click **Add Content**. Under **Actions** or **Cards** *(depending upon the type of section you chose)*, click **Add Content** again to add buttons or panels within your new sections. You can fill in the rest of the details in the left-hand navigation panel or directly in the page preview.
+Go back to Stackbit Studio, you should now be able to add new Actions to the "Call to Action" section and new cards to the "Card Gallery" section. To add a section in Stackbit Studio, beneath **Sections** within the page you'd like to edit, in the left-hand navigation panel, click **Add Content**. Under **Actions** or **Cards** _(depending upon the type of section you chose)_, click **Add Content** again to add buttons or panels within your new sections. You can fill in the rest of the details in the left-hand navigation panel or directly in the page preview.
 
 [![Animated GIF of Stackbit Studio screen capture editing a page built from phase 2 of the tutorial](https://stackbit-docs-files.s3.amazonaws.com/components-phase2-add-sections.gif)](https://stackbit-docs-files.s3.amazonaws.com/components-phase2-add-sections.mp4)
 
-<a href="#phase_3" class="hash-link"><span class="icon-copy"></span></a>Phase 3
--------------------------------------------------------------------------------
+## <a href="#phase_3" class="hash-link"><span class="icon-copy"></span></a>Phase 3
 
 Finally, we'll build out our final section types: `action` and `card`.
 
@@ -451,12 +420,11 @@ Commit your changes and push them to the remote `preview` branch:
 
 Once you're in Stackbit, be sure to play in the Studio and see how easy it is to point-and-click your way through a complete content overhaul:
 
--   Add, remove, & edit pages
--   Add, remove, edit, & reorder sections
--   Add, remove, edit, & reorder actions & cards within a section
+- Add, remove, & edit pages
+- Add, remove, edit, & reorder sections
+- Add, remove, edit, & reorder actions & cards within a section
 
-<a href="#next_steps" class="hash-link"><span class="icon-copy"></span></a>Next steps
--------------------------------------------------------------------------------------
+## <a href="#next_steps" class="hash-link"><span class="icon-copy"></span></a>Next steps
 
 Now that you've built a small page builder, ask yourself:
 
@@ -464,45 +432,27 @@ Now that you've built a small page builder, ask yourself:
 
 When you consider the versatility that can be demanded from your theme and incorporate containers and sections appropriately, you empower end-users to be creative and effective within your theme's constraints. It allows editors, designers, and anyone to quickly spin up pages that fit their often impromptu needs and provide visual feedback reflecting their work results. In this case, the scalability and freedom that the Jamstack provides to developers can go hand in hand with empowering clients, editors, and anyone with the flexibility they require to make modern websites an integral part of their strategy.
 
-<a href="#helpful_resources" class="hash-link"><span class="icon-copy"></span></a>Helpful resources
----------------------------------------------------------------------------------------------------
+## <a href="#helpful_resources" class="hash-link"><span class="icon-copy"></span></a>Helpful resources
 
--   Not on Stackbit yet? [Bring your site](/docs/developer-guides/basics/import-your-site/)
--   Have a theme already? [Section it to use components](/docs/developer-guides/content-modeling/adding-sections-existing-theme/)
+- Not on Stackbit yet? [Bring your site](/docs/developer-guides/basics/import-your-site/)
+- Have a theme already? [Section it to use components](/docs/developer-guides/content-modeling/adding-sections-existing-theme/)
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
+## Jump to Section
 
-
-
-
-Jump to Section
----------------
-
--   [Build your own theme](#build_your_own_theme)
--   [Phase 1](#phase_1)
-    -   [CMS models](#cms_models)
-    -   [Data entry](#data_entry)
-    -   [SSG templates](#ssg_templates)
--   [Phase 2](#phase_2)
-    -   [CMS models](#cms_models)
-    -   [Data entry](#data_entry)
-    -   [SSG templates](#ssg_templates)
--   [Phase 3](#phase_3)
-    -   [CMS models](#cms_models)
-    -   [Data entry](#data_entry)
-    -   [SSG templates](#ssg_templates)
--   [Next steps](#next_steps)
--   [Helpful resources](#helpful_resources)
-
-
-
-
-
-
-
-
-
-
-
+- [Build your own theme](#build_your_own_theme)
+- [Phase 1](#phase_1)
+  - [CMS models](#cms_models)
+  - [Data entry](#data_entry)
+  - [SSG templates](#ssg_templates)
+- [Phase 2](#phase_2)
+  - [CMS models](#cms_models)
+  - [Data entry](#data_entry)
+  - [SSG templates](#ssg_templates)
+- [Phase 3](#phase_3)
+  - [CMS models](#cms_models)
+  - [Data entry](#data_entry)
+  - [SSG templates](#ssg_templates)
+- [Next steps](#next_steps)
+- [Helpful resources](#helpful_resources)

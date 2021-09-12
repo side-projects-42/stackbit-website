@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Adding Analytics to Your Stackbit Gatsby Site
-=============================================
+# Adding Analytics to Your Stackbit Gatsby Site
 
 Adding the Google Analytics (or any analytics script really) to a Stackbit site - Gatsby or not - is easy and doesn't require that you edit any code at all. Instead, we'll use a feature in Netlify called [snippet injection](https://docs.netlify.com/site-deploys/post-processing/snippet-injection/). Here are the steps:
 
@@ -47,23 +20,6 @@ Adding the Google Analytics (or any analytics script really) to a Stackbit site 
 
 Your site will now automatically have the analytics code injected on every page.
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
-
-
-
-
-Jump to Section
----------------
-
-
-
-
-
-
-
-
-
-
-
+## Jump to Section

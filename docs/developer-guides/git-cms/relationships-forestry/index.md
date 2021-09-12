@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Managing Content Relationships in the Forestry CMS
-==================================================
+# Managing Content Relationships in the Forestry CMS
 
 [Forestry](https://forestry.io/) is another popular, commercial git-based CMS option. The basic setup of Forestry is simple. When you import a project, Forestry will automatically look at the content and map out the data models in its system for you, placing all of these settings in a `.forestry` directory in your project. Below is the default editing for a basic post that has a one-to-one relationship to an author and a one-to-many relationship to related posts.
 
@@ -121,23 +94,6 @@ Notice that existing references to authors and related posts may disappeared or 
       - posts/last-jedi-was-good.md
       - posts/return-of-skywalker-awful.md
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
-
-
-
-
-Jump to Section
----------------
-
-
-
-
-
-
-
-
-
-
-
+## Jump to Section
