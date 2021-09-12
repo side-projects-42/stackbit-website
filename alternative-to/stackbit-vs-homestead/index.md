@@ -2,17 +2,7 @@ This app works best with JavaScript enabled.
 
 
 
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-What Makes Jamstack Sites Managed by Stackbit More Powerful than Homestead Sites
-================================================================================
+# What Makes Jamstack Sites Managed by Stackbit More Powerful than Homestead Sites
 
 Stackbit vs. Homestead: Stackbit is a powerful Homestead alternative where you own your content and easily edit it. Here’s how Stackbit and Homestead compare to one another.
 
@@ -20,15 +10,13 @@ Homestead is one of the longest-tenured page builders around, debuting more than
 
 Unfortunately, Homestead has struggled to keep up with more modern options. Homestead's templates lack built-in mobile responsiveness, a significant issue as more people access the internet on their smartphones. Homestead is not cost-effective either, with many competitors offering superior value for money. Most importantly, Homestead's page builder does not offer developers the creative freedom they need to create stellar websites for their clients. If you're looking for a website that's just as easy to create and manage as Homestead, look no further than a Jamstack site managed by Stackbit.
 
-What is Stackbit and who is it intended for?
---------------------------------------------
+## What is Stackbit and who is it intended for?
 
 Stackbit is the first complete platform for the Jamstack. We created Stackbit for developers seeking unlimited creativity and clients looking for an easy way to edit their Jamstack site. Stackbit is brand-agnostic, so developers can use their preferred headless CMS (or content management system), SSG (static site generator), and developmental tools. They can also create a custom theme to edit in Stackbit Site Builder or even import a theme from elsewhere on the web. Most importantly, you can choose any extensions available in the Jamstack ecosystem or design your own by accessing your site's code directly.
 
 Those features might make the Jamstack seem complicated to novices, but Stackbit can help you as well. [Stackbit Site Builder](https://app.stackbit.com/create) includes a variety of themes to choose from, helping beginners get up and running. When your site is finished, you can use a WYSIWYG editing tool called Stackbit Studio to edit it without messing with any code. Please continue reading to find out more about how Jamstack sites and Stackbit are making the web, better.
 
-What advantages make Jamstack sites a great alternative to Homestead sites?
----------------------------------------------------------------------------
+## What advantages make Jamstack sites a great alternative to Homestead sites?
 
 Homestead sites have used many of the same templates for over a decade, periodically adding new functionality to an aging core. It's harder than it should be to edit your template as a result. Furthermore, industry-specific templates often include pre-written text that search engines may flag as duplicate content, hurting your SEO performance. Worst of all, Homestead templates do not offer built-in mobile responsiveness, nor does their page builder support mobile sites. They have partnered with Duda to give their customers some kind of mobile solution, but you have to pay an extra fee for the privilege. In contrast, Stackbit offers built-in mobile responsiveness that ensures your site looks just as good on a smaller screen as a larger one.
 
@@ -36,8 +24,7 @@ The costs associated with Homestead sites can also add up quickly. Their cheapes
 
 Homestead sites only have one level of navigation, meaning that you're likely to outgrow it if your business takes off. Unfortunately, there is no way to take a Homestead site off of the company's hosting service, meaning that you'll need to start fresh with a completely new site. You will always own the underlying code of a Jamstack site, allowing you to do whatever you wish with it.
 
-How does Stackbit make Jamstack sites more accessible?
-------------------------------------------------------
+## How does Stackbit make Jamstack sites more accessible?
 
 Jamstack sites are created by manually stitching multiple building blocks together, including a headless CMS, SSG, and additional tools for versioning and the like. This is traditionally a time-consuming process for developers, making Jamstack sites inaccessible for most people. Stackbit provides a user-friendly interface that streamlines this process, putting some of the web's most powerful development tools in the hands of anyone who wants them.
 
@@ -45,26 +32,15 @@ If you're an [entrepreneur](https://www.stackbit.com/businesses) who doesn't hav
 
 Here are some of the other great features that Stackbit brings to the table:
 
--   Superior loading times
--   Increased security
--   [SEO toolbox](https://www.stackbit.com/blog/seo-tools/) to easily add metadata, alt tags, and define social-media sharing elements on any webpage.
--   Front-end modular editing
--   Collaboration tools
--   Developmental tools
--   Live previews of site edits
--   Ability to share unpublished pages
+- Superior loading times
+- Increased security
+- [SEO toolbox](https://www.stackbit.com/blog/seo-tools/) to easily add metadata, alt tags, and define social-media sharing elements on any webpage.
+- Front-end modular editing
+- Collaboration tools
+- Developmental tools
+- Live previews of site edits
+- Ability to share unpublished pages
 
-And The Winner Is...
---------------------
+## And The Winner Is...
 
 Homestead was the leading page builder once upon a time, but the company hasn't been able to keep up with the innovation in the space. Jamstack sites managed by Stackbit are just as easy to use and offer much more power. Try it once and we're confident that you will never want to build a website any other way.
-
-
-
-
-
-
-
-
-
-

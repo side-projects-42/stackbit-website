@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Data-driven JAMstack with Sourcebit
-===================================
+# Data-driven JAMstack with Sourcebit
 
 Brian Rinaldi — February 26, 2020
 
@@ -24,16 +19,15 @@ Similarly, a headless CMS, a static site generator and a continuous deployment s
 
 [Sourcebit](https://github.com/stackbithq/sourcebit) is a new, MIT-licensed open source project that solves this problem by giving you both the tools and the "recipe" for building a JAMstack site that is driven by your data. In this article, I'll go into detail about what Sourcebit is, why it is necessary and how to get started using it. It's worth noting that Sourcebit is completely customizable and extensible via plugins, and a future post will cover those topics in more detail.
 
-Introducing Sourcebit
----------------------
+## Introducing Sourcebit
 
 [![Sourcebit](/images/Sourcebit.svg)](https://github.com/stackbit/sourcebit)
 
 Sourcebit is a new open source project that aims to make it easy for developers to connect their JAMstack site to data coming from a broad range of sources. It does this by abstracting the steps for consuming data from any source:
 
--   Pulling the data and assets from the source;
--   Transforming that data, if needed;
--   Making the data accessible where it is needed by the static site generator. This can be as files or by calling the Sourcebit module from within the site's code.
+- Pulling the data and assets from the source;
+- Transforming that data, if needed;
+- Making the data accessible where it is needed by the static site generator. This can be as files or by calling the Sourcebit module from within the site's code.
 
 Within Sourcebit, each of these three steps is represented by plugin point: a source; a transformation; and a target.
 
@@ -47,19 +41,18 @@ As part of the initial release, Sourcebit has pre-built plugins for Contentful a
 
 In order to walk us through how Sourcebit works, I've created an [example project](https://github.com/remotesynth/control-fan-page) that uses Sourcebit to populate content and assets that are pulled from Contentful. The site is intended to emulate a "fan page" for the [video game Control](https://controlgame.com/) (great game - highly recommended!). Here are some details:
 
--   The site is populated with some example content and assets from the [Control Wiki](https://control.fandom.com/wiki/Control_Wiki).
--   The [Contentful](http://contentful.com/) content model has two types: \_ An "About" type that represents a standard "About Us" type page. ![The About model](/images/1582723760-about-model-sm.png) \_ A "Blog Post" model that represents a group of posts.
+- The site is populated with some example content and assets from the [Control Wiki](https://control.fandom.com/wiki/Control_Wiki).
+- The [Contentful](http://contentful.com/) content model has two types: \_ An "About" type that represents a standard "About Us" type page. ![The About model](/images/1582723760-about-model-sm.png) \_ A "Blog Post" model that represents a group of posts.
 
 ![The About model](/images/1582723782-post-model-sm.png)
 
--   It is a standard [Hugo](https://gohugo.io/) site created without any pre-built in CMS integration.
+- It is a standard [Hugo](https://gohugo.io/) site created without any pre-built in CMS integration.
 
 You can find the source code for the project at [github.com/remotesynth/control-fan-page](https://github.com/remotesynth/control-fan-page). You can see what the finished project with the populated content looks like at [control-fan-page-demo.netlify.com](https://control-fan-page-demo.netlify.com/).
 
 ![The finished project using Sourcebit](/images/1582723780-finished-project-sm.png)
 
-Getting Started with Sourcebit
-------------------------------
+## Getting Started with Sourcebit
 
 Let's walk through an example of how you can use Sourcebit in your project.
 
@@ -105,12 +98,12 @@ It is time for me to configure how Sourcebit handles the Contentful data and sav
 
 The next step will ask a series of questions about each content model. Each step shows actual source data examples to help guide you in making the proper selections. The steps for Hugo are:
 
--   Whether it represents a single page or a series of pages. In my case, "About" is a single page but "Blog Post" is a series of pages.
--   Which directory the content files will be placed in. For the "About" page, it simply goes in `content` but blog posts will go in `content/posts`.
--   How I want to generate the file name. In both cases, I chose to use the content's title field to generate the file name.
--   In the case of a collection of posts, it asks if I want to append the date to the file name. I choose no.
--   How to generate the value for the layout frontmatter field. I specify a static value for both, which is `page` for "About" and `post` for blog posts.
--   Lastly, I select which field represents the page's content. In both of my cases, that is "body".
+- Whether it represents a single page or a series of pages. In my case, "About" is a single page but "Blog Post" is a series of pages.
+- Which directory the content files will be placed in. For the "About" page, it simply goes in `content` but blog posts will go in `content/posts`.
+- How I want to generate the file name. In both cases, I chose to use the content's title field to generate the file name.
+- In the case of a collection of posts, it asks if I want to append the date to the file name. I choose no.
+- How to generate the value for the layout frontmatter field. I specify a static value for both, which is `page` for "About" and `post` for blog posts.
+- Lastly, I select which field represents the page's content. In both of my cases, that is "body".
 
 You can see the entire process of configuring Hugo that I described in the short video below.
 
@@ -165,28 +158,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

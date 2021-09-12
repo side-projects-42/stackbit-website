@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Adding Search to Your Gatsby Site
-=================================
+# Adding Search to Your Gatsby Site
 
 Brian Rinaldi — July 01, 2020
 
@@ -24,15 +19,14 @@ Search is an important part of almost any site. Once you have a lot of content, 
 
 In this post, we're going to explore adding search to a site built with Gatsby. We'll use a service called [Algolia](https://www.algolia.com/) for the search API. This is a commercial offering, but it has a generous free tier. The example site was built with Stackbit, though there's nothing in the code that we'll discuss that is Stackbit specific (for reference, you can see the full project code at <https://github.com/remotesynth/good-celery>). Ok, enough intro...let's get coding.
 
-Setting Up Algolia
-------------------
+## Setting Up Algolia
 
 First things first, you'll need to set up your account on Algolia and set up a project. You can skip the steps about setting up indices as we'll take care of that via code. However, be sure to grab all your API keys from the Algolia dashboard as we'll need them later.
 
 Algolia provides two projects that we'll make use of:
 
--   [Gatsby Plugin Algolia](https://github.com/algolia/gatsby-plugin-algolia) will help us create our indices and make sure they are kept in sync with our content.
--   [React InstantSearch](https://github.com/algolia/react-instantsearch) provides a pre-built set of tools for interacting with Algolia's search API for a "search as you type" UI. This project also encompasses the `react-instantsearch-dom` UI tools we'll also use.
+- [Gatsby Plugin Algolia](https://github.com/algolia/gatsby-plugin-algolia) will help us create our indices and make sure they are kept in sync with our content.
+- [React InstantSearch](https://github.com/algolia/react-instantsearch) provides a pre-built set of tools for interacting with Algolia's search API for a "search as you type" UI. This project also encompasses the `react-instantsearch-dom` UI tools we'll also use.
 
 Let's start by installing these on our Gatsby project.
 
@@ -144,8 +138,7 @@ We can now see the results when going into Algolia and browsing Indices.
 
 ![indices populated on Algolia dashboard](/images/1593607436-algolia-indices-sm.png)
 
-Creating the Search UI
-----------------------
+## Creating the Search UI
 
 Now that our search indices are populated, let's display some results. To do this, we're going to use [React InstantSearch](https://github.com/algolia/react-instantsearch), which offers a search-as-you-type experience. It pretty much works out of the box using the [code they provide](https://www.algolia.com/doc/guides/building-search-ui/installation/react/).
 
@@ -283,8 +276,7 @@ The result works as shown below.
 
 ![](/images/gatsby-finished-search.png)
 
-Where to Go From Here
----------------------
+## Where to Go From Here
 
 There's one more step that I should mention. We need to ensure that the environment variables we created are available when we deploy. On Netlify, all we need to do is go to Settings &gt; Build & Deploy &gt; Environment and add the necessary variables defined in our `.env` file to our deployment settings.
 
@@ -300,28 +292,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

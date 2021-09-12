@@ -1,29 +1,23 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-How to Separate Content from Website Code
-=========================================
+# How to Separate Content from Website Code
 
 Sean C Davis — August 24, 2021
 
 When it comes to turning a website design into a real thing (a website), a static site generator is an invaluable tool. It provides you with the ability to abstract reusable parts so you can write code more efficiently and more accurately.
 
-We covered the process of moving from static HTML files to a [static site generator](https://www.seancdavis.com/blog/wtf-is-ssg/) (SSG) [in the precursor to this article](/blog/jamstack-journey-templatize-static-html/). Here we're going to look at taking your SSG game to the next level by transforming it into content-driven engine. Together, these two steps make up a few parts of *The Jamstack Journey*.
+We covered the process of moving from static HTML files to a [static site generator](https://www.seancdavis.com/blog/wtf-is-ssg/) (SSG) [in the precursor to this article](/blog/jamstack-journey-templatize-static-html/). Here we're going to look at taking your SSG game to the next level by transforming it into content-driven engine. Together, these two steps make up a few parts of _The Jamstack Journey_.
 
 Let's dive in!
 
-How a Content-Driven Website Works
-----------------------------------
+## How a Content-Driven Website Works
 
 There are two main steps in the process of transforming a templatized site into one that is content-driven:
 
@@ -38,7 +32,7 @@ For example, you might have a blog post represented as `my-first-post.html` that
 
 <img src="/images/210824--post-after-templatizing.png" alt="Blog post after templatizing" class="small no-border" />
 
-It doesn't have any layout elements because those have all been abstracted away in your template, but it still has HTML code, which effects the structure — the *presentation* — of the page.
+It doesn't have any layout elements because those have all been abstracted away in your template, but it still has HTML code, which effects the structure — the _presentation_ — of the page.
 
 Converting this to a content driven approach means we can convert the HTML file into a content-based file, like markdown (e.g. `my-first-post.md`). And then that content can be fed into the main post layout. Like this:
 
@@ -48,29 +42,26 @@ If this doesn't make sense, don't worry yet. We're going to go through a real-wo
 
 ### Abstract Repeatable Components
 
-This process forces us to develop a *shape* for our content. Doing so will help us uncover opportunities to further simplify templates by combining and abstracting repeatable structures. If this also has your head spinning, it's okay. We'll look at an example of this in action, too.
+This process forces us to develop a _shape_ for our content. Doing so will help us uncover opportunities to further simplify templates by combining and abstracting repeatable structures. If this also has your head spinning, it's okay. We'll look at an example of this in action, too.
 
-Benefits of a Content-Driven Website
-------------------------------------
+## Benefits of a Content-Driven Website
 
 The process of separating content from presentation has a number of benefits. These are the primary reasons I go through through this effort:
 
--   It reduces the potential for introducing new bugs through content. When you force your editors to write HTML code just to add content to your site, you are greatly increasing your risk for new bugs that come from unexpected or bad HTML code.
--   Less technical content editors can contribute without learning code.
--   It's more pleasant to author content. Markdown is built to get out of your way. Instead of wrapping a top-level heading in an `<h1>` tag, you just precede the line with `#`. There are no paragraph tags — they are inferred.
--   Markdown is faster to write, too! (At least once you get the hang of it.)
+- It reduces the potential for introducing new bugs through content. When you force your editors to write HTML code just to add content to your site, you are greatly increasing your risk for new bugs that come from unexpected or bad HTML code.
+- Less technical content editors can contribute without learning code.
+- It's more pleasant to author content. Markdown is built to get out of your way. Instead of wrapping a top-level heading in an `<h1>` tag, you just precede the line with `#`. There are no paragraph tags — they are inferred.
+- Markdown is faster to write, too! (At least once you get the hang of it.)
 
-What about Content Management Systems?
---------------------------------------
+## What about Content Management Systems?
 
 If we're talking about separating content from presentation, shouldn't we be talking about content management systems (CMS), too?
 
-*(Great question, Sean.)*
+_(Great question, Sean.)_
 
-Yes, this would be the perfect time to introduce a CMS into your project. What we're doing here is substituting a more formal CMS with markdown files. Think of markdown files as the data coming from your CMS. In fact, you could technically pull content from a CMS *and* convert it to markdown files. I like this approach because a) it's simpler than wiring up a whole CMS, but b) can still work well with your setup if you choose to use a CMS.
+Yes, this would be the perfect time to introduce a CMS into your project. What we're doing here is substituting a more formal CMS with markdown files. Think of markdown files as the data coming from your CMS. In fact, you could technically pull content from a CMS _and_ convert it to markdown files. I like this approach because a) it's simpler than wiring up a whole CMS, but b) can still work well with your setup if you choose to use a CMS.
 
-Step 1: The Templatized Site
-----------------------------
+## Step 1: The Templatized Site
 
 With that, let's get started!
 
@@ -87,8 +78,7 @@ To make sure everything is in order before we get going, it'd be safe to reinsta
 
 Then visit localhost:8000 in your browser and you should see the site.
 
-Step 2: Simplify Pages
-----------------------
+## Step 2: Simplify Pages
 
 The easiest step in this process is setting up our interior pages. Right now, our privacy and terms pages are `.njk` files, which means they are littered with HTML code. The beauty of Eleventy is that if we simply change the file extension in these files to `.md` they will work immediately.
 
@@ -100,8 +90,7 @@ But, even though it works, we have an opportunity to drastically simplify this c
 
 After these changes, your code [should look like this](https://github.com/seancdavis/stackbit-jamstack-journey/tree/63eb311/04-content-driven-site) and you should be able to visit localhost:8000/terms and localhost:8000/privacy with both looking as they did before you made the change.
 
-Step 3: Shared Global Data
---------------------------
+## Step 3: Shared Global Data
 
 We could jump to the home page next, but that one is a doozy, so let's move on to something a little simpler first — shared global data. There is often content that you want to share across multiple pages or templates. Eleventy is built to support this with its [global data files](https://www.11ty.dev/docs/data-global/).
 
@@ -125,12 +114,11 @@ For example, the code in the content page template would look like this:
 
 The home page can follow a similar pattern. [Here is a summary of the changes I made](https://github.com/seancdavis/stackbit-jamstack-journey/commit/737599767da0ce5ad044985499811dd1d76c01bb).
 
-It's a good idea to keep this pattern in mind and employ it whenever you find opportunities to share *content* (not code) among multiple pages or templates. For example, another use case might be to build a list of social media account URLs so that you can separate the links from the markup and style of the icons.
+It's a good idea to keep this pattern in mind and employ it whenever you find opportunities to share _content_ (not code) among multiple pages or templates. For example, another use case might be to build a list of social media account URLs so that you can separate the links from the markup and style of the icons.
 
 Give your browser another look to make sure that those values were updated as you'd expect.
 
-Step 4: The Home Page
----------------------
+## Step 4: The Home Page
 
 Let's take a look at the home page next. We won't abstract this in quite the same way as the interior pages. This is because when we templatized the site, we used a super generic template and put all the unique stuff directly in the home page.
 
@@ -171,8 +159,7 @@ And you could replace the section in `_includes/home.njk` to look like this:
 
 This is a long and often tedious process, but it's a game-changer when it comes to editing your site down the road. I'll leave the rest up to you and share where I ended up after going through the exercise. But first I want to talk about the process of abstracting components.
 
-Step 5: Abstracting Components
-------------------------------
+## Step 5: Abstracting Components
 
 Extracting content from your pages and templates requires that you define the structure of your data. In Step 4, we could see the beginning of that structure — e.g. `jumbotron` was going to be its own section, presumably with multiple properties within it.
 
@@ -211,7 +198,7 @@ For example, in this home page, each of the speakers has a similar shape to its 
               facebook: '#'
               instagram: '#'
 
-This repeatable pattern hints that we could also abstract the code. Instead of having individual HTML for each speaker, we could create another *include* template and render the content of each speaker.
+This repeatable pattern hints that we could also abstract the code. Instead of having individual HTML for each speaker, we could create another _include_ template and render the content of each speaker.
 
 Our `_includes/home.njk` file would include this:
 
@@ -264,7 +251,7 @@ That's 30-some lines of HTML, instead of more than 100! And if you want to chang
 
 Go ahead, try it! Create a new `.md` file. Give it a `content-page` layout (like Terms and Privacy) and `title`, then see it come to life!
 
-Now that you now how to templatize a static HTML site *and* you can separate its content from presentation, you have two very important tools necessary to create rock solid websites with the Jamstack.
+Now that you now how to templatize a static HTML site _and_ you can separate its content from presentation, you have two very important tools necessary to create rock solid websites with the Jamstack.
 
 <span class="post-share-title">Share on:</span>
 
@@ -272,28 +259,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

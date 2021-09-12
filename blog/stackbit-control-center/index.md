@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Get Netlify Build Updates Directly on Your Site!
-================================================
+# Get Netlify Build Updates Directly on Your Site!
 
 Brian Rinaldi — November 06, 2019
 
@@ -17,8 +10,7 @@ Building modern web sites with the [JAMStack](https://jamstack.org/) is generall
 
 Until now, one downside of this has been that the build and deploy process can be a bit opaque. Even small changes to the site files or connected CMS will trigger the build process. Sure, I can log into my Netlify admin, go to my deploys and see the build process happen, but, if you're like me, you're more likely to be sitting on your live web page hitting `⌘+R` every few seconds until the changes are live. Depending on the type of change I made, it may not even be immediately obvious if I'm looking at the old copy of the site or the updated site.
 
-Announcing the Stackbit On-page Control Center
-----------------------------------------------
+## Announcing the Stackbit On-page Control Center
 
 One of Stackbit's goals is to improve the developer experience when building modern web sites. To that end, we're announcing the availability of our new [Stackbit On-Page Control Center](https://www.stackbit.com/control-center/). The control center addresses the issues I discussed above and more. Let's look at some of the features.
 
@@ -36,10 +28,9 @@ If there's a delay or problem with your build, you'll know immediately because t
 
 ### Quick Access to Your Connected Services
 
-Need to go to the Netlify admin console or the GitHub repository associated with your site? The control center gives you quick links directly to those services. This gives you one-stop to access to the tools that run your site *on your site*.
+Need to go to the Netlify admin console or the GitHub repository associated with your site? The control center gives you quick links directly to those services. This gives you one-stop to access to the tools that run your site _on your site_.
 
-How Do I Get the Control Center?
---------------------------------
+## How Do I Get the Control Center?
 
 Maybe you're thinking, "That all sounds cool, but I bet it's a pain to implement." Well, good news - if you're already a Netlify user, integration is just a matter of a couple clicks. Seriously!
 
@@ -54,8 +45,7 @@ So long as your site is deployed to Netlify, yes it will! It doesn't matter if y
 
 If you'd like to know more about how all this works, you can check out the [FAQ](https://www.stackbit.com/control-center/#faq).
 
-We'd Love to Hear From You!
----------------------------
+## We'd Love to Hear From You!
 
 Give the [Stackbit On-Page Control Center](https://www.stackbit.com/control-center/) a try and let us know what you think. We hope it helps make your developer experience even better. We have a ton more features in store, which you can read more about [here](https://www.stackbit.com/live/).
 
@@ -65,28 +55,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

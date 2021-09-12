@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Best Practices for Working with the JAMstack and an API-based CMS
-=================================================================
+# Best Practices for Working with the JAMstack and an API-based CMS
 
 Brian Rinaldi — March 25, 2020
 
@@ -24,8 +19,7 @@ Still, there are a number of stumbling blocks or "gotchas" you may encounter whe
 
 > I want to acknowledge that this article is based heavily on insights shared with me by our amazing engineering team at Stackbit and, in particular, with the assistance of [David Berlin](https://twitter.com/dberlin).
 
-Handle Invalid CMS Content
---------------------------
+## Handle Invalid CMS Content
 
 The ease of editing experience in a headless CMS offers a great deal of flexibility to your content editors. This is part of what makes these systems compelling. But this means that sometimes the content you receive on the frontend may not arrive as you'd planned - perhaps an attribute is missing or doesn't have the type of value you typically expect. Let's look at some strategies and example code for handling unexpected or invalid content.
 
@@ -49,8 +43,7 @@ We'll talk more about handling changes to the underlying data structure in the n
 
 The best way to handle many, if not most, of these issues is to code defensively, so let's discuss that.
 
-Code Defensively
-----------------
+## Code Defensively
 
 As we noted in the prior section, content models may change or disappear or you may be attempting to preview a draft that has not been run through validation. These can cause your site build to fail if not properly accounted for and can lead to major headaches. The way to deal with that is to write a "defensive app" that can handle these changes without failing.
 
@@ -65,8 +58,7 @@ Second, leverage tools that can simplify data access in complex structures. For 
 
 Third, avoid tight coupling by normalizing data as much as possible in the data layer. If you are using React, you would likely create a data layer within React that would handle any data interactions (here's an [8 part series on creating a data layer in React](https://www.bignerdranch.com/blog/react-data-layer-series-part-1/)). If you are using something like Hugo or Jekyll, your data layer could exist within serverless functions that call the API and populate the content within your build process. This data layer will ensure that data is passed consistently and you are protected (as best you can be) from changes in the underlying content model, irregular or missing data in a response or changes to the API.
 
-Leverage the Existing Ecosystem
--------------------------------
+## Leverage the Existing Ecosystem
 
 Developers love to create - it's part of what drives us. Generally, this is great, but it can sometimes lead to a "reinventing the wheel" syndrome. The JAMstack ecosystem isn't always the easiest to navigate, which can amplify the desire to roll your own solution,. Still, this can lead to problems in multiple ways, from not using the best practice methods provided by your particular toolset to not keeping up with potentially breaking changes within updates in your stack. Let's look at some examples of how you can do better by leveraging the tools provided the ecosystem around your chosen stack.
 
@@ -74,8 +66,7 @@ Where there is an existing ecosystem of tools to assist, it's almost always reco
 
 For example, Gatsby has a [source plugin for Contentful](https://www.gatsbyjs.org/packages/gatsby-source-contentful/), [for Sanity](https://www.gatsbyjs.org/packages/gatsby-source-sanity/), [for DatoCMS](https://www.gatsbyjs.org/packages/gatsby-source-datocms/) and more. In cases where there isn't an existing ecosystem of plugins, there may be community tools that you can leverage, but they'll require more effort to vet that they actually enforce best practices. At Stackbit, we released a tool that can help with this called [Sourcebit](https://github.com/stackbithq/sourcebit) which connects the CMS API with the SSG and has existing plugins for Contentful and Sanity on the CMS side and Hugo and Jekyll on the SSG side (for more on how to use Sourcebit, check the [introductory tutorial](https://www.stackbit.com/blog/data-driven-jamstack-sourcebit/)).
 
-Conclusion
-----------
+## Conclusion
 
 Decoupled architectures using a headless CMS offer a ton of benefits. The frontend or the backend can be upgraded without impacting the other. CMS APIs can be accessed from a variety of frontends, whether they are web, mobile apps, voice assistants, chat, etc. Plus, they allow us to leverage the [JAMstack](https://jamstack.org/) and all of it's [benefits](https://jamstack.org/#why). But decoupled architectures also bring in new considerations that may not have existed previously. Following some best practices when working with a CMS and a SSG can take some additional up-front work. However, in the long run, it'll save you a ton of headaches.
 
@@ -85,28 +76,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

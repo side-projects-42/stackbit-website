@@ -1,20 +1,12 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-What to Expect from the JAMstack in 2020 - Ahmad Awais
-======================================================
+# What to Expect from the JAMstack in 2020 - Ahmad Awais
 
 Brian Rinaldi — December 30, 2019
 
 Ahmad Awais of Cloudinary shares what changes we saw in the JAMstack ecosystem in 2019 and what he expects for 2020.
 
-What to Expect from the JAMstack in 2020 - Ahmad Awais
-------------------------------------------------------
+## What to Expect from the JAMstack in 2020 - Ahmad Awais
 
 2019 definitely seemed to be a pivotal year for the JAMstack. New companies cropped up (yep, [us included](https://www.stackbit.com/)), [JAMstack*conf*sf](https://jamstackconf.com/) was the biggest event yet and lots of new tools seemed to gain momentum daily. In this series of posts, we're asking some well-known members of the JAMstack community what they thought about this past year and what they think you can expect for the year to come. This edition features [Ahmad Awais](https://twitter.com/MrAhmadAwais), developer advocate for [Cloudinary](https://cloudinary.com/) and Google Developer Expert.
 
@@ -32,9 +24,9 @@ I use many different kinds of JAMstack. Most notably [Gatsby](https://www.gatsby
 
 Case in point:
 
--   VSCode.pro — My custom-built LMS for the VSCode course that I built using Gatsby.js and hosted with Netlify. This new frontend has outperformed previous sites that had a rather dynamic frontend.
--   [CloudyCAM.dev](https://cloudycam.dev/) — JAMstack site built with Next.js, ZEIT Now (using React.js, Vue.js, and Node.js). CloudyCAM is sort of an IoT setup where we take your picture and a demo page gets generated for you in less than 15 secs, by the time you come to ask about your photos. It showcases how Cloudinary can become your serverless media component that integrates well with JAMstack frameworks. I actually gave a talk about it in more detail at the [BackendlessConf\_](https://www.youtube.com/watch?v=dwpn1pd9kT8).
--   Talks/Presentations: I love markdown and write everything from my emails to [my talks](https://backendlessconf.ahmadawais.com/) and presentations with markdown. Hugo comes in handy here which helps me build my presentations in a super quick manner — like helping me live code in talk while recompiling the slides in a jiffy.
+- VSCode.pro — My custom-built LMS for the VSCode course that I built using Gatsby.js and hosted with Netlify. This new frontend has outperformed previous sites that had a rather dynamic frontend.
+- [CloudyCAM.dev](https://cloudycam.dev/) — JAMstack site built with Next.js, ZEIT Now (using React.js, Vue.js, and Node.js). CloudyCAM is sort of an IoT setup where we take your picture and a demo page gets generated for you in less than 15 secs, by the time you come to ask about your photos. It showcases how Cloudinary can become your serverless media component that integrates well with JAMstack frameworks. I actually gave a talk about it in more detail at the [BackendlessConf\_](https://www.youtube.com/watch?v=dwpn1pd9kT8).
+- Talks/Presentations: I love markdown and write everything from my emails to [my talks](https://backendlessconf.ahmadawais.com/) and presentations with markdown. Hugo comes in handy here which helps me build my presentations in a super quick manner — like helping me live code in talk while recompiling the slides in a jiffy.
 
 When I contributed a codelab to Google's Web.dev site, I found out about [11ty](https://www.11ty.dev/) which I'm also excited about. I think it can be a very good contender for a conference site we are building.
 
@@ -58,28 +50,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

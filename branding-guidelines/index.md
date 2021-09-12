@@ -1,18 +1,10 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Stackbit Branding
-=================
+# Stackbit Branding
 
 Logo Assets & Guidance
 
-Stackbit Logo
--------------
+## Stackbit Logo
 
 We are proud of our logo, and we require that you follow these guidelines to ensure it always acts and behaves the same. Our logo is the combination of a modern monogram and simple wordmark. While the monogram can exist without the wordmark, the wordmark should never exist without the monogram.
 
@@ -24,48 +16,44 @@ We are proud of our logo, and we require that you follow these guidelines to ens
 
 <a href="https://assets.stackbit.com/brand-guidelines/Stackbit-Brand-Assets.zip" class="button-component button-component-theme-accent"><span>Download all logo assets</span></a>
 
-Stackbit Colors
----------------
+## Stackbit Colors
 
 Blue
 
--   RGB 32, 123, 234
--   \#207BEA
+- RGB 32, 123, 234
+- \#207BEA
 
 Dark Grey
 
--   RGB 39, 43, 52
--   \#272B34
+- RGB 39, 43, 52
+- \#272B34
 
-Secondary colours
------------------
+## Secondary colours
 
 Our secondary color palette is used to highlight various elements appropriate to the context.
 
 Green
 
--   RGB 18, 182, 94
--   \#12B65E
+- RGB 18, 182, 94
+- \#12B65E
 
 Orange
 
--   RGB 237, 155, 12
--   \#DF8E00
+- RGB 237, 155, 12
+- \#DF8E00
 
 Grey
 
--   RGB 113, 126, 141
--   \#717E8D
+- RGB 113, 126, 141
+- \#717E8D
 
-Spacing guidelines
-------------------
+## Spacing guidelines
 
 These diagrams below give a general indication of how much spacing is needed to ensure that the logo and monogram aren't bumping up against other elements.
 
 ![Stackbit Logo spacing guidelines](https://assets.stackbit.com/brand-guidelines/stackbit-clear-space.png)
 
-Logo Misuse
------------
+## Logo Misuse
 
 Please help us maintain the integrity of the Stackbit logo and promote the consistency of the brand by not misusing it.
 
@@ -75,8 +63,7 @@ Please help us maintain the integrity of the Stackbit logo and promote the consi
 
 ![Unapproved logo layout](https://assets.stackbit.com/brand-guidelines/stackbit-wrong-layout.png)**Do not use unapproved logo layout**
 
-Stackbit In Press
------------------
+## Stackbit In Press
 
 ### [Intro to Stackbit: Build a Custom JAMstack in Minutes](https://snipcart.com/blog/stackbit "Intro to Stackbit, Build a Custom JAMstack in Minutes")
 
@@ -86,9 +73,7 @@ If this is your first time hearing about Stackbit, don’t worry, it’s pretty 
 
 How long does it take to deploy a JAMstack site from scratch? For those used to work with WordPress and other monolithic architectures, adapting to a completely different way of doing things could represent a time-consuming challenge.
 
-
-
-> <img src="/images/1566230159-jonny-goodwin.jpg" class="avatar" />[Jonny Goodwin<span class="small">@Jonny\_Goodwin</span>](https://twitter.com/Jonny_Goodwin/status/1108768178899951616)
+> <img src="/images/1566230159-jonny-goodwin.jpg" class="avatar" />[Jonny Goodwin<span class="small">@Jonny_Goodwin</span>](https://twitter.com/Jonny_Goodwin/status/1108768178899951616)
 >
 > [@stackbit](https://twitter.com/stackbit) allows you to easily deploy a static site backed with a CMS. Amazing service.
 
@@ -104,28 +89,6 @@ How long does it take to deploy a JAMstack site from scratch? For those used to 
 >
 > Using [@stackbit](https://twitter.com/stackbit) for the first time after getting into the beta. This is a game changer everyone. [\#JamStack](https://twitter.com/hashtag/JamStack?src=hash)
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

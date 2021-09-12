@@ -1,32 +1,25 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Tutorial: Adding Stackbit to a Hugo theme (part 1/2)
-====================================================
+# Tutorial: Adding Stackbit to a Hugo theme (part 1/2)
 
 Robert Austin — August 14, 2019
 
 In this tutorial I'm going to walk you through converting an open source Hugo theme into a Stackbit Uniform theme. You can do this with any Hugo site and once it's done you can import the theme into Stackbit, connect it to a headless CMS and deploy to Netlify in just 1 click.
 
-**Adding Stackbit to a Hugo theme**
------------------------------------
+## **Adding Stackbit to a Hugo theme**
 
 Stackbit recently announced [Custom Themes](https://www.stackbit.com/blog/announcing-custom-themes-and-so-much-more/). Stackbit already has lots of pre-built themes to choose from but what if you want to use your own theme? Or use a theme built on a static site generator that isn't currently supported by Stackbit? That's where custom themes comes in.
 
 Before you start you can try importing the final version of the theme we are going to recreate. Click this link: <https://app.stackbit.com/create?theme=https://github.com/JugglerX/hugo-serif-theme> - Magic!
 
-Quick Overview
---------------
+## Quick Overview
 
 In this tutorial I'm going to use this Github repo as a reference. <https://github.com/stackbithq/uniform-hugo-tutorial>
 
@@ -55,8 +48,7 @@ At this point you will see the validator fails.
 
 Lets go ahead and add the stackbit.yaml
 
-Create a stackbit.yaml file
----------------------------
+## Create a stackbit.yaml file
 
 Create a new file called `stackbit.yaml` in the projects root (same level as the README.md) and add the following fields.
 
@@ -104,8 +96,7 @@ Re-run the validator.
 
 All the basic required fields should be validating, and it's now attempting to load the first pages and match them with content models. So you should be seeing an error at the "Validating Pages" step now.
 
-Adding Content Models
----------------------
+## Adding Content Models
 
 For a CMS to edit your site it needs to understand the content in a structured format that can be mapped to a database and or GUI interface.
 
@@ -326,8 +317,7 @@ The service pages live in `services` folder along with the `_index.md` used by t
             name: weight
             label: Weight
 
-Validating Page Models
-----------------------
+## Validating Page Models
 
 Now we have defined page models for all of our content let's run the validator again and just check in.
 
@@ -374,8 +364,7 @@ Update the service page model and add the weight field.
             name: weight
             label: Weight
 
-Ready To Import
----------------
+## Ready To Import
 
 We've modelled all of the pages in our theme.
 
@@ -383,8 +372,7 @@ Visit <https://app.stackbit.com/create> and import your theme.
 
 There is still more work to do modelling our config and data files but we can leave that for now. You do not have to model data for the theme to import and work with Stackbit. It just means these files will not yet be editable in the CMS.
 
-Choose a CMS and deploy!
-------------------------
+## Choose a CMS and deploy!
 
 You can choose to connect to any CMS at this point. For now let's try DatoCMS. Choose DatoCMS and click "connect accounts". You will need a DatoCMS account, but it should prompt you authenticate or signup or in-app. Once you've connected DatoCMS click "create your project"
 
@@ -392,15 +380,14 @@ Stackbit is now going to convert and build the theme for DatoCMS and deploy it t
 
 Once the site is built you can login to DatoCMS and explore the CMS. Go ahead, edit some of the fields or the content. These changes will be published to your live Netlify site.
 
-Wrapping Up
------------
+## Wrapping Up
 
 That's the first stage to importing a 3rd party Hugo theme into Stackbit. In the next tutorial I'll cover modelling the data and config files and exploring some more advanced field models including object references to better model our menus.
 
 ### Documentation
 
--   The full Uniform spec is available in our docs <https://docs.stackbit.com/uniform/>
--   The code for this tutorial is available on our Github <https://github.com/stackbithq/uniform-hugo-tutorial>
+- The full Uniform spec is available in our docs <https://docs.stackbit.com/uniform/>
+- The code for this tutorial is available on our Github <https://github.com/stackbithq/uniform-hugo-tutorial>
 
 ### Tutorial Part 2
 
@@ -412,28 +399,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

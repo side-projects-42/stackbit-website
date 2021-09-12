@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-15 JAMstack Resources You Need as a Web Developer
-=================================================
+# 15 JAMstack Resources You Need as a Web Developer
 
 Brian Rinaldi — November 20, 2019
 
@@ -22,8 +17,7 @@ The other day my friend Ray and I were asked about whether our book, "[Working w
 
 So what resources would I recommend for developers working with the JAMstack today? Let's take a look at resources for everything from getting started to advanced topics to community.
 
-Getting Started
----------------
+## Getting Started
 
 Are you wondering what the heck the JAMstack is? Or have you seen a lot about it and curious where and how to get started? These resources will help.
 
@@ -43,8 +37,7 @@ This is the only up-to-date general JAMstack book that I'm aware of (though ther
 
 Every worthwhile technology deserves a well-maintained awesome list or everyone will question its legitimacy. Thanks to Vilson Vieira for providing the JAMstack with one.
 
-Ecosystem
----------
+## Ecosystem
 
 So you know what the JAMstack is and are ready to get started, but there are so many tools to choose from. Thankfully there are some good sites that help organize the wide array of tools that make up the JAMstack ecosystem.
 
@@ -60,8 +53,7 @@ In most real-world cases, your JAMstack site will need some sort of content mana
 
 Perhaps, like me, you suck at designing. Or perhaps you simply want a solid head start on your JAMstack site's look and feel. This site, maintained by [Stackbit](https://www.stackbit.com/) where I am a developer advocate, has over 400 themes filterable by static site generator and CMS.
 
-Digging Deeper
---------------
+## Digging Deeper
 
 Alright, you're already well into building your first JAMstack site and now you're looking for a way to keep up with new developments, trends and learn advanced techniques. Well, here are some useful sites to get you going.
 
@@ -73,8 +65,7 @@ Alright, you're already well into building your first JAMstack site and now you'
 
 Both Dev.to and CSS-Tricks are two of the best developer resources on the web in their own right, but they've both included a ton of articles on the JAMstack in recent months from a variety of outstanding authors.
 
-The Community
--------------
+## The Community
 
 After your initial experiences with the JAMstack, you're now in love with it...because of course you are! You want to get more involved in the community - getting to know folks who contribute to it, helping out others who want to get started. Here are some great resources to do that.
 
@@ -86,7 +77,7 @@ The New Dynamic slack is an extension of the New Dynamic site and newsletter and
 
 JAMstack Radio, hosted by Brian Douglas, centers on interviews with individuals and companies working in the JAMstack. That's My JAMstack also focuses on interviews but with the goal of understanding people's journey into learning the JAMstack.
 
-### 15. [JAMstack\_conf](https://jamstackconf.com/)
+### 15. [JAMstack_conf](https://jamstackconf.com/)
 
 While there are [JAMstack meetups](https://jamstack.org/community/) in a number of cities around the world, this is the one major event focused solely on the topic. Hosted by Netlify, the conference has been held in New York, London and San Francisco. The best part for those of us who missed it is that the recent [JAMstack*conf*sf](https://jamstackconf.com/sf/schedule/) has all its sessions recorded and online.
 
@@ -96,28 +87,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Bringing Next.js to the JAMstack
-================================
+# Bringing Next.js to the JAMstack
 
 Simon Hanukaev — March 16, 2020
 
@@ -17,34 +10,32 @@ Next.js is a great React framework that can be used for server-rendered sites an
 
 Fortunately, Next.js recently added [next-gen static site generation (SSG) support](https://nextjs.org/blog/next-9-3#next-gen-static-site-generation-ssg-support). With these new APIs, it is now possible to configure Next.js to generate JAMstack sites supporting advanced features like data pre-fetching and client-side rendering. And as before, the content of these sites can be driven by a headless CMS. Still, it is not always trivial to configure and integrate Next.js with a headless CMS. Moreover, generating the static assets is only one side of the story — what about the development experience while developing or authoring a static site? In this post, I will discuss some of the areas that can still improve in the Next.js experience for developing JAMstack sites and how a new open source project called [Sourcebit](https://github.com/stackbithq/sourcebit) can help to fill those gaps.
 
-What's the Optimal JAMstack Setup?
-----------------------------------
+## What's the Optimal JAMstack Setup?
 
 Let's ask ourselves what features would create the optimal development experience for both developers and users for JAMstack sites built with a headless CMS? Personally, I have a number of requirements that I find to be useful when developing or authoring, and later deploying, a JAMstack site. I have divided these requirements into two groups. The first group consists of requirements intended to improve developer experience while developing and authoring a static site. The second group is intended to improve the user experience for users browsing a static site after it has been built and deployed.
 
 ### DX requirements
 
--   **Live update on code change** - when site code is changed, instantly update the currently opened page in the browser using hot module replacement (HMR) or live reload.
--   **Live update on content change** - when the site content is changed, instantly update the currently opened page in the browser using HMR or live reload. The content can be stored in local files or served via API, for example by a headless CMS.
--   **Content caching** - when starting a local development server or building a production site, the remote content should be fetched sparingly. Some headless CMS limit the number of monthly requests per pricing plan. If used wastefully, API access might be blocked or incur extra charges. Instead of executing an API call every time a page is requested and pre-rendered, a single API call should be made when the development server starts, fetch the whole content and cache it for future use.
--   **Observe content changes** - because content is cached, we need to observe content changes and update the cache with a fresh content. The client should be notified about the changes and trigger a live update. To prevent API overuse, observing content should be done in an optimized manner. The changes should be pushed by the content provider rather than being frequently pulled by a server. For example, instead of frequently polling the content provider for content changes, a web-hook or other method of notification should be considered.
--   **Server-side rendering on page request** - whenever a page is requested, the fully generated page should be returned to the client. For React-based SSGs, the page should be hydrated on the client. Cached content should be used to reduce API usage of external services.
--   **Client-side rendering on client-side navigation** - whenever internal site navigation occurs, the loaded page should be rendered on the client without triggering a full browser page load.
+- **Live update on code change** - when site code is changed, instantly update the currently opened page in the browser using hot module replacement (HMR) or live reload.
+- **Live update on content change** - when the site content is changed, instantly update the currently opened page in the browser using HMR or live reload. The content can be stored in local files or served via API, for example by a headless CMS.
+- **Content caching** - when starting a local development server or building a production site, the remote content should be fetched sparingly. Some headless CMS limit the number of monthly requests per pricing plan. If used wastefully, API access might be blocked or incur extra charges. Instead of executing an API call every time a page is requested and pre-rendered, a single API call should be made when the development server starts, fetch the whole content and cache it for future use.
+- **Observe content changes** - because content is cached, we need to observe content changes and update the cache with a fresh content. The client should be notified about the changes and trigger a live update. To prevent API overuse, observing content should be done in an optimized manner. The changes should be pushed by the content provider rather than being frequently pulled by a server. For example, instead of frequently polling the content provider for content changes, a web-hook or other method of notification should be considered.
+- **Server-side rendering on page request** - whenever a page is requested, the fully generated page should be returned to the client. For React-based SSGs, the page should be hydrated on the client. Cached content should be used to reduce API usage of external services.
+- **Client-side rendering on client-side navigation** - whenever internal site navigation occurs, the loaded page should be rendered on the client without triggering a full browser page load.
 
 ### UX requirements
 
--   **Pre-render pages into static files** - every page should be pre-rendered into a static HTML file, which can then be served from a CDN hosting service like [Netlify](https://www.netlify.com/) or [Zeit](https://zeit.co/). For React-based SSGs, the page should be hydrated on the client.
--   **Data pre-fetching** - pre-fetch data for pages that link from the current page. There are different strategies to data pre-fetching such as "pre-fetch when a link is scrolled into the view" (Next.js) or "pre-fetch when hovering over a link" (Gatsby).
--   **Client-side rendering on client side navigation** - whenever internal site navigation occurs, the loaded page should be rendered on client without triggering full browser page load, preemptively triggering a data pre-fetch.
+- **Pre-render pages into static files** - every page should be pre-rendered into a static HTML file, which can then be served from a CDN hosting service like [Netlify](https://www.netlify.com/) or [Zeit](https://zeit.co/). For React-based SSGs, the page should be hydrated on the client.
+- **Data pre-fetching** - pre-fetch data for pages that link from the current page. There are different strategies to data pre-fetching such as "pre-fetch when a link is scrolled into the view" (Next.js) or "pre-fetch when hovering over a link" (Gatsby).
+- **Client-side rendering on client side navigation** - whenever internal site navigation occurs, the loaded page should be rendered on client without triggering full browser page load, preemptively triggering a data pre-fetch.
 
 Now that we know what we want, let's see what is missing to achieve it in Next.js. Luckily not much, and the missing requirements are all related to DX.
 
--   **Live updates on content change** - right now, Next.js does not have any special capability to update the page when its content changes. In the next section we'll see how it can be solved.
--   **Content caching** - while content caching is not a Next.js responsibility, it has an [issue](https://github.com/zeit/next.js/issues/10933) that prevents using in-memory caching. We can solve this as well.
--   **Observing content changes** - as with the content caching, observing content changes is not a Next.js responsibility, but specific to the content source itself. In the following section I'll give an example of how content changes can be observed using Sanity's [listen API](https://www.sanity.io/docs/listening).
+- **Live updates on content change** - right now, Next.js does not have any special capability to update the page when its content changes. In the next section we'll see how it can be solved.
+- **Content caching** - while content caching is not a Next.js responsibility, it has an [issue](https://github.com/zeit/next.js/issues/10933) that prevents using in-memory caching. We can solve this as well.
+- **Observing content changes** - as with the content caching, observing content changes is not a Next.js responsibility, but specific to the content source itself. In the following section I'll give an example of how content changes can be observed using Sanity's [listen API](https://www.sanity.io/docs/listening).
 
-Bringing It All Together with Sourcebit
----------------------------------------
+## Bringing It All Together with Sourcebit
 
 [Sourcebit](https://github.com/stackbithq/sourcebit) is an open-source tool that closes the gap between headless CMS and static site generators such as Next.js. It is driven by different plugins that fetch data from any possible API source, transform and normalize the data into a format expected by an SSG, and eventually provide that data to the SSG.
 
@@ -88,7 +79,7 @@ For each selected model, you will then be asked for the path to the page within 
 
 The "page" model represents content that will sit at the root of the site, so rather I can enter a custom value for that of `/{slug}`.
 
-The final step is to choose which content models represent data that we will want to include as props in all pages within our Next.js application. In my case, I want both the "site\_config" model and "posts" available.
+The final step is to choose which content models represent data that we will want to include as props in all pages within our Next.js application. In my case, I want both the "site_config" model and "posts" available.
 
 ![Assigning props](/images/1584364817-nextjs-step5-sm.png)
 
@@ -148,9 +139,9 @@ Alternatively, instead of including `sourcebit.fetch()` in your code, you can ru
 
 Next, you'll need to update your page components to get their static paths and static props from Sourcebit:
 
--   Call `sourcebitDataClient.getStaticPaths()` from within `getStaticPaths` in pages with [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes)
--   Call `sourcebitDataClient.getStaticPropsForPageAtPath(pagePath)` from within `getStaticProps`, passing the URL path of the page to be rendered. You can compute this path by applying `params` provided by `getStaticProps` and the dynamic route pattern of the page component.
--   Wrap your component with the provided `withRemoteDataUpdates` higher order component (HOC ) to trigger live updates when content changes. This HOC does nothing when Next.js is not in development mode.
+- Call `sourcebitDataClient.getStaticPaths()` from within `getStaticPaths` in pages with [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes)
+- Call `sourcebitDataClient.getStaticPropsForPageAtPath(pagePath)` from within `getStaticProps`, passing the URL path of the page to be rendered. You can compute this path by applying `params` provided by `getStaticProps` and the dynamic route pattern of the page component.
+- Wrap your component with the provided `withRemoteDataUpdates` higher order component (HOC ) to trigger live updates when content changes. This HOC does nothing when Next.js is not in development mode.
 
 Below is an example template that you can use for pages coming from the Sourcebit source data.
 
@@ -188,8 +179,7 @@ The Next.js application is now pulling data directly from Sanity and any updates
 
 You can view the source code of a complete project built using Sourcebit, Next.js and Sanity at <https://github.com/stackbithq/azimuth-nextjs-sanity>.
 
-Where To Go From Here
----------------------
+## Where To Go From Here
 
 We believe the combination of Sourcebit and Next.js offers developers the power to quickly and easily create powerful, next-generation JAMstack applications. The new features in Next.js truly make it a fantastic choice for the JAMstack and Sourcebit simplifies the process of connecting the application to a variety of data sources.
 
@@ -203,28 +193,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

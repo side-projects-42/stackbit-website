@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-How to Convert Static HTML into Powerful Templates
-==================================================
+# How to Convert Static HTML into Powerful Templates
 
 Sean C Davis — August 10, 2021
 
@@ -15,29 +8,27 @@ One of the first stops on the Jamstack is to move from static HTML files to a st
 
 You've gone through the design process in building a website, but now you're left with a handful of HTML files, along with some images and one or more CSS and JavaScript files, and you want to know what to do with them? Great! Let's talk about it.
 
-You *could* deploy (i.e. publish) them, and eventually you will, otherwise no one will see your site. But deploying at this point is only going to get you so far. Inevitably, you’re going to want to change something with the site, and then what? Are you going to go all the way through the design process again? That sounds … *painful.*
+You _could_ deploy (i.e. publish) them, and eventually you will, otherwise no one will see your site. But deploying at this point is only going to get you so far. Inevitably, you’re going to want to change something with the site, and then what? Are you going to go all the way through the design process again? That sounds … _painful._
 
-A more sustainable approach is to take the static HTML content you were given and *templatize it!* Make it easier for you to work with — to make changes and to create new pages — when the need arises.
+A more sustainable approach is to take the static HTML content you were given and _templatize it!_ Make it easier for you to work with — to make changes and to create new pages — when the need arises.
 
-Why templatize a website?
--------------------------
+## Why templatize a website?
 
-This process has one major benefit — *reusability*. It makes the act of adjusting structure or content relatively trivial when compared with having to work with individual HTML files. That process can be further enhanced by separating content from presentation, so that when all you need to do is change a few words, you know right where to go and never have to mess with any of the code. (We have a detailed guide for that, but you’ll want to follow this one first.)
+This process has one major benefit — _reusability_. It makes the act of adjusting structure or content relatively trivial when compared with having to work with individual HTML files. That process can be further enhanced by separating content from presentation, so that when all you need to do is change a few words, you know right where to go and never have to mess with any of the code. (We have a detailed guide for that, but you’ll want to follow this one first.)
 
-Consider two typical and simple content pages that most sites have — *Terms & Conditions* and *Privacy Policy*. They often have the same header and footer. It’s just the content in the middle of the page that differs (though the *structure* is likely similar). With those pages as separate HTML files, when you want to change something in a shared section — like the header or footer — you have to make the change in both places.
+Consider two typical and simple content pages that most sites have — _Terms & Conditions_ and _Privacy Policy_. They often have the same header and footer. It’s just the content in the middle of the page that differs (though the _structure_ is likely similar). With those pages as separate HTML files, when you want to change something in a shared section — like the header or footer — you have to make the change in both places.
 
-Expand that example to a site that has hundreds of pages with a similar structure (like blog posts). You’d be making that change hundreds or *thousands* of times, depending on the size of your site.
+Expand that example to a site that has hundreds of pages with a similar structure (like blog posts). You’d be making that change hundreds or _thousands_ of times, depending on the size of your site.
 
-Following a software development principle called [*don’t repeat yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (often referred to as *DRY code*), you could build the site with reusable pieces. Then you can make each change once and have it work everywhere. This is the magic of templatizing.
+Following a software development principle called [_don’t repeat yourself_](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (often referred to as _DRY code_), you could build the site with reusable pieces. Then you can make each change once and have it work everywhere. This is the magic of templatizing.
 
-How templatizing works
-----------------------
+## How templatizing works
 
 When you have no templates and only HTML, the code on each page is unique and lives within its own file. Take a super simple site that has a home page (`index.html`), along with Terms (`terms.html`) and Privacy (`privacy.html`) pages. Your files look like this, where the dark blue boxes represent the code unique to each page:
 
 ![Before templatizing, each page is unique.](/images/210720--templatizing-before.png)
 
-Now let’s say the header on the home page is unique, but the header on the Terms and Privacy (i.e. *interior*) pages could be shared. And maybe the footer is the same on every page. Then we could make the header and footer into their own files and share them among multiple pages. Like this:
+Now let’s say the header on the home page is unique, but the header on the Terms and Privacy (i.e. _interior_) pages could be shared. And maybe the footer is the same on every page. Then we could make the header and footer into their own files and share them among multiple pages. Like this:
 
 ![After templatizing, the header and footer can be shared where appropriate.](/images/210720--templatizing-after.png)
 
@@ -47,30 +38,27 @@ This is a super simplistic view to show the power that even small abstractions c
 
 But how do we actually do this?
 
-Static site generators are here to save the day!
-------------------------------------------------
+## Static site generators are here to save the day!
 
-Unfortunately, the web isn’t built to work with templates. We can’t actually just add a `footer.html` file and then tell every page to include it and have the browser work. In the end, the browser expects a *single* HTML file. In other words, the browser actually *wants* the non-templatized version of the two scenarios above.
+Unfortunately, the web isn’t built to work with templates. We can’t actually just add a `footer.html` file and then tell every page to include it and have the browser work. In the end, the browser expects a _single_ HTML file. In other words, the browser actually _wants_ the non-templatized version of the two scenarios above.
 
-But that’s not how we want to work. It’s tedious and prone to errors. If you want the footer to look the same everywhere, it should *be* the same everywhere. Otherwise, you risk making inadvertent changes on random pages. To help with this process we can use a tool called a [static site generator](https://www.seancdavis.com/blog/wtf-is-ssg/).
+But that’s not how we want to work. It’s tedious and prone to errors. If you want the footer to look the same everywhere, it should _be_ the same everywhere. Otherwise, you risk making inadvertent changes on random pages. To help with this process we can use a tool called a [static site generator](https://www.seancdavis.com/blog/wtf-is-ssg/).
 
 [There are many to choose from](https://jamstack.org/generators/), perhaps including some popular ones you may have heard of, such as [Jekyll](https://jekyllrb.com/), [Gatsby](https://www.gatsbyjs.com/), [Next.js](https://nextjs.org/), or [Hugo](https://gohugo.io/). Here we’re going to use one called [Eleventy](https://www.11ty.dev/).
 
-What’s so great about Eleventy?
--------------------------------
+## What’s so great about Eleventy?
 
 Eleventy isn’t as popular as some of its competition, but it is supreme in its approach, which is simplicity. It is modeled after Jekyll, which provides a super low barrier to getting started when compared with the rest of the field. But unlike Jekyll, it is written entirely in JavaScript, which makes it a great fit for folks getting started with building websites.
 
 Eleventy can also be super powerful. It takes more customization as your site grows in complexity, but it can grow with you. [My site](https://www.seancdavis.com/) has several hundred pages and, at the time of writing this, is built entirely through Eleventy.
 
-Okay, *now* are you convinced you should templatize those HTML files?
+Okay, _now_ are you convinced you should templatize those HTML files?
 
 Hooray! Me too.
 
 Let’s do it!
 
-Step 1: The Static Site
------------------------
+## Step 1: The Static Site
 
 Let’s work through this process together using a real-world example. We’re going to build a super simple version of [the Unmute website](https://www.unmutedstories.com/). (Unmute is a real thing — a side project I’m working on with a few nerdy friends.)
 
@@ -78,25 +66,23 @@ We’ll have a unique [home](https://stackbit-jamstack-journey.netlify.app/) [pa
 
 Let’s say the output of the whatever process you went through to obtain the files for your site left you with [this mess](https://github.com/seancdavis/stackbit-jamstack-journey/tree/2c600cc/02-static-site/www):
 
--   `css/styles.css` to hold all your styling for the site.
--   `js/bundle.js` which handles the carousel at the bottom of the home page.
--   `images` as a house for all visual assets.
--   `index.html` to represent your home page.
--   `content-page.html` to represent all other internal pages.
+- `css/styles.css` to hold all your styling for the site.
+- `js/bundle.js` which handles the carousel at the bottom of the home page.
+- `images` as a house for all visual assets.
+- `index.html` to represent your home page.
+- `content-page.html` to represent all other internal pages.
 
 **Gotcha!** Take note that we’re making a big assumption here. We’re assuming that you won’t need to mess with your `styles.css` or `bundle.js` file. They were bundled up nicely for you by the freelance dev and you won’t need to make changes.
 
-In the real world, it can be a tricky process to take big, bulky, obfuscated CSS and JS files and create a method for adding to them. And it gets even more complicated if you ever have to go back to the developer for changes *after* you’ve customized one of these.
+In the real world, it can be a tricky process to take big, bulky, obfuscated CSS and JS files and create a method for adding to them. And it gets even more complicated if you ever have to go back to the developer for changes _after_ you’ve customized one of these.
 
 As a result, we’re considering that process outside the scope of this guide. However, if this need arises, I’ve written a couple relatively simple guides on how to achieve this for both [CSS](https://www.seancdavis.com/blog/getting-started-with-postcss/) and [JavaScript](https://www.seancdavis.com/blog/javascript-webpack-build-pipeline/).
 
-Step 2: Create a New Project
-----------------------------
+## Step 2: Create a New Project
 
 Add the contents of the example static project to some directory on your machine. [Here’s a link to download the larger example](https://github.com/seancdavis/stackbit-jamstack-journey/archive/refs/tags/v1-draft.zip). After doing that, you can find the appropriate files in the `02-static-site/www` directory. Move these files into a new directory on your machine. Your folder’s contents [should look like this](https://github.com/seancdavis/stackbit-jamstack-journey/tree/88e200d/03-templated-site).
 
-Step 3: Setup Eleventy
-----------------------
+## Step 3: Setup Eleventy
 
 We’re going to assume you have a computer that is setup for web development. (If not, [here’s a guide](https://www.seancdavis.com/blog/new-mac-dev-guide/) I wrote on setting up a new Mac for development.)
 
@@ -111,7 +97,7 @@ Once you’re ready to go, open up your command line or terminal application, ch
     # install eleventy
     npm install -D @11ty/eleventy
 
-*Note: If you’re tracking your changes with* [*Git*](https://git-scm.com/)*, this is a great spot to initialize the repository (*`git init`*) and add* `node_modules` *to a* `.gitignore` *file. If you’re not working with Git, don’t worry about this right now.*
+_Note: If you’re tracking your changes with_ [_Git_](https://git-scm.com/)_, this is a great spot to initialize the repository (_`git init`_) and add_ `node_modules` _to a_ `.gitignore` _file. If you’re not working with Git, don’t worry about this right now._
 
 I like to add a few shortcuts after this installation to make working with sites more consistent across my machine. Open your `package.json` file and add the following to the `scripts` section:
 
@@ -133,7 +119,7 @@ Now we have a way to run an Eleventy development server. Run the following comma
 
 You should now have a dev server running at localhost:8000. And you’ll notice you now have a new `_site` directory in your project. Eleventy did this automatically for you.
 
-You can open your browser and visit localhost:8000 to see your site, and … *something doesn’t look right.*
+You can open your browser and visit localhost:8000 to see your site, and … _something doesn’t look right._
 
 ![Where the heck are our styles??](/images/210720--unmute-unstyled.png)
 
@@ -152,12 +138,11 @@ Give the browser a refresh and everything should look good again!
 
 ![Phew! That’s better.](/images/210720--unmute-styled.png)
 
-*Note: Throughout this guide, when making changes, you may have to clear the cache on your browser. Most browsers have an option to reload while clearing the cache for that site.*
+_Note: Throughout this guide, when making changes, you may have to clear the cache on your browser. Most browsers have an option to reload while clearing the cache for that site._
 
-Step 4: The Default Layout
---------------------------
+## Step 4: The Default Layout
 
-In Eleventy (and most static site generators), each page is wrapped in a *layout*. A layout is just a fancy term for a template. We’re going to begin by creating a default layout. This will be code that every page uses. We do this because, as we’ll soon see, Eleventy supports nesting layouts within one another. So what we’re going to do here is define our base layout.
+In Eleventy (and most static site generators), each page is wrapped in a _layout_. A layout is just a fancy term for a template. We’re going to begin by creating a default layout. This will be code that every page uses. We do this because, as we’ll soon see, Eleventy supports nesting layouts within one another. So what we’re going to do here is define our base layout.
 
 In looking at `index.html` and `content-page.html`, the code that is consistent between the two is mostly contained within the `<head>` tag, but also includes a few lines at the very bottom of the file. Here’s what it looks like:
 
@@ -195,12 +180,11 @@ Three items are important to note in this new template:
 
 1.  We changed the file extension from `.html` to `.njk`. This means we’re using [Nunjucks](https://mozilla.github.io/nunjucks/) as our templating language. Eleventy supports [a number of](https://www.11ty.dev/docs/languages/) languages. Nunjucks is nice for staying with our theme of using JavaScript. And it’s also fairly minimalistic, which is nice for our example.
 2.  We added a single Nunjucks variable, `content` and passed a `safe` filter to it. `content` tells Nunjucks to render the content of the each page in that area. That means all of our page content will fall where you see `{{ content | safe }}`.
-3.  The `_includes` directory has some special characteristics that make it easy to … well, *include* files. [Read more here](https://www.11ty.dev/docs/config/#directory-for-includes).
+3.  The `_includes` directory has some special characteristics that make it easy to … well, _include_ files. [Read more here](https://www.11ty.dev/docs/config/#directory-for-includes).
 
 Nothing has changed if we refresh the browser because we haven’t wired these up yet. When we go to the home page, we’re still just looking at `index.html`, which isn’t using our new layout yet.
 
-Step 5: Wrap the home page in the new layout
---------------------------------------------
+## Step 5: Wrap the home page in the new layout
 
 Let’s adjust our home page to use the new layout.
 
@@ -208,7 +192,7 @@ Begin by changing `index.html` to `index.njk`. This is going to help us in the f
 
 Now, remove all the code you extracted to create the layout and refresh your browser.
 
-*What the heck?* You’re back to a page without styles. What happened?
+_What the heck?_ You’re back to a page without styles. What happened?
 
 What happened is that you removed your references to the CSS and JS files, which were in the `<head>` and near the bottom of the `<body>`, but you didn’t tell Eleventy to use a layout. So let’s change that. Add the following at the top of your `index.njk` file:
 
@@ -218,7 +202,7 @@ What happened is that you removed your references to the CSS and JS files, which
 
 Now refresh the browser and you should see your styles come back!
 
-This style code — three hyphens, then some code, then three more hyphens — is called [*frontmatter*](https://www.seancdavis.com/blog/wtf-is-frontmatter/). It’s like *code before the code*. It provides us a space to place meta information about that file that won’t ultimately be written to your browser screen.
+This style code — three hyphens, then some code, then three more hyphens — is called [_frontmatter_](https://www.seancdavis.com/blog/wtf-is-frontmatter/). It’s like _code before the code_. It provides us a space to place meta information about that file that won’t ultimately be written to your browser screen.
 
 The last thing to note here is that you will want to either remove or change the comments in your code. Nunjucks comments look a little different than HTML comments (although they will ultimately still be treated as comments, so you can ignore this if you’d like).
 
@@ -226,8 +210,7 @@ Any code between `<!--` and `-->` is an HTML comment. Either remove these or cha
 
 In the end, [this is what your new `index.njk` file should look like](https://github.com/seancdavis/stackbit-jamstack-journey/tree/b0b554e/03-templated-site/index.njk).
 
-Step 6: Content Pages
----------------------
+## Step 6: Content Pages
 
 Now let’s add a couple plain content pages. Our developer delivered a generic content page to us called `content-page.html`. We want to use that to create multiple pages. In this case, maybe those are Terms & Conditions and Privacy Policy pages.
 
@@ -249,12 +232,11 @@ Now you can go to localhost:8000/terms and localhost:8000/privacy and you should
 
 Here are the links to these files at this stage:
 
--   [`_includes/content-page.njk`](https://github.com/seancdavis/stackbit-jamstack-journey/tree/b709edb/03-templated-site/_includes/content-page.njk)
--   [`terms.njk`](https://github.com/seancdavis/stackbit-jamstack-journey/tree/b709edb/03-templated-site/terms.njk)
--   [`privacy.njk`](https://github.com/seancdavis/stackbit-jamstack-journey/tree/b709edb/03-templated-site/privacy.njk)
+- [`_includes/content-page.njk`](https://github.com/seancdavis/stackbit-jamstack-journey/tree/b709edb/03-templated-site/_includes/content-page.njk)
+- [`terms.njk`](https://github.com/seancdavis/stackbit-jamstack-journey/tree/b709edb/03-templated-site/terms.njk)
+- [`privacy.njk`](https://github.com/seancdavis/stackbit-jamstack-journey/tree/b709edb/03-templated-site/privacy.njk)
 
-Step 7: Extracting Shared Code
-------------------------------
+## Step 7: Extracting Shared Code
 
 Now you’re in good shape and have a pattern to create new pages with a nice layout. Any new file you create with the “content-page” layout will now have a header and footer wrapping your content.
 
@@ -268,12 +250,11 @@ Let’s make that easier. Pull the footer content into its own file in the `_inc
 
 Now you can make the change once and see it work everywhere. For example, you could [add links to the terms and privacy pages](https://github.com/seancdavis/stackbit-jamstack-journey/commit/bf4025d).
 
-*Note: You could have chosen to include the footer directly in the default layout, or even reference in in the default layout. This is entirely up to you and your project. In this case, I’m accounting for some future template that won’t want the footer. But if we’re sure every page wants the footer, maybe it makes sense to put it in the default layout.*
+_Note: You could have chosen to include the footer directly in the default layout, or even reference in in the default layout. This is entirely up to you and your project. In this case, I’m accounting for some future template that won’t want the footer. But if we’re sure every page wants the footer, maybe it makes sense to put it in the default layout._
 
-Other Opportunities
--------------------
+## Other Opportunities
 
-As your site grows, you’ll find other opportunities for improvement and abstraction (*abstraction* being the process of cleaning up code to be shared).
+As your site grows, you’ll find other opportunities for improvement and abstraction (_abstraction_ being the process of cleaning up code to be shared).
 
 ### Shared Images
 
@@ -304,8 +285,7 @@ The world is your oyster when it comes to finding these efficiencies. It’s all
 
 I bucketed a handful of these changes together and did them all at once. [Here are the changes I made](https://github.com/seancdavis/stackbit-jamstack-journey/commit/6e9cb47) and [the files in the project at this point](https://github.com/seancdavis/stackbit-jamstack-journey/tree/6e9cb47/03-templated-site).
 
-Wrapping Up
------------
+## Wrapping Up
 
 Phew! Take a break, give yourself a pat on the back. This process can be a harrowing one, especially the first time around. If you’ve made it through, you deserve a break and some ice cream.
 
@@ -325,28 +305,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

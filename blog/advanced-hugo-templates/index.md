@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Advanced Hugo Template Tips and Tricks
-======================================
+# Advanced Hugo Template Tips and Tricks
 
 Brian Rinaldi — April 20, 2020
 
@@ -22,8 +17,7 @@ Hugo's Go-powered templates can accomplish some very powerful templating tasks. 
 
 Hugo uses Go's [text](https://golang.org/pkg/text/template/) and [HTML](https://golang.org/pkg/html/template/) templates that underly a lot of the core features you'll use in every template, but it adds a [long list of functions](https://gohugo.io/functions/) that help you accomplish some pretty complex templating tasks. In this article, I'm going to discuss some of the things you may encounter or need as you develop more complex Hugo templates. This is by no means a comprehensive list, but they are things that I've personally needed (or needed help with) when developing with Hugo.
 
-Scoping
--------
+## Scoping
 
 One of the things you will encounter regularly in Hugo once you get beyond the basics are issues around the current scope (sometimes also called context). If you've done any kind of Hugo templating, you'll be used to typing the leading `.` on a value or even the `.` by itself but never thought much about it.
 
@@ -39,7 +33,7 @@ The most common time you'll encounter scope being changed is when looping over v
 
 In the above example, `.Permalink` and `.Title` refer to the current iteration of `.Pages` rather than the current page. This can get complex when you have multiple nested loops, but generally it makes sense. However, sometimes it is useful to change the base scope, while other times you are likely to encounter weird issues that are often related to scope. Let's look at these.
 
-*Régis Philibert has a great deep dive into this topic that is worth checking out: [Hugo, the scope, the context and the dot](https://regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/).*
+_Régis Philibert has a great deep dive into this topic that is worth checking out: [Hugo, the scope, the context and the dot](https://regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/)._
 
 ### with
 
@@ -67,7 +61,7 @@ I have found `with` especially useful in combination with `GetPage` to scope out
 
 ### Scratch
 
-I have to admit that for the longest time I never understood the need for [`.Scratch`](https://gohugo.io/functions/scratch/), but as your templates get more complex, you'll occasionally run into hard to figure out scope issues. It's even a little tough to describe scenarios where it is useful but, most often, when I received seemingly unexplainable errors related to undefined variables (ones that I *knew* existed), it was usually because I was encountering a scoping issue where `.Scratch` is useful.
+I have to admit that for the longest time I never understood the need for [`.Scratch`](https://gohugo.io/functions/scratch/), but as your templates get more complex, you'll occasionally run into hard to figure out scope issues. It's even a little tough to describe scenarios where it is useful but, most often, when I received seemingly unexplainable errors related to undefined variables (ones that I _knew_ existed), it was usually because I was encountering a scoping issue where `.Scratch` is useful.
 
 Most of these issues involve when you move into a different scope within a block, but then need to access some of the data outside that block (i.e. when in a different scope). Let's take the following code where, within a `with` block I need to set a variable. I should note that this example is purposefully contrived to create the problem in a way to make it clear the type of problems `.Scratch` solves.
 
@@ -83,8 +77,7 @@ As I said, this is an intentionally contrived example and it is worth noting tha
 
 Still, as your templates get more complex you may into these sorts of issues in various places and it's good to be aware that `.Scratch` might be useful.
 
-GetPage
--------
+## GetPage
 
 Sometimes you need to load the contents of another page on a template. For example, a blog post template may require author information that is contained in a page in the `/authors` directory. I could load my author information that exists at `/authors/brian-rinaldi.md` as follows:
 
@@ -102,8 +95,7 @@ What if we need to dynamically generate the URL? In this case, I've found that u
 
     {{ $author := print "/authors/" .Params.author }} {{ with .GetPage $author }} {{.Title}} {{end}}
 
-Complex Querying
-----------------
+## Complex Querying
 
 If you've done any templating in Hugo, you've probably used the [`where` function](https://gohugo.io/functions/where/) to filter an array of results. For example, if I wanted only pages in the blog section, I might do something like this:
 
@@ -143,8 +135,7 @@ In this case, the results do not exclude pages that have other characters listed
     </ul>
     {{ end }}
 
-Index
------
+## Index
 
 The [`index` function](https://gohugo.io/functions/index-function/) is most commonly useful when you need to get a specific object in an array of data. For example, let's take the following data set:
 
@@ -173,10 +164,9 @@ However, `index` can also be useful in cases where you need to pull a specific i
 
     {{ $events := where .Site.RegularPages ".Params.sessions" "intersect" $eventArr }} {{ $event := index $events 0 }}
 
-Where to Go From Here
----------------------
+## Where to Go From Here
 
-Hopefully you find these tips helpful. Obviously, there's *a lot* that I didn't cover. The first place to check for help is the [Hugo docs](https://gohugo.io/documentation/), which are very well written and comprehensive - always including a relevant code sample. I definitely recommend following [Régis Philibert's blog](https://regisphilibert.com/blog/) as he covers a lot of beginner and advanced Hugo topics (and thanks to him for his review of this post).
+Hopefully you find these tips helpful. Obviously, there's _a lot_ that I didn't cover. The first place to check for help is the [Hugo docs](https://gohugo.io/documentation/), which are very well written and comprehensive - always including a relevant code sample. I definitely recommend following [Régis Philibert's blog](https://regisphilibert.com/blog/) as he covers a lot of beginner and advanced Hugo topics (and thanks to him for his review of this post).
 
 <span class="post-share-title">Share on:</span>
 
@@ -184,28 +174,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

@@ -1,20 +1,12 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Tutorial: Adding Stackbit to a Jekyll theme
-===========================================
+# Tutorial: Adding Stackbit to a Jekyll theme
 
 Tomas Bankauskas — September 01, 2019
 
 In this tutorial you will learn how to convert your Jekyll theme to a [Stackbit Uniform theme](https://www.stackbit.com/uniform-themes/). With Stackbit Uniform, you can connect your theme to headless CMS and deploy it to Netlify in minutes.
 
-Overview
---------
+## Overview
 
 For this tutorial we are going to use the following process:
 
@@ -25,15 +17,13 @@ For this tutorial we are going to use the following process:
 5.  Validate our theme with the Stackbit CLI validator
 6.  Import the converted theme to Stackbit and connect it to a CMS of your choice.
 
-Overview How Stackbit Works
----------------------------
+## Overview How Stackbit Works
 
 To make your Jekyll theme work with Stackbit, you will need to create the stackbit.yaml file in the root folder of your theme. In this file you will define content models which map your theme content to a structured schema.
 
 ![Overview How Stackbit Works](/images/1567335214-how-stackbit-works.jpg)
 
-Prepare Our Development Environment
------------------------------------
+## Prepare Our Development Environment
 
 To start things off, first create the Stackbit account. Then fork the repo at [uniform-jekyll-tutorial](https://github.com/stackbithq/uniform-jekyll-tutorial) and clone it to your local machine. It will be our starting point. For testing and debugging we will need to install [Unibit CLI](https://docs.stackbit.com/unibit/unibit-cli/) from Stackbit. It will help us to validate the theme.
 
@@ -41,8 +31,7 @@ To start things off, first create the Stackbit account. Then fork the repo at [u
 
 After the installation is complete, we are ready to go.
 
-Create the stackbit.yaml File in the Jekyll Theme and Add Required Fields
--------------------------------------------------------------------------
+## Create the stackbit.yaml File in the Jekyll Theme and Add Required Fields
 
 When you have the repo cloned and Unibit CLI set up on your local machine, let's move on and create the **stackbit.yaml** file in the Jekyll theme root directory. After you did that, add the basic fields to the file:
 
@@ -64,8 +53,7 @@ The next step is to add the required fields to the file. As the name suggests th
 
 If you want to learn more about these fields, please head on to the [Stackbit Docs](https://docs.stackbit.com/uniform/stackbit-yaml/).
 
-Define Content Models in stackbit.yaml
---------------------------------------
+## Define Content Models in stackbit.yaml
 
 Now we begin the most interesting part, adding content models to the stackbit.yaml file. These models are necessary for CMS to understand your content in a structured way. There are a few types of content models — page models, data models, field models and object models. We use page models to map all our pages, data models to map everything that is inside the data directory and in the config.yml file, and field models to define individual fields of page, data and object models.
 
@@ -73,16 +61,16 @@ Before we begin creating content models, let's create the list of what kind of c
 
 **Page Models**
 
--   Posts
--   Pages
--   Tags page
--   404 page
+- Posts
+- Pages
+- Tags page
+- 404 page
 
 **Data Models**
 
--   Author information
--   Social links
--   config.yml
+- Author information
+- Social links
+- config.yml
 
 To start creating content models, add `models:` to the stackbit.yaml file below the `pageTemplateKey: layout` field. All other models (page, data and object) are nested under this field:
 
@@ -499,8 +487,7 @@ Now we will create a new page model "notfound" and specify the necessary fields 
           label: Permalink
           description: The permalink of the page.
 
-Validate Our Theme with the Stackbit CLI Validator
---------------------------------------------------
+## Validate Our Theme with the Stackbit CLI Validator
 
 Now when we have defined all content models for our theme, let's run the validator again (`unibit validate`) and check if we haven't missed anything.
 
@@ -550,8 +537,7 @@ Now when we have defined all content models for our theme, let's run the validat
 
 Our theme has passed the validation and now we are ready to import it into Stackbit.
 
-Import the Converted Theme to Stackbit and Connect to a CMS of Your Choice
---------------------------------------------------------------------------
+## Import the Converted Theme to Stackbit and Connect to a CMS of Your Choice
 
 Visit <https://app.stackbit.com/create> and import your theme.
 
@@ -559,21 +545,18 @@ Visit <https://app.stackbit.com/create> and import your theme.
 
 Stackbit will check the theme again, and if everything is OK, you can select the CMS you want and let Stackbit connect your theme to the CMS and deploy it to Netlify.
 
-Trying Out Different CMSs the Easy Way
---------------------------------------
+## Trying Out Different CMSs the Easy Way
 
 With Stackbit and Uniform theme (a theme with the stackbit.yaml file), you can explore different CMSs quick and easy. For example, if you have never tried Dato or Contentful CMS before, you can do it now with just a few clicks and see if these CMS's are the right choice for you.
 
-Conclusion
-----------
+## Conclusion
 
 This Jekyll Uniform theme tutorial was quite long but hopefully you’ve seen that Jekyll and Stackbit make an incredible duo for spinning rapid JAMstack sites on Netlify. Don’t stop here! I encourage you to further explore [Uniform Themes](https://docs.stackbit.com/uniform/) and tinker with Stackbit on your own.
 
-Further Reading
----------------
+## Further Reading
 
--   [Uniform spec](https://docs.stackbit.com/uniform/)
--   [Tutorial: Adding Stackbit to a Hugo theme](https://www.stackbit.com/blog/hugo-stackbit-tutorial/)
+- [Uniform spec](https://docs.stackbit.com/uniform/)
+- [Tutorial: Adding Stackbit to a Hugo theme](https://www.stackbit.com/blog/hugo-stackbit-tutorial/)
 
 <span class="post-share-title">Share on:</span>
 
@@ -581,28 +564,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

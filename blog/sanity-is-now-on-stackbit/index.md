@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Sanity.io is now on Stackbit!
-=============================
+# Sanity.io is now on Stackbit!
 
 Rodik Hanukaev — September 17, 2019
 
@@ -21,8 +14,7 @@ Sanity's Studio is actually its own little customizable JAMstack app that deploy
 
 ![](/images/1568750824-untitled-2.png)
 
-Faster builds
--------------
+## Faster builds
 
 Stackbit helps you hit the ground running by pre-building Sanity Studio on your first deploy, so that your site could be live and editable in 2 minutes!
 
@@ -30,8 +22,7 @@ Want to customize your Sanity Studio? Just push your changes to the studio sourc
 
 In order to reduce the overhead of having an additional deployment for your studio (reducing overheads is kinda what we do here at Stackbit), we've utilized Sanity's own deploy service to build and host your studio on Sanity's convenience service. If you need more control, it's just as easy to move your studio to a host of your choice.
 
-Integrating with Sanity
------------------------
+## Integrating with Sanity
 
 We'd like to shoutout a huge thanks to the team at Sanity for working together with us on this feature! It's amazing how even collaborating with other companies in 2019 is bleeding edge, with Slack's shared channels and the way a chat message can turn into a working oAuth integration in moments.
 
@@ -49,28 +40,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

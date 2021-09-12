@@ -1,33 +1,24 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Introducing jamstack.new
-========================
+# Introducing jamstack.new
 
 Eduardo Bouças — October 05, 2020
 
 We're excited to announce a nifty little shortcut for creating new Jamstack sites: here's [jamstack.new](https://jamstack.new/info).
 
-Introducing jamstack.new
-------------------------
+## Introducing jamstack.new
 
 A couple of months ago, our friends at CodeSandbox [announced a cool set of domains](https://twitter.com/compuives/status/1291020566221205511) that allow anyone to instantly create a project with a specific stack.
 
 Off the back of this announcement, [Dave Darnes](https://twitter.com/daviddarnes) floated the idea of having a `.new` domain as a launchpad for the Jamstack. This made me go frantically check whether a very special keyword had already been taken – to my absolute surprise, [jamstack.new](https://jamstack.new/info) was still available. We had to get it!
 
-I shared this in our company Slack, pitching it in a very calm matter. It's just a domain, after all. I do *NOT* get overly excited about domain names.
+I shared this in our company Slack, pitching it in a very calm matter. It's just a domain, after all. I do _NOT_ get overly excited about domain names.
 
 ![Screenshot of the Stackbit Slack](/images/blog/jamstack-new-slack.png)
 
 Sure enough, we got the domain and we're putting it to good use. Do you need a new Jamstack site? Simple! Head to [jamstack.new](https://jamstack.new). 🌈
 
-Choose your flavor
-------------------
+## Choose your flavor
 
 We built this as a tool for the community to use. You don't need to memorize the right combinations of tools to pick or the install commands needed to get them working – your next site is just one catchy URL away.
 
@@ -43,28 +34,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

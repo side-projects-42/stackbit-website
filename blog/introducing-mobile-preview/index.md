@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-New Shortcut to See your Site on Mobile
-=======================================
+# New Shortcut to See your Site on Mobile
 
 Dwayne McDaniel — November 30, 2020
 
@@ -20,9 +15,9 @@ Most of the people who visit your website probably do so on a mobile device. But
 
 Creating a site today means building for mobile. As most developers, designers and marketers likely know:
 
--   [Since 2018 most website visits have been from a mobile device](https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/)
--   [Mobile traffic has an annual growth rate of 46%](https://www.statista.com/statistics/271405/global-mobile-data-traffic-forecast/)
--   [Mobile commerce is expected to drive almost 50% of ecommerce sales by 2022](https://www.forbes.com/sites/shelleykohan/2020/02/09/mobile-commerce-to-grow-68-by-2022-as-more-people-shop-on-their-phones)
+- [Since 2018 most website visits have been from a mobile device](https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/)
+- [Mobile traffic has an annual growth rate of 46%](https://www.statista.com/statistics/271405/global-mobile-data-traffic-forecast/)
+- [Mobile commerce is expected to drive almost 50% of ecommerce sales by 2022](https://www.forbes.com/sites/shelleykohan/2020/02/09/mobile-commerce-to-grow-68-by-2022-as-more-people-shop-on-their-phones)
 
 But we don’t build websites on our mobile devices. We develop websites and content primarily from our laptops, spending hours making sure things look just right on our computer monitors. We are then faced with making sure it looks good on much smaller screens.
 
@@ -32,10 +27,9 @@ The other common path is deploying the site and then checking it out on a mobile
 
 For most people working on Jamstack websites, they just want to see what our design and content changes look like on a real device with less complexity.
 
-New Tools for Previews on the Jamstack
---------------------------------------
+## New Tools for Previews on the Jamstack
 
-Wouldn't it be great to have a handy tool that shows you instantly what your site will *actually* look like on mobile, without deploying or using emulators? We thought so too.
+Wouldn't it be great to have a handy tool that shows you instantly what your site will _actually_ look like on mobile, without deploying or using emulators? We thought so too.
 
 Stackbit Studio now offers two ways to easily check for mobile responsiveness on your real device:
 
@@ -50,21 +44,19 @@ The new mobile preview makes it even easier to view your site on a mobile device
 
 This is really handy for:
 
--   Designers who want to make sure that their work looks great on mobile
--   Developers to make sure the site looks and behaves on mobile as intended
--   Marketers who are changing texts and need to see, in real time, what their edits look like on mobile
+- Designers who want to make sure that their work looks great on mobile
+- Developers to make sure the site looks and behaves on mobile as intended
+- Marketers who are changing texts and need to see, in real time, what their edits look like on mobile
 
-Making the Jamstack more Mobile Friendly
-----------------------------------------
+## Making the Jamstack more Mobile Friendly
 
 We want to empower marketers, designers and developers with the right tools to deliver truly responsive, beautiful Jamstack websites. This goes beyond this mobile preview. We try to deliver on this with all of our features.
 
-This is why *all* of the [pre-integrated themes](https://app.stackbit.com/edit/5fb71bc69a53b1001c9704d3/theme) in the Stackbit Site Builder are responsive, right out of the box. And because our themes work with common static site generators like [Gatsby](https://www.gatsbyjs.com/), [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/) and more, you are free to leverage the tools you like while making the internet awesome.
+This is why _all_ of the [pre-integrated themes](https://app.stackbit.com/edit/5fb71bc69a53b1001c9704d3/theme) in the Stackbit Site Builder are responsive, right out of the box. And because our themes work with common static site generators like [Gatsby](https://www.gatsbyjs.com/), [Hugo](https://gohugo.io/), [Jekyll](https://jekyllrb.com/) and more, you are free to leverage the tools you like while making the internet awesome.
 
 ![Stackbit Site Builder Theme selection menu](/images/blog/Stackbit-Studio-Select-A-Theme.png)
 
-Get Building for Mobile
------------------------
+## Get Building for Mobile
 
 We believe Jamstack is the future. Website builders should be able to get the best results without having to wire it all up themselves, by themselves. We hope our new mobile preview makes your website building experience a little easier.
 
@@ -78,28 +70,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

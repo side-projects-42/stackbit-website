@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Voice Assistants and the JAMstack
-=================================
+# Voice Assistants and the JAMstack
 
 Raymond Camden — January 29, 2020
 
@@ -17,29 +10,27 @@ I've got over ten thousand Twitter followers, so that officially means I'm an "i
 
 In this article I'll talk about what a voice assistant is and how it relates to your JAMStack projects.
 
-Basic Voice Assistant Concepts
-------------------------------
+## Basic Voice Assistant Concepts
 
-Voice assistants involve a lot more than just speech recognition. A good voice assistant can understand the context and *intent* of what you ask, and then use that understanding to drive a conversation between the user and your services. As a simple example of this, users do not need to speak a precise phrase in order to work with a good voice assistant. Instead they can speak as they would to any other human and the voice assistant will understand their intent and communicate it to your code.
+Voice assistants involve a lot more than just speech recognition. A good voice assistant can understand the context and _intent_ of what you ask, and then use that understanding to drive a conversation between the user and your services. As a simple example of this, users do not need to speak a precise phrase in order to work with a good voice assistant. Instead they can speak as they would to any other human and the voice assistant will understand their intent and communicate it to your code.
 
 When we speak about voice assistants, we generally speak about two main ones: Google Assistant and Amazon Alexa. Apple's Siri, while used quite heavily, must be tied to an app on the device, unlike Google Assistant and Alexa.
 
 While a detailed look at how to build for Google and Amazon is outside the scope of this article, in general a voice assistant app (or skill as Amazon calls them) comes down to a few parts:
 
--   **Intents** are where you describe the kind of things you would say to the service. When I go to Starbucks, I'm generally going to ask about a product and order a product. I'm not going to ask about the weather. The topics of things a user may ask would be considered intents.
--   Intents are fleshed out with **utterances**. That's a fancy way of saying example phrases. "I'd like a coffee." "I want a coffee!" "Please give me a coffee!" "I'd like an espresso." These are all sample utterances. The nice thing is you don't have to provide every single possible combination. By using powerful AI and other Ph.D.-level computer science stuff, your voice assistant can figure out that "I'd like a damn coffee" is close enough to match the intent of asking for a product.
--   Intents can also support **variables** or dynamic aspects. Alexa calls these **slots**. For example, I might say "I want a coffee" versus "I want an espresso". While both are the same intent, which is me wanting to order something, the actual product (coffee or espresso) is the dynamic part.
--   The final aspect is your code that responds to the information sent by the assistant. What's cool is that the voice assistance platform will do the heavy lifting for you and just simply *tell* your code, "the user wants to order something and the thing she wants is a coffee." Your code can then return a response and the voice assistant will handle speaking it out loud to the user.
+- **Intents** are where you describe the kind of things you would say to the service. When I go to Starbucks, I'm generally going to ask about a product and order a product. I'm not going to ask about the weather. The topics of things a user may ask would be considered intents.
+- Intents are fleshed out with **utterances**. That's a fancy way of saying example phrases. "I'd like a coffee." "I want a coffee!" "Please give me a coffee!" "I'd like an espresso." These are all sample utterances. The nice thing is you don't have to provide every single possible combination. By using powerful AI and other Ph.D.-level computer science stuff, your voice assistant can figure out that "I'd like a damn coffee" is close enough to match the intent of asking for a product.
+- Intents can also support **variables** or dynamic aspects. Alexa calls these **slots**. For example, I might say "I want a coffee" versus "I want an espresso". While both are the same intent, which is me wanting to order something, the actual product (coffee or espresso) is the dynamic part.
+- The final aspect is your code that responds to the information sent by the assistant. What's cool is that the voice assistance platform will do the heavy lifting for you and just simply _tell_ your code, "the user wants to order something and the thing she wants is a coffee." Your code can then return a response and the voice assistant will handle speaking it out loud to the user.
 
 There's a lot more to this of course and I'd encourage you to read this great Smashing Magazine article on the topic for a deeper look, ["Creating Voice Skills For Google Assistant And Amazon Alexa"](https://www.smashingmagazine.com/2019/12/voice-skills-google-assistant-amazon-alexa/)
 
 Typically the process to create a voice assistant comes down to:
 
--   Configuration on the platform side. So for example, with Alexa I use a web site to define my skill, write out my intents and utterances, and so forth.
--   I then write the code to process and respond to requests. Again, the voice assistant is doing the hard work. My code literally listens for a request that specifies the intent and any variables. I can do whatever my business logic needs and then return a JSON packet. The voice assistant takes that simple JSON result and speaks it to the user.
+- Configuration on the platform side. So for example, with Alexa I use a web site to define my skill, write out my intents and utterances, and so forth.
+- I then write the code to process and respond to requests. Again, the voice assistant is doing the hard work. My code literally listens for a request that specifies the intent and any variables. I can do whatever my business logic needs and then return a JSON packet. The voice assistant takes that simple JSON result and speaks it to the user.
 
-JAMstack Voice Assistants
--------------------------
+## JAMstack Voice Assistants
 
 So how does this apply to the JAMstack?
 
@@ -97,9 +88,9 @@ In this imagined scenario, editing that core JSON file means you can control bot
 
 Perhaps the only truly difficult (or convoluted) aspect to this scenario is letting your serverless code have access to the same JSON data driving the site. Here's where things can get a bit complex. As always, I like to remind folks that adopting the JAMStack doesn't always mean everything is simpler.
 
--   The first issue you run into is that the JSON used is not necessarily available in the final static site. In Eleventy's example, it's used to build the site, but not used in the final site.
--   That's no problem though - you could build a page meant for the final site that has the JSON. You could literally output the global data as is, or you could massage that data a bit. It's possible you may have values there you don't want public.
--   Ok, so now you have JSON at mysite.com/products.json, but then your serverless function needs to hit it. You could make a HTTP request. In other words, Alexa fires a HTTP request to your serverless endpoint for your voice assistant, your code makes a HTTP request to your site, and then return the right data. This immediately raises a red flag for me, but it's not necessarily a bad idea either. You could also store it in RAM and if your skill is active, it wouldn't need to be re-fetched. The reason for the network request is that even if your serverless function lies at `mysite.com/functions/foo`, it isn't on the same filesystem as `mysite.com/products.json`. Netlify has a possible solution for this (and thank you [@\_munter](https://twitter.com/_munter_) for the tip!) - [build functions](https://github.com/netlify/build#lifecycleonbuild). You could use the build plugin process to provide the JSON data to the serverless functions *before* the functions get deployed.
+- The first issue you run into is that the JSON used is not necessarily available in the final static site. In Eleventy's example, it's used to build the site, but not used in the final site.
+- That's no problem though - you could build a page meant for the final site that has the JSON. You could literally output the global data as is, or you could massage that data a bit. It's possible you may have values there you don't want public.
+- Ok, so now you have JSON at mysite.com/products.json, but then your serverless function needs to hit it. You could make a HTTP request. In other words, Alexa fires a HTTP request to your serverless endpoint for your voice assistant, your code makes a HTTP request to your site, and then return the right data. This immediately raises a red flag for me, but it's not necessarily a bad idea either. You could also store it in RAM and if your skill is active, it wouldn't need to be re-fetched. The reason for the network request is that even if your serverless function lies at `mysite.com/functions/foo`, it isn't on the same filesystem as `mysite.com/products.json`. Netlify has a possible solution for this (and thank you [@\_munter](https://twitter.com/_munter_) for the tip!) - [build functions](https://github.com/netlify/build#lifecycleonbuild). You could use the build plugin process to provide the JSON data to the serverless functions _before_ the functions get deployed.
 
 If you've done this and have your JSON data available, what does the code look like for a simple voice assistant? Keeping in mind we're simplifying things quite a bit, here's what that code could look like as a Netlify serverless function.
 
@@ -148,8 +139,7 @@ Alexa sends information about the request in a JSON packet to your endpoint. Par
 
 As I said above, how the serverless code gets access to your static site data will depend on the platform. You absolutely could use a HTTP request to load the data, but it would be more performant to use your build process to provide the data to the function instead.
 
-Where To Go From Here
----------------------
+## Where To Go From Here
 
 While I think we're all already thinking a lot about the ways we can add features to the JAMStack, I hope this article inspires you to consider integrating a voice assistant as well. I'd love to hear from folks who may be doing this already (and again, I mean something with "tight" integration between HTML and voice) so please be sure to drop me a comment below!
 
@@ -161,28 +151,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

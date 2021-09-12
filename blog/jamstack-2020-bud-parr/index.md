@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-What to Expect from the JAMstack in 2020 - Bud Parr
-===================================================
+# What to Expect from the JAMstack in 2020 - Bud Parr
 
 Brian Rinaldi — December 23, 2019
 
@@ -32,13 +27,11 @@ We use [Hugo](https://gohugo.io/) quite a bit, along with [Forestry](https://for
 
 I'm really excited about what's happening in the headless CMS space. I think tools like [Sanity.io](https://www.sanity.io/) fulfill the promise of a true headless CMS with its [structured content](https://www.sanity.io/structured-content), and other tools, like [Prismic](https://prismic.io/) and [Ghost](https://ghost.org/) are great editing experiences. I'm also excited about the potential of [Svelte/Sapper](https://sapper.svelte.dev/), which is a [NextJS](https://nextjs.org/)-style web application framework along the same line as React or Vue, but with a much smaller footprint as it compiles to vanilla Javascript. I can see a tool like that providing a lot of flexibility for developers who may need JAMstack at times, and server-rendered sites or applications at others.
 
-What changes did you see, for better or worse, in 2019 related to the JAMstack ecosystem?
------------------------------------------------------------------------------------------
+## What changes did you see, for better or worse, in 2019 related to the JAMstack ecosystem?
 
 The JAMstack has become more mainstream this year, and with that a set of expectations that will be hard to meet as the basis of comparison changes. When we began building static sites it was for the security, stability and efficiency gains, and, importantly, eschewing unnecessary complexity. It took a fairly radical re-think to get things done, but we were free to pick and choose the best tools for a job. Maybe I just got used to it being a little bit painful 😉, but as the ecosystem grows to ease that pain, abstractions arrive to meet expectations of developer experience and new, ever more complicated use-cases; until we're right back lamenting the monoliths we've created that we sought to escape in the first place.
 
-What changes in 2020 do you see forthcoming that will have an impact on adoption of or day-to-day development using the JAMstack?
----------------------------------------------------------------------------------------------------------------------------------
+## What changes in 2020 do you see forthcoming that will have an impact on adoption of or day-to-day development using the JAMstack?
 
 I'm always surprised by new tools people create and look forward to watching more innovation in 2020. The most impactful recent innovation we've benefited from is the growth of serverless functions, which allow us to sprinkle in backend functionality where we need it to enhance the front-end of our sites. We use these quite a bit at our firm today and I only see that growing. I think there's a lot of room for developers to do interesting things there. I imagine serverless going fairly "codeless" in the near future, which will open up all sorts of functionality while making them more stable and create a sharing ecosystem of functions.
 
@@ -48,28 +41,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

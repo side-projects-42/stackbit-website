@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-What is Markdown and Why Does it Matter to the Jamstack?
-========================================================
+# What is Markdown and Why Does it Matter to the Jamstack?
 
 Brian Rinaldi — May 19, 2020
 
@@ -17,8 +10,7 @@ Markdown has become so ubiquitous to developers that it is often taken for grant
 
 If you're unfamilar with Markdown but find yourself writing or editing content for Jamstack sites, you may be wondering what all this weird formatting is all about. In this post, I hope to offer some background on what Markdown is and the role it typically plays in the Jamstack.
 
-A Brief History of Markdown
----------------------------
+## A Brief History of Markdown
 
 Markdown was originally [released in 2004 by John Gruber](https://daringfireball.net/projects/markdown/) who was already very well known for his Apple-focused blog. He created the syntax in collaboration with Aaron Swartz, co-founder of Reddit.
 
@@ -41,8 +33,7 @@ The most accurate list I can find identifies [36 flavors of Markdown](https://gi
 
 These issues led to the creation of the [CommonMark specification](https://commonmark.org/), which aimed to create a clear and evolving standard for Markdown syntax. While this has lead to some programs and Markdown implementations to adopt the standard, the adoption has been far from universal. Thankfully, in most cases the rendering differences tend to be small.
 
-Markdown and Static Site Generators
------------------------------------
+## Markdown and Static Site Generators
 
 Jekyll was one of the earliest static site generators that gained widespread adoption, partly because it was the default tool supported in GitHub Pages. Jekyll moved from Textile markup to Markdown in 2008 with the release of [v0.1.3](https://jekyllrb.com/docs/history/#v0-1-3). Most of the popular static site generators that followed also supported Markdown by default.
 
@@ -66,8 +57,7 @@ Here's a very simple example of YAML frontmatter you might find in a Jekyll post
 
 In some cases, this front matter can contain the majority of the content of a page. For example, a site's home page can often have long and complex front matter that defines content for the various sections and sub-sections within the design.
 
-Markdown in the Modern Jamstack
--------------------------------
+## Markdown in the Modern Jamstack
 
 Markdown's central place in static site generators means that it remains a key ingredient in modern Jamstack applications. This has hardly diminished as Jamstack applications have moved towards headless CMS for managing content.
 
@@ -97,17 +87,16 @@ Markdown's inability to easily embed complex UI elements has led to a further ex
 
 MDX aims to solve that problem by allowing the author to embed [JSX](https://reactjs.org/docs/introducing-jsx.html), which are effectively a JavaScript representation of HTML, into Markdown text. With the widespread usage of React-based static site generators like Next.js and Gatsby, usage of MDX has grown. It remains very much a developer-centric solution though, and not something one would anticipate that a non-developer content author or editor would need to become familiar with.
 
-Where to Go From Here
----------------------
+## Where to Go From Here
 
 If you already know Markdown, then hopefully this was a good look at the ecosystem that relies on it. If you are new to Markdown, then hopefully this offered some good background on what it is and how to use it. Regardless, I wanted to leave you with some resources and tools related to using Markdown.
 
--   [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) - a comprehensive overview of Markdown and usage of the GitHub flavored Markdown syntax.
--   [CommonMark Markdown Tutorial](https://commonmark.org/help/) - a good reference for a common flavor of Markdown syntax. It'll teach you the basics that cross the various implementations and has a good interactive tutorial for learning Markdown syntax.
--   [Typora](https://typora.io/) - an excellent editor (still in beta and free) for writing and reading Markdown available for MacOS, Windows and Linux.
--   [Paste as Markdown](http://markitdown.medusis.com/) - for when you need to quickly convert rich text copied (ex. from the browser) to Markdown.
--   [Word to Markdown converter](https://word2md.com/) - while far from perfect, this tool can help in a crunch to comnvert Word documents.
--   [Deckset](https://www.deckset.com/) - a tool I enjoy for creating full slide decks using only Markdown (Mac only).
+- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) - a comprehensive overview of Markdown and usage of the GitHub flavored Markdown syntax.
+- [CommonMark Markdown Tutorial](https://commonmark.org/help/) - a good reference for a common flavor of Markdown syntax. It'll teach you the basics that cross the various implementations and has a good interactive tutorial for learning Markdown syntax.
+- [Typora](https://typora.io/) - an excellent editor (still in beta and free) for writing and reading Markdown available for MacOS, Windows and Linux.
+- [Paste as Markdown](http://markitdown.medusis.com/) - for when you need to quickly convert rich text copied (ex. from the browser) to Markdown.
+- [Word to Markdown converter](https://word2md.com/) - while far from perfect, this tool can help in a crunch to comnvert Word documents.
+- [Deckset](https://www.deckset.com/) - a tool I enjoy for creating full slide decks using only Markdown (Mac only).
 
 <span class="post-share-title">Share on:</span>
 
@@ -115,28 +104,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

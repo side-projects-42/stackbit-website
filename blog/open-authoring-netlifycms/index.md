@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Creating a JAMstack Site with Open Authoring Using Netlify CMS
-==============================================================
+# Creating a JAMstack Site with Open Authoring Using Netlify CMS
 
 Brian Rinaldi — December 09, 2019
 
@@ -19,8 +12,7 @@ When it comes to JAMstack sites, this community-driven content is often powered 
 
 However, a new feature of [Netlify CMS](https://www.netlifycms.org) called [open authoring](https://www.netlifycms.org/docs/open-authoring) makes this process as easy as editing content directly in the CMS - the forking and pull requests are all handled behind the scenes. In this post, I'm going to walk through the steps to set up open authoring using Netlify CMS on a site built originally with [Stackbit](https://www.stackbit.com/).
 
-What is Netlify CMS and Open Authoring?
----------------------------------------
+## What is Netlify CMS and Open Authoring?
 
 Netlify CMS is an open source project maintained by Netlify. It is what's often called a git-based CMS. As a git-based CMS, Netlify CMS provides the UI and tools to maintain the content, but the content itself is stored as files within a git repository and versioning is handled by the repository. Under a typical deployment, user access might be managed by Netlify Identity (or a third-party integration) and you'd invite contributors who are granted access to your CMS admin to edit content. You might have a workflow in place, but editing content is still limited to a small group with specially granted access.
 
@@ -28,8 +20,7 @@ With a site designed to have "crowdsourced" content, you'd need access to be pub
 
 Here's a quick overview of how it works. Open authoring uses GitHub authentication, meaning essentially that anyone with a GitHub account can add or modify content on your site. Content edits are work by creating a fork of your project and, when they submit their change for review, submitting as a pull request. However, while the whole fork and pull request process underpins the feature, it is (mostly) transparent to the user who simply makes changes to the content in the CMS. This means that, other than requiring a GitHub account, contributing content should be easily accessible to anyone, regardless of their level of technical knowledge.
 
-The Example Site
-----------------
+## The Example Site
 
 The example we'll review for this tutorial is a site I just launched called [RageQuit.tips](https://ragequit.tips/) that is designed to be community resource on the topic of [burnout](https://www.psychologytoday.com/us/basics/burnout). Burnout is [defined](https://www.merriam-webster.com/dictionary/burnout) as "exhaustion of physical or emotional strength or motivation usually as a result of prolonged stress or frustration." It is generally associated with job stress and is something that many of us have faced, regardless what industry we work in. The idea for the site is to allow the community to share experiences and resources related to dealing with burnout.
 
@@ -37,16 +28,15 @@ If you are interested in the topic of burnout, please check it out. And if you h
 
 The site was built using the following technologies:
 
--   [Stackbit](https://www.stackbit.com/) - Stackbit allowed the site and CMS to be easily generated using a theme, which was later customized to meet the site's specific needs.
--   [Jekyll](https://jekyllrb.com/) - The underlying static site generator is Jekyll . This was chosen to make source contributions easier as it is one of the oldest and most widely known static site generators.
--   [Netlify CMS](https://www.netlifycms.org/) - As mentioned earlier, this is an open source, git-based CMS.
--   [Netlify](https://www.netlify.com/) - Netlify is used to deploy and host the site, but also maintains the hooks needed to authenticate into the CMS via GitHub.
--   [GitHub](https://github.com) - GitHub manages the repository but also handles the authentication.
+- [Stackbit](https://www.stackbit.com/) - Stackbit allowed the site and CMS to be easily generated using a theme, which was later customized to meet the site's specific needs.
+- [Jekyll](https://jekyllrb.com/) - The underlying static site generator is Jekyll . This was chosen to make source contributions easier as it is one of the oldest and most widely known static site generators.
+- [Netlify CMS](https://www.netlifycms.org/) - As mentioned earlier, this is an open source, git-based CMS.
+- [Netlify](https://www.netlify.com/) - Netlify is used to deploy and host the site, but also maintains the hooks needed to authenticate into the CMS via GitHub.
+- [GitHub](https://github.com) - GitHub manages the repository but also handles the authentication.
 
 Using this site's code as an example, let's explore the steps to enable open authoring on a Netlify CMS site.
 
-Getting Started
----------------
+## Getting Started
 
 Stackbit provides a great tool that makes it easy to get started with a CMS-driven JAMstack site, including Netlify CMS. The best part, for the design-impaired like me, is that it comes with selection of attractive templates. I won't run through the process too deeply here, but basically you choose a theme, then a static site generator and finally a CMS. You can [try it out for yourself here](https://app.stackbit.com/create).
 
@@ -78,8 +68,7 @@ The second solution, which is what I chose to do, is to make the change above an
 
 While harder to maintain, the benefit of the second solution is that you can retain content in subfolders and avoid making difficult layout changes. In theory, once Netlify CMS supports this feature, you can just remove all the additional models.
 
-Configuring Netlify CMS for Open Authoring
-------------------------------------------
+## Configuring Netlify CMS for Open Authoring
 
 Firstly, open authoring is a beta feature. So we need to change the project to use the beta release of the project. Open up `admin/index.html` and replace the source for `netlify-cms.js` with the beta release.
 
@@ -119,8 +108,7 @@ If you commit these changes or test locally and go to your site's `admin`, you'l
 
 That's it! Open authoring is now enabled and anyone can access your `/admin` and add or edit content. Their experience will be slightly different than yours though, so let's take a look at that.
 
-The End User Experience
------------------------
+## The End User Experience
 
 Assuming someone now accesses your `/admin`, what's the experience going to be like?
 
@@ -154,7 +142,7 @@ This works because there is a collection with `name: post` in the `config.yml` f
 
     <a href="/admin/#/collections/post/{{page.name | replace: ".md", ""}}" class="button">Edit this post</a>
 
-Let's look at one more example of something slightly more complicated. As you may recall from *much* earlier in this post, in my case, I created a number of content mappings comprising the [resources section](https://ragequit.tips/resources/) of RageQuit.tips. In this section, I wanted you to be able to edit any existing page or add a page to the current section. The way I did this without needing to create a different layout template for each subsection was to standardize how the sections were named in the config based upon their subfolder. So, for example, `/resources/faq` would be defined as a content model of `resources_faq` in the CMS. I could then replace text within the path and link to the correct section in the CMS.
+Let's look at one more example of something slightly more complicated. As you may recall from _much_ earlier in this post, in my case, I created a number of content mappings comprising the [resources section](https://ragequit.tips/resources/) of RageQuit.tips. In this section, I wanted you to be able to edit any existing page or add a page to the current section. The way I did this without needing to create a different layout template for each subsection was to standardize how the sections were named in the config based upon their subfolder. So, for example, `/resources/faq` would be defined as a content model of `resources_faq` in the CMS. I could then replace text within the path and link to the correct section in the CMS.
 
     {% assign collection_path = page.path | replace: '.md', '' %} {% assign collection_array = collection_path | split: "/" %}
     <!-- the root content model name is just resources so checking if we aren't in the root -->
@@ -171,8 +159,7 @@ Let's look at one more example of something slightly more complicated. As you ma
 
 You can see more details about the current end-user editing experience in the [RageQuit.tips contribution guide](https://ragequit.tips/contribute/).
 
-A Powerful Tool for Enabling Community Contribution
----------------------------------------------------
+## A Powerful Tool for Enabling Community Contribution
 
 Open authoring in Netlify CMS is a really great addition. I think it has some rough edges that might hinder non-technical users from contributing - things like the GitHub account requirement and the prompt to "fork", for instance. It is a beta feature after all. However, despite what the length of this post might imply (verbosity is my core competency), it's actually surprisingly easy to implement and use.
 
@@ -186,28 +173,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

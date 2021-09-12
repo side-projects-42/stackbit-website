@@ -1,24 +1,16 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Getting Started with Ecommerce and the JAMstack
-===============================================
+# Getting Started with Ecommerce and the JAMstack
 
 Brian Rinaldi — March 19, 2020
 
 A look at some of the options for building an ecommerce site using the JAMstack including a demo that shows how to easily build am ecommerce site using a headless CMS and Snipcart.
 
-Just a handful of years ago, when I was deeply enthralled with something called "static sites" and "static site generators," the idea of building an ecommerce site using these tools seemed a little bit ridiculous. Everything required for an ecommerce site shouted "*Dynamic!*" - including maintaining a product library to creating a shopping cart. However, the modern JAMstack, with its rich array of services and APIs makes building ecommerce site surprisingly easy.
+Just a handful of years ago, when I was deeply enthralled with something called "static sites" and "static site generators," the idea of building an ecommerce site using these tools seemed a little bit ridiculous. Everything required for an ecommerce site shouted "_Dynamic!_" - including maintaining a product library to creating a shopping cart. However, the modern JAMstack, with its rich array of services and APIs makes building ecommerce site surprisingly easy.
 
 In this post, we'll look at some of the options for building an ecommerce site using the JAMstack. Then we'll dig into a demo to show how easily it can be built using modern tools for managing the content and enabling the shopping cart and checkout functionality.
 
-Options for Ecommerce
----------------------
+## Options for Ecommerce
 
 The good news is that you have a ton of options when it comes to choosing how to enable ecommerce on your JAMstack site using headless ecommerce solutions. Headless ecommerce, much like a headless CMS, decouples the tooling and management needed for a storefront and checkout from the frontend.
 
@@ -28,14 +20,13 @@ There are a ton of options out there and, to be honest, it can be tough to disce
 
 Some headless ecommerce options include:
 
--   [Snipcart](https://snipcart.com/) - Snipcart's offering focuses on ease of integration and a plan based solely on transaction fees without additional monthly subscription costs.
--   [Foxy.io](https://www.foxy.io/) - Like Snipcart, Foxy.io is designed to be easy to integrate, but their pricing model is focused around a fixed monthly subscription with a set amount of included transactions.
--   [Commerce.js](https://commercejs.com/) - Unlike the prior options, Commerce.js doesn't have a drop-in shopping cart and checkout solution but is designed for those that want to build a fully-customized cart and checkout experience from scratch using their APIs.
+- [Snipcart](https://snipcart.com/) - Snipcart's offering focuses on ease of integration and a plan based solely on transaction fees without additional monthly subscription costs.
+- [Foxy.io](https://www.foxy.io/) - Like Snipcart, Foxy.io is designed to be easy to integrate, but their pricing model is focused around a fixed monthly subscription with a set amount of included transactions.
+- [Commerce.js](https://commercejs.com/) - Unlike the prior options, Commerce.js doesn't have a drop-in shopping cart and checkout solution but is designed for those that want to build a fully-customized cart and checkout experience from scratch using their APIs.
 
 These are just a few options of many, so it pays to do your research. Let's look at how to integrate one of these services into a JAMstack site.
 
-Enabling Ecommerce Using Snipcart
----------------------------------
+## Enabling Ecommerce Using Snipcart
 
 For my example, I decided to use Snipcart. One nice option that Snipcart has is that test development is always free.
 
@@ -146,8 +137,7 @@ I should note here before we finish that in order for the checkout process to co
 
 ![Adding a domain on Snipcart](/images/1584622804-adddomainsm.png)
 
-Where To Go From Here
----------------------
+## Where To Go From Here
 
 As I stated, this is the very basic implementation of Snipcart, without much customization and with a very simple product set. For example, products might have different size or personalization options, or you would likely need to set up shipping (unless the product is digital, which is also supported). Or you may need to take advantage of features like discounts, inventory management, abandoned cart recovery. Or perhaps you need to enable more complex functionality via the [SDK](https://docs.snipcart.com/v3/sdk/basics). There's obviously a lot more we could explore. Still, it's pretty amazing that tools like Snipcart and other headless ecommerce tools can offer developers a means of implementing a shopping cart and checkout process in just a few lines of code.
 
@@ -157,28 +147,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

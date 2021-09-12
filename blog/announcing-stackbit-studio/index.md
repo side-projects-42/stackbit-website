@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Now Anyone Can Make the Web, Better
-===================================
+# Now Anyone Can Make the Web, Better
 
 Artem Denysov — September 01, 2020
 
@@ -20,16 +15,15 @@ When we started building what would eventually become the Stackbit platform, the
 
 Today, after tons of hard work and feedback, we’re thrilled to announce the general availability of **Stackbit Studio**, the first complete platform for the Jamstack. Stackbit Studio fulfils the promise of the Jamstack by unlocking its potential for anyone.
 
--   **Marketers** can edit content inline and see live previews of their changes without bugging developers
--   **Agency and Freelance Web Developers** can easily hand off projects to clients without having to worry about being on the hook for small changes and security issues
--   **Teams** can collaborate and quickly share updates with stakeholders, designers, writers and dev
+- **Marketers** can edit content inline and see live previews of their changes without bugging developers
+- **Agency and Freelance Web Developers** can easily hand off projects to clients without having to worry about being on the hook for small changes and security issues
+- **Teams** can collaborate and quickly share updates with stakeholders, designers, writers and dev
 
 and most importantly,
 
--   **Anyone** who wants to build websites can start their journey with the cutting edge, secure, and fast technological wonder that the Jamstack has matured into
+- **Anyone** who wants to build websites can start their journey with the cutting edge, secure, and fast technological wonder that the Jamstack has matured into
 
-Stackbit Studio - The live editing experience at the heart of our complete Jamstack platform
---------------------------------------------------------------------------------------------
+## Stackbit Studio - The live editing experience at the heart of our complete Jamstack platform
 
 You can pick a theme and deploy a test site to [play with the Studio,](https://app.stackbit.com/create) or [watch a quick video walkthrough on YouTube](https://youtu.be/zd9lGRLVDm4). Here’s a quick tour of what is available in the Stackbit Studio, today:
 
@@ -83,28 +77,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-AMP for the JAMstack
-====================
+# AMP for the JAMstack
 
 Stephen Keep — March 12, 2020
 
@@ -20,15 +15,14 @@ Despite the controversy that has surrounded it, AMP has become a requirement for
 
 [AMP](https://amp.dev/), which stands for accelerated mobile pages, was originally created by Google in 2015. It was designed to compete with other similar initiatives like Facebook Instant Pages and Apple News, which used specialized caching to speed up the browsing experience for content on the web. However, since its early days, AMP has been caught up in controversy. In this post, we are going to look at:
 
--   What AMP is.
--   The controversy around AMP and why AMP still matters for many sites.
--   How to convert an Hugo theme to AMP.
--   How to test if the page is AMP compatible.
+- What AMP is.
+- The controversy around AMP and why AMP still matters for many sites.
+- How to convert an Hugo theme to AMP.
+- How to test if the page is AMP compatible.
 
 Let's dive in.
 
-What is AMP?
-------------
+## What is AMP?
 
 AMP is an initiative by Google to speed up the web. It is now a part of the [Open JS Foundation](https://openjsf.org/). Google created AMP to set some standards that would help create fast pages and improve the mobile web browsing experience. These standards came at a cost. To turn an HTML page into an AMP page there are many hoops to jump through.
 
@@ -36,22 +30,20 @@ For example, instead of using an `img` tag, AMP uses an `amp-img` tag. This is t
 
 You may be wondering, why should I make all these changes?
 
-Why does AMP matter?
---------------------
+## Why does AMP matter?
 
 There is one major reason why you would jump through these hoops and that is Google Search results. Google gives AMP pages special sections in the search results. Here is a list of AMP only sections on [Google Search](https://developers.google.com/search/docs/guides/about-amp):
 
--   **Top stories carousel** - If you want to appear in the top stories section on Google then you need an AMP page. ![top stories carousel](/images/1584017959-image9.png)
--   **Host carousel** - This allows you to include a carousel of items within your search result. ![host carousel](/images/1584018104-image1.png)
--   **Rich result** - Get a large image in the search results.
--   **Visual stories** - This is a new component that shows a full-screen slideshow in the search results. ![visual stories](/images/1584018142-image7.png)
+- **Top stories carousel** - If you want to appear in the top stories section on Google then you need an AMP page. ![top stories carousel](/images/1584017959-image9.png)
+- **Host carousel** - This allows you to include a carousel of items within your search result. ![host carousel](/images/1584018104-image1.png)
+- **Rich result** - Get a large image in the search results.
+- **Visual stories** - This is a new component that shows a full-screen slideshow in the search results. ![visual stories](/images/1584018142-image7.png)
 
 Is this a good thing? Probably not. Google is pushing its technology and using Google search as a carrot. The trouble is once your competitors start making AMP pages what can you do? If you are building a news site, you will find it hard to compete in Google Search without an AMP page.
 
 So how easy is it to convert a site to AMP? Let's look at how to do this for a [Hugo](https://gohugo.io/) theme.
 
-Getting Started with AMP in Hugo
---------------------------------
+## Getting Started with AMP in Hugo
 
 For this tutorial, we are going to start with the same Hugo theme recommended on the [Hugo Quick Start page](https://gohugo.io/getting-started/quick-start/). You can install Hugo on Mac Linux using [Homebrew](https://brew.sh) or all supported platforms using the [binary](https://gohugo.io/getting-started/installing/#binary-cross-platform). Install Hugo by following the [installation instructions provided on their site](https://gohugo.io/getting-started/installing/).
 
@@ -95,18 +87,18 @@ Now that we have a way to verify our AMP changes, let's convert the theme to AMP
 
 There are a few steps we need to perform to convert the Ananke theme to AMP. These include:
 
--   Set as an AMP page.
--   Add the AMP script.
--   Add the AMP boilerplate CSS.
--   Add a canonical link.
--   Make the CSS inline.
--   Make the JS AMP compatible.
+- Set as an AMP page.
+- Add the AMP script.
+- Add the AMP boilerplate CSS.
+- Add a canonical link.
+- Make the CSS inline.
+- Make the JS AMP compatible.
 
 You may notice a couple of CSS tasks above. There are very strict rules around CSS on AMP pages:
 
--   No external stylesheets.
--   Only one style tag on the page.
--   Up to 50kb of CSS in the style tag.
+- No external stylesheets.
+- Only one style tag on the page.
+- Up to 50kb of CSS in the style tag.
 
 In my opinion, handling the CSS is the hardest part when converting the theme as it is at 82kb.
 
@@ -433,8 +425,7 @@ This is because we are not running the site over https. Running SSL on localhost
 
 If you would like to see all the changes I made then you can see them [in this repo.](https://github.com/stephenkeep/hugo-amp-example)
 
-Wrapping Up
------------
+## Wrapping Up
 
 We have looked at why, despite the contriversies, you may still need to care about AMP and what it takes to make a Hugo theme AMP compatible. Although it's not always straightforward, it is possible to convert existing themes to support AMP. Depending on the industry your site is in you may have to include AMP pages and hopefully this tutorial has given you the guidance you need to get started.
 
@@ -448,28 +439,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

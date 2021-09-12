@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Searching the JAMStack
-======================
+# Searching the JAMStack
 
 Raymond Camden — January 09, 2020
 
@@ -17,10 +10,9 @@ Congratulations. You've successfully gotten someone to visit your web site. Unfo
 
 I feel your pain. Making a large site more usable for visitors is a hard task, and providing the ability to search goes a long way to helping them get what they need. Using search in the JAMStack is absolutely possible and in this article I'll show you a couple of ways of accomplishing that.
 
-All roads lead to Google...
----------------------------
+## All roads lead to Google...
 
-It should come as no surprise that the first thing we'll discuss when talking about search is Google. Google is a *lot* of things, but primarily they're a search engine and can help expose your content in multiple ways. Let's take a look at the options Google provides.
+It should come as no surprise that the first thing we'll discuss when talking about search is Google. Google is a _lot_ of things, but primarily they're a search engine and can help expose your content in multiple ways. Let's take a look at the options Google provides.
 
 Let me begin by saying that I'm not going to talk about SEO. That's an important topic and worthy of its own article. While it directly relates to how well Google can find what your site covers, the assumption here is that we will be searching only against our particular site and don't have to worry about competitors, other sites, and so forth.
 
@@ -40,9 +32,9 @@ Google looks for a value named `q` that represents your query term. Of course, y
 
 I've added the site operator and pointed it at my blog. I also added a space after it so that when a person starts typing, it won't mess with the operator.
 
-There's a lot to *not* like about this approach. First, the user has to know not to mess with the operator. Second, this takes the user off your site and takes them to Google. You get no control over the display, no control over results, and so forth.
+There's a lot to _not_ like about this approach. First, the user has to know not to mess with the operator. Second, this takes the user off your site and takes them to Google. You get no control over the display, no control over results, and so forth.
 
-This is probably the *worst* solution you can use, but it also takes roughly ten seconds to add to your site and can work in a pinch.
+This is probably the _worst_ solution you can use, but it also takes roughly ten seconds to add to your site and can work in a pinch.
 
 ### Google Custom Search Engine
 
@@ -58,7 +50,7 @@ Click the Add button and begin by configuring the site, or sites, to search. Not
 
 ![Adding a new CSE](/images/1578578598-cse2.png)
 
-You can enter *any* site you want here, even sites you don't own. For my testing, I entered <https://www.stackbit.com/blog>. After you've done that, you can then get your code:
+You can enter _any_ site you want here, even sites you don't own. For my testing, I entered <https://www.stackbit.com/blog>. After you've done that, you can then get your code:
 
 ![CSE creation is complete](/images/1578578650-cse3.png)
 
@@ -77,7 +69,7 @@ What's not obvious from the screen shot above is that the form takes 100% of the
 
 You may notice that the first result shown here is an ad. Also note that results are sorted by relevancy. And finally, results will open in a new tab. You can test a live version of this here: <https://netlifydemos.netlify.com/jamstacksearchcse.html>
 
-Personally, I dislike *all* of that. I don't like the modal popup window. I don't like searches showing in another tab. Luckily this is all easily fixable. In your new CSE, you can go to the "Look and feel" section and tweak quite a bit.
+Personally, I dislike _all_ of that. I don't like the modal popup window. I don't like searches showing in another tab. Luckily this is all easily fixable. In your new CSE, you can go to the "Look and feel" section and tweak quite a bit.
 
 ![Customizing layout of results](/images/1578578797-cse6.png)
 
@@ -144,28 +136,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

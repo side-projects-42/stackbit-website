@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Getting Started with Next.js for Jamstack Development
-=====================================================
+# Getting Started with Next.js for Jamstack Development
 
 Brian Rinaldi — June 23, 2020
 
@@ -20,19 +15,17 @@ Next.js is an increasingly popular solution for creating Jamstack sites using Ja
 
 There's been a lot of well-deserved buzz around Next.js lately - with two major consecutive releases in [9.3](https://nextjs.org/blog/next-9-3) and then [9.4](https://nextjs.org/blog/next-9-4) bringing tons of new functionality to the framework. Jamstack developers have been excited by a ton of new features that support Next.js for Jamstack sites including new data-fetching methods and incremental static regeneration. In this post, I want to give an introduction to Next.js for Jamstack development and explore how you can leverage it with [Sourcebit](https://github.com/stackbithq/sourcebit) to build CMS-driven Jamstack apps.
 
-What is Next.js?
-----------------
+## What is Next.js?
 
 Next.js is a very popular React-based framework for building single-page applications (SPAs). It has gained a great deal of popularity in large part because it simplifies a number of aspects of developing full-stack React applications. For example, routes are handled automatically with zero configuration. However, your Next.js also handles all of the server-side rendering of the page, meaning you can use a single framework for both the frontend and backend of your application.
 
 ### What Makes Next.js Different?
 
-Next.js is also a static site generator (SSG), but it differs from tools like Hugo, Jekyll or even Gatsby in that generating static assets is not its only purpose. You can build an SPA with server-side rendering (SSR) using Next.js and then decide to static export all or *even just part of your app*. That's a key distinction because, when choosing most other SSGs, you are committing to going fully static right out of the gate.
+Next.js is also a static site generator (SSG), but it differs from tools like Hugo, Jekyll or even Gatsby in that generating static assets is not its only purpose. You can build an SPA with server-side rendering (SSR) using Next.js and then decide to static export all or _even just part of your app_. That's a key distinction because, when choosing most other SSGs, you are committing to going fully static right out of the gate.
 
 This can also present some mental hurdles for someone (like me) coming to Next.js after working primarily with more traditional SSGs like Hugo or Jekyll. Not only did it force me to grok a lot of React (which I've admittedly had limited experience with in the past) but it also somewhat upends the way I've traditionally thought of Jamstack, by challenging the static versus dynamic assets dichotomy.
 
-The Sample App
---------------
+## The Sample App
 
 ![The completed sample app](/images/1592918919-finished-project-sm.png)
 
@@ -50,8 +43,7 @@ Please note that the example code shown throughout the article below are simplif
 
 Converting an existing project (in my case from Hugo to Next.js) rather than starting from scratch did present some challenges. The site was not originally built using a "React mindset". While this largely meant making small changes to convert the HTML to be React components , there were also some small visual elements that relied upon DOM manipulation that happened on window load. These required some refactoring to get them to work properly using the [`componentDidMount()`](https://reactjs.org/docs/react-component.html#componentdidmount). While I'm not sure my solution is what you might consider React best practice, it worked and this wasn't something I'd consider core to the site's functionality.
 
-Getting Started
----------------
+## Getting Started
 
 The easiest way to get started with Next.js is to run the following command in the console/terminal:
 
@@ -63,8 +55,8 @@ This will only ask a couple questions such as the project name and template. I c
 
 The default starter doesn't include too much boilerplate. Let's look at what's there:
 
--   The `pages` directory is a critical part in any Next.js application. One of the benefits of using Next.js is that it will automatically create a route for any [pages](https://nextjs.org/docs/basic-features/pages) (which in the Next.js are React components) contained within this directory. If, for example, I were to create a `foo.js` file in this directory, then I could navigate to it via the `/foo` route (i.e. `http://localhost:3000/foo` if you are testing locally). Pages can also handle dynamic routes, which we'll get into later.
--   The `public` directory is where you can place static assets that you want to be able to serve and access via your site. These may be things like images, PDF files, downloads, or even CSS or JavaScript files you want included. For instance, any images under `/public/images` will be accessible to your site as just `/images`.
+- The `pages` directory is a critical part in any Next.js application. One of the benefits of using Next.js is that it will automatically create a route for any [pages](https://nextjs.org/docs/basic-features/pages) (which in the Next.js are React components) contained within this directory. If, for example, I were to create a `foo.js` file in this directory, then I could navigate to it via the `/foo` route (i.e. `http://localhost:3000/foo` if you are testing locally). Pages can also handle dynamic routes, which we'll get into later.
+- The `public` directory is where you can place static assets that you want to be able to serve and access via your site. These may be things like images, PDF files, downloads, or even CSS or JavaScript files you want included. For instance, any images under `/public/images` will be accessible to your site as just `/images`.
 
 Now I can run either `npm run dev` or `yarn dev` to start the local development server and go to `localhost:3000` where you should see the Next.js default boilerplate page.
 
@@ -72,8 +64,7 @@ Now I can run either `npm run dev` or `yarn dev` to start the local development 
 
 Note that from here on out I use npm instead of Yarn as the libraries related to Sourcebit are automatically installed using npm during the configuration process.
 
-Loading Local Data
-------------------
+## Loading Local Data
 
 It's pretty common for a Jamstack site to store some portions of site data in a JSON or YAML file. A common use of this is often the site configuration file containing things like the site title, description and so on. For example, my site has a `/data/config.json` file that looks like this (note that Next.js has no opinion on where you should store any data files):
 
@@ -139,8 +130,7 @@ As you can see, I set `Home()` to receive the `props` object and then assign the
 
 It is worth noting, as we move on to talk about components, that the `getStaticProps()` exists only on pages and is not available on components.
 
-Building Components
--------------------
+## Building Components
 
 While you can build the site by creating pages in the `/pages` directory, this would become unmaintainable very quickly as many aspects of each page will be reused. For a simple site like the sample app, this may only be a few components like the layout, header and footer. Next.js has no opinion about where you put your components, but generally developers choose to use a `/components` directory.
 
@@ -215,8 +205,7 @@ Then in `Layout.js` it is used.
         );
     }
 
-Connecting to a CMS
--------------------
+## Connecting to a CMS
 
 The sample site content comes from a pre-existing headless CMS instance on Contentful. Of course, Next.js makes it relatively painless to connect to APIs, but I used an open source tool called [Sourcebit](https://github.com/stackbithq/sourcebit) that makes it even easier. The best part is Sourcebit already has [Next.js integration](https://github.com/stackbithq/sourcebit-target-next).
 
@@ -310,8 +299,7 @@ One key difference you may notice between the [finished code for this page](http
         };
     }
 
-Deploying the Site
-------------------
+## Deploying the Site
 
 Running `npm run export` on the Next.js site will export everything you need to the `/out` folder. However, it's also easy to deploy on Jamstack-focused, continuous deployment solutions like Netlify. Let's take a quick look at how to do that.
 
@@ -325,18 +313,17 @@ Sourcebit stores environment variables in a `.env` file that is loaded when the 
 
 With that configured, Sourcebit will pull the latest content and assets from Contentful every time your site rebuilds on Netlify. You can see my finished, deployed site on Netlify at <https://control-next.netlify.app/>.
 
-Where to Go Next
-----------------
+## Where to Go Next
 
 See what I did there? 😉 I've only scratched the surface of building an application with Next.js, but hopefully I have piqued your curiosity to give it a try (and try Sourcebit as well). Be sure to check out the full source code of the example site at <https://github.com/remotesynth/control-next>.
 
 If you'd like to explore further, I'll leave you with a bunch of worthy resources to explore:
 
--   [Official Next.js getting started guide](https://nextjs.org/learn/basics/getting-started) - This is an well done, step by step tutorial that will guide you through the ins and outs of Next.js, including SSR as well as static generation.
--   [Building a Markdown blog with Next 9.3 and Netlify](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.3-and-netlify/) - Next.js 9.3 brought some big improvements to the framework, especially around generating Jamstack sites, and this tutorial walks through building a blog using traditional file-based Markdown.
--   [Building a portfolio site with Contentful, Next.js and Netlify](https://www.contentful.com/blog/2018/05/09/building-portfolio-website-contentful-nextjs-netlify/) - While Sourcebit makes the process easier in my opinion, this tutorial will help you if you want to directly call Contentful APIs.
--   [Make a blog with Next.js, React and Sanity](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js) - Sourcebit also has a plugin that supports Sanity, but this tutorial uses the Sanity API and SSR deployed to Now (note that it uses an earlier version of Next.js)
--   [Data Fetching with NextJS: What I learned](https://blog.maximeheckel.com/posts/data-fetching-with-next-js) - A good overview of the data fetching methods in Next.js as of 9.3.
+- [Official Next.js getting started guide](https://nextjs.org/learn/basics/getting-started) - This is an well done, step by step tutorial that will guide you through the ins and outs of Next.js, including SSR as well as static generation.
+- [Building a Markdown blog with Next 9.3 and Netlify](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.3-and-netlify/) - Next.js 9.3 brought some big improvements to the framework, especially around generating Jamstack sites, and this tutorial walks through building a blog using traditional file-based Markdown.
+- [Building a portfolio site with Contentful, Next.js and Netlify](https://www.contentful.com/blog/2018/05/09/building-portfolio-website-contentful-nextjs-netlify/) - While Sourcebit makes the process easier in my opinion, this tutorial will help you if you want to directly call Contentful APIs.
+- [Make a blog with Next.js, React and Sanity](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js) - Sourcebit also has a plugin that supports Sanity, but this tutorial uses the Sanity API and SSR deployed to Now (note that it uses an earlier version of Next.js)
+- [Data Fetching with NextJS: What I learned](https://blog.maximeheckel.com/posts/data-fetching-with-next-js) - A good overview of the data fetching methods in Next.js as of 9.3.
 
 <span class="post-share-title">Share on:</span>
 
@@ -344,28 +331,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

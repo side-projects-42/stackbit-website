@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Building Documentation Sites with the JAMstack
-==============================================
+# Building Documentation Sites with the JAMstack
 
 Brian Rinaldi — April 07, 2020
 
@@ -22,39 +17,36 @@ One of the earliest use cases for static site generators (SSGs), which are a key
 
 The good news is that both the tooling and the ecosystem have improved tremendously in recent years to where the JAMstack is likely a perfect fit for just about any kind of documentation site. The prior benefits still apply, but are complimented by an array of tools and services that make the content easier to edit and contributions easier to accept - even from folks who may be unfamiliar with the tools. In this post, we'll explore some of the options available to you for developing documentation sites using the JAMstack and show an example of how to build one.
 
-Considerations for a Docs Site
-------------------------------
+## Considerations for a Docs Site
 
 First, let's think about what type of considerations are typical for a documentation site:
 
--   **How big is the site and how often will it update?** If you are documenting a small library, your site may be no more than a few pages or even a single page. However, if you are documenting a large project or product, your documentation site is likely to have a lot of pages, even if it doesn't start out that way. The build speed can become a factor if the site is particularly large. However, most documentation sites update fairly infrequently, which can make the build speed a less critical consideration.
--   **Who is writing the content? Will you allow external contributions?** There are a variety of possibilities here that can impact how you build your documentation site. Here are a few examples: \_ Written by a technical internal team. \_ API documentation that is largely generated. \_ Written by non-technical internal authors. \_ Written with the help and contributions of external authors. \* A combination of any of the above.
+- **How big is the site and how often will it update?** If you are documenting a small library, your site may be no more than a few pages or even a single page. However, if you are documenting a large project or product, your documentation site is likely to have a lot of pages, even if it doesn't start out that way. The build speed can become a factor if the site is particularly large. However, most documentation sites update fairly infrequently, which can make the build speed a less critical consideration.
+- **Who is writing the content? Will you allow external contributions?** There are a variety of possibilities here that can impact how you build your documentation site. Here are a few examples: \_ Written by a technical internal team. \_ API documentation that is largely generated. \_ Written by non-technical internal authors. \_ Written with the help and contributions of external authors. \* A combination of any of the above.
 
 While the first consideration can influence how you evaluate your SSG options (we'll discuss some in just a bit), the second impacts the tools you choose for managing and editing content. For example, an API-based headless CMS may be a great solution for documentation that is largely maintained internally, a git-based solution may be preferable if you intend to allow editing by external users - and which specific CMS of either type you choose can depend partly on the technical level of your contributors.
 
-SSG Options for Documentation
------------------------------
+## SSG Options for Documentation
 
 Let me be clear up front: any SSG should work for a documentation site. That being said, there are actually a number of SSGs that are specifically geared towards documentation.
 
--   [Docsify](https://github.com/docsifyjs/docsify) - This is a Javascript-based SSG that serves documentation as a single-page application that can support server-side rendering (SSR).
--   [Slate](https://github.com/slatedocs/slate) - This is a Ruby-based solution (that uses the Middleman SSG under the covers) and is geared specifically towards API docs.
--   [MkDocs](https://github.com/mkdocs/mkdocs) A Python-based solution that emphasizes its speed and themes (some of which can be [found here](https://jamstackthemes.dev/#ssg=mkdocs).
+- [Docsify](https://github.com/docsifyjs/docsify) - This is a Javascript-based SSG that serves documentation as a single-page application that can support server-side rendering (SSR).
+- [Slate](https://github.com/slatedocs/slate) - This is a Ruby-based solution (that uses the Middleman SSG under the covers) and is geared specifically towards API docs.
+- [MkDocs](https://github.com/mkdocs/mkdocs) A Python-based solution that emphasizes its speed and themes (some of which can be [found here](https://jamstackthemes.dev/#ssg=mkdocs).
 
 While it isn't a documentation-specific solution, [Hugo](https://gohugo.io/) is a common solution because of its emphasis on build speed. It has a significant number of [community themes](https://jamstackthemes.dev/#ssg=hugo) with designs and features targeted to documentation sites including:
 
--   [Ace Documentation](https://github.com/vantagedesign/ace-documentation) is a Bootstrap-based docs theme.
--   [DocuAPI](https://github.com/bep/docuapi) is geared towards multilingual API documentation.
--   [Libris](https://github.com/stackbithq/stackbit-theme-libris) is a theme created by Stackbit, which means you can connect it to a CMS and deploy it automatically using the [site builder](https://app.stackbit.com/create). This also means it can be used with Jekyll or Gatsby.
--   [Dot](https://github.com/themefisher/dot) is aimed at documentation in the form of a support center or knowledge base.
--   [Hugo Book](https://github.com/alex-shpak/hugo-book) is a minimalist book-style theme with features like built-in search.
--   [Techdoc](https://github.com/thingsym/hugo-theme-techdoc) is also a minimalist book-style theme.
--   [Kraiklyn](https://github.com/jsnjack/kraiklyn) is designed for creating single-page documentation.
+- [Ace Documentation](https://github.com/vantagedesign/ace-documentation) is a Bootstrap-based docs theme.
+- [DocuAPI](https://github.com/bep/docuapi) is geared towards multilingual API documentation.
+- [Libris](https://github.com/stackbithq/stackbit-theme-libris) is a theme created by Stackbit, which means you can connect it to a CMS and deploy it automatically using the [site builder](https://app.stackbit.com/create). This also means it can be used with Jekyll or Gatsby.
+- [Dot](https://github.com/themefisher/dot) is aimed at documentation in the form of a support center or knowledge base.
+- [Hugo Book](https://github.com/alex-shpak/hugo-book) is a minimalist book-style theme with features like built-in search.
+- [Techdoc](https://github.com/thingsym/hugo-theme-techdoc) is also a minimalist book-style theme.
+- [Kraiklyn](https://github.com/jsnjack/kraiklyn) is designed for creating single-page documentation.
 
 One of the benefits of Hugo for documentation sites besides the build speed is that it does not rely on a front-end framework. This is not meant to criticize framework-based SSGs, just to note that a front-end framework may add unnecessary weight to a site that, in most cases, is simply geared towards serving text content. Other popular, non-framework-based alternatives for SSGs include [Eleventy](https://www.11ty.dev/) and [Jekyll](https://jekyllrb.com/).
 
-The Example Site
-----------------
+## The Example Site
 
 Now that we've covered a lot of the ecosystem of tools and themes that are available for you to develop your JAMstack documentation site, let's look at an example. The example site is simple documentation (of sorts) that teaches people how to be good teammates on the battle royale game Apex Legends. It's a fun game, but, because it is a squad-based game, playing with "randos" can be...ummm...let's say challenging (any of you who've played the game probably know what I'm talking about).
 
@@ -62,20 +54,19 @@ Now that we've covered a lot of the ecosystem of tools and themes that are avail
 
 Here were the basic requirements for this example site:
 
--   This is a standard documentation site and not API-documentation or a knowledge base type of site.
--   The content will be stored in git as this gives it access to broad collaboration tools that can be open to the public.
--   However, users should be able to edit the site without needing to go through a manual fork/pull request process by using an open authoring workflow that gives them access to the CMS.
+- This is a standard documentation site and not API-documentation or a knowledge base type of site.
+- The content will be stored in git as this gives it access to broad collaboration tools that can be open to the public.
+- However, users should be able to edit the site without needing to go through a manual fork/pull request process by using an open authoring workflow that gives them access to the CMS.
 
 To achieve these goals, I chose the following:
 
--   Use Hugo as the SSG. While this site won't have a lot of pages to take advantage of the build speed, its content is simple enough that doesn't require a frontend framework and, personally, I am comfortable with Hugo.
--   Use a fork of Hugo Book as the documentation layout (note that this differs from the theme's documentation for the theme which suggests adding it as a submodule).
--   Use the [Netlify CMS](https://www.netlifycms.org/) beta. Netlify CMS is an open source, git-based CMS that includes [open authoring](https://www.netlifycms.org/docs/open-authoring/) capabilities.
+- Use Hugo as the SSG. While this site won't have a lot of pages to take advantage of the build speed, its content is simple enough that doesn't require a frontend framework and, personally, I am comfortable with Hugo.
+- Use a fork of Hugo Book as the documentation layout (note that this differs from the theme's documentation for the theme which suggests adding it as a submodule).
+- Use the [Netlify CMS](https://www.netlifycms.org/) beta. Netlify CMS is an open source, git-based CMS that includes [open authoring](https://www.netlifycms.org/docs/open-authoring/) capabilities.
 
 You can view the site at <https://apexetiquette.netlify.com/> or grab the code at <https://github.com/remotesynth/apexetiquette>.
 
-Creating the Example Site
--------------------------
+## Creating the Example Site
 
 Let's walk through the steps used to create this documentation example.
 
@@ -275,8 +266,7 @@ At this point, a pull request has been submitted and we can accept the change vi
 
 The user can continue to make changes to any of the content in the admin, but these only directly affect their fork and you must approve each as a pull request. If you choose to use open authoring with Netlify CMS, I believe it is critical that part of your documentation includes a detailed guide to the contribution process so that users can understand this process as well.
 
-Where to Go From Here
----------------------
+## Where to Go From Here
 
 This is just one example of how to build a docs site - there are a lot of different solutions, some of which we covered, and what you choose may depend heavily on the type of documentation you are creating the audience for it (both in terms of editing and of consuming the content). Which brings us to the hardest part: actually writing good documentation. There's a lot of advice out there for this - and, again, this will depend on the type of documentation and audience - but I recommend checking out [Write the Docs](https://www.writethedocs.org) for resources, community and events. In addition, Google has a complete [guide to technical writing](https://developers.google.com/tech-writing) organized by audience and type of documentation. Now let's get documenting!
 
@@ -286,28 +276,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

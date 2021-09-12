@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Managing Content Relationships in Git-based Headless CMS
-========================================================
+# Managing Content Relationships in Git-based Headless CMS
 
 Brian Rinaldi — April 13, 2020
 
@@ -22,43 +17,41 @@ Relationships are a key aspect of modeling content. They help represent complex 
 
 In this post, I will explain how relationships are handled when content and data are held in files. We'll look at how this can be done on your own, using files without a CMS, as well as using popular git-based headless CMS options like Forestry and Netlify CMS.
 
-Why Relationships?
-------------------
+## Why Relationships?
 
 Let's imagine a simple blog site that has multiple authors. The post data model might contain the following data:
 
--   Title
--   Date Posted
--   Description
--   Body
--   Author
+- Title
+- Date Posted
+- Description
+- Body
+- Author
 
 In most cases, `author` will represent more than just a string with the name. However, we want to include a photo, a bio, social media profile links with our post. So let's update the content model:
 
--   Title
--   Date Posted
--   Description
--   Body
--   Author Name
--   Author Photo
--   Author Bio
--   Author Twitter
+- Title
+- Date Posted
+- Description
+- Body
+- Author Name
+- Author Photo
+- Author Bio
+- Author Twitter
 
 This works, but what happens when the author has 10 posts...or 100? The first problem is I will need to reenter the author information in each entry. The second problem is that I will need to update every entry each time any of this information changes. The third problem is that I want to display authors on a "contributors" page and there's no easy way to get just a list of authors.
 
 This is where relationships come in. Instead of putting the information in each entry, I would create an author content type:
 
--   Name
--   Photo
--   Bio
--   Twitter
+- Name
+- Photo
+- Bio
+- Twitter
 
 And then the `author` field of the post content type would actually be a reference to the author record. In a database, this might be a foreign key reference to the ID of the author (i.e. the author record's primary key). But what if the author is just an entry in a JSON file or even just Markdown file with frontmatter?
 
-Manually Managing Relationships in File-based Content
------------------------------------------------------
+## Manually Managing Relationships in File-based Content
 
-*View the code for this example at <https://github.com/remotesynth/content-relationships-manual>.*
+_View the code for this example at <https://github.com/remotesynth/content-relationships-manual>._
 
 First, let's look at how you might define these sorts of relationships in a site where the content is manually edited without a CMS. My example will be a simple blog in which I share non-controversial opinions about Star Wars 😉. Below is my new blog in all it's beautifully designed glory!
 
@@ -112,10 +105,9 @@ First I assemble the URL of the author page and then use `.Site.GetPage` to load
 
 This works, but it's likely in most cases you'll be managing this sort of content via a CMS, so let's look at how to do this. Note that our examples will focus on relationships between page-based content, though many of the same principles will apply when a relationship includes a data file.
 
-Managing Relationships in Netlify CMS
--------------------------------------
+## Managing Relationships in Netlify CMS
 
-*View the code for this example at <https://github.com/remotesynth/content-relationships-netlifycms>.*
+_View the code for this example at <https://github.com/remotesynth/content-relationships-netlifycms>._
 
 Let's first look at how to manage these sorts of relationships in [Netlify CMS](https://www.netlifycms.org/). Netlify CMS is an open source, git-based CMS. It obviously can be deployed to Netlify, but this is not a requirement. Let's look at how we'd set up the example above to be using Netlify CMS. I will focus on defining and managing the relationships rather than the nuts and bolts of getting Netlify CMS up and running.
 
@@ -208,10 +200,9 @@ If you were paying very close attention, you may have noticed an additional fiel
 
 The issue with this is, as you can imagine, that it is very fragile. First, my code loading the page assumes that the slug and filename match. Since `slug` is just a textfield in the CMS, it is prone to easy typos. I could change the code to search for posts based on the `title` value and then load the page using `GetPage` on the result, but regardless it is still prone to typos and mistakes.
 
-Managing Relationships in Forestry
-----------------------------------
+## Managing Relationships in Forestry
 
-*View the code for this example at <https://github.com/remotesynth/content-relationships-forestry>.*
+_View the code for this example at <https://github.com/remotesynth/content-relationships-forestry>._
 
 [Forestry](https://forestry.io/) is another popular, commercial git-based CMS option. The basic setup of Forestry is simple. I can import the manual relationships project I created above and choose Hugo as my SSG and Forestry will automatically look at the content and map out the data models in its system for you, placing all of these settings in a `.forestry` directory in your project. Below is the default editing for a post.
 
@@ -303,15 +294,13 @@ You may notice that my existing references to authors and related posts have now
         - posts/last-jedi-was-good.md
         - posts/return-of-skywalker-awful.md
 
-The Problem with Relationships in Git-based CMS
------------------------------------------------
+## The Problem with Relationships in Git-based CMS
 
 The main issue with these solutions is that they are very brittle. Some of them require the user to manually enter the proper slug, which is prone to typos and mistakes. However, even in the best case scenario where the CMS helps to ensure the validity of the data, the content can be easily overridden as it is just text-based data in a flat file. All it takes is someone manually editing a file or even deleting it for it to potentially break.
 
 Because of the file-based nature of content in a git-based CMS, there really is no way to guarantee [referential integrity](https://en.wikipedia.org/wiki/Referential_integrity). Thus, it is important that your templates account for this so that a broken relationship does not cause the build to fail. Be sure to verify whether a referenced page, data file or data value exists before using it.
 
-Where to Go From Here
----------------------
+## Where to Go From Here
 
 While it may be impossible to guarantee the integrity of relationships in file-based content, relationships are still critical to building an extensible and maintainable content model. Regardless of your git-based CMS solution, there are tools to help you, so definitely reference the documentation when building your content schema. In addition, some of the problems I discussed in the prior section are very similar to the ones I discussed in my prior post about [best practices for the JAMstack with API-based headless CMS](https://www.stackbit.com/blog/jamstack-api-based-cms/), where I discuss things like handling invalid content (including linked objects) and defensive coding strategies when building templates.
 
@@ -321,28 +310,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

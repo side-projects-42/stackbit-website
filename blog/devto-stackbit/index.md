@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Own Your Content, Broaden Your Audience
-=======================================
+# Own Your Content, Broaden Your Audience
 
 Brian Rinaldi — October 22, 2019
 
@@ -20,11 +15,11 @@ The Dev.to and Stackbit integration gives developers an easy option to build a s
 
 I have always been a firm believer that content authors should maintain ownership of their content - of course, this includes developers who blog and/or write tutorials. Back in May of this year, I wrote about the three options available to developers to publish their content, while maintaining ownership and avoiding any nasty subscription modals.
 
-> As developers, we have really great options to post but avoid Medium.  
->   
-> 1) Use <https://t.co/kAJXIGPncW> if you prefer to not manage your own site at all  
-> 2) Use [@Netlify](https://twitter.com/Netlify?ref_src=twsrc%5Etfw) if you want to easily spin up a static site  
-> 3) Use [@Netlify](https://twitter.com/Netlify?ref_src=twsrc%5Etfw) and repost to <https://t.co/kAJXIGPncW> &lt;= do this!
+> As developers, we have really great options to post but avoid Medium.
+>
+> 1. Use <https://t.co/kAJXIGPncW> if you prefer to not manage your own site at all
+> 2. Use [@Netlify](https://twitter.com/Netlify?ref_src=twsrc%5Etfw) if you want to easily spin up a static site
+> 3. Use [@Netlify](https://twitter.com/Netlify?ref_src=twsrc%5Etfw) and repost to <https://t.co/kAJXIGPncW> &lt;= do this!
 >
 > — Brian Rinaldi (@remotesynth) [May 15, 2019](https://twitter.com/remotesynth/status/1128645546242080768?ref_src=twsrc%5Etfw)
 
@@ -32,8 +27,7 @@ I have always been a firm believer that content authors should maintain ownershi
 
 > Zach Leatherman also gave a great talk about [owning your content on social media](https://www.youtube.com/watch?v=X3SrZuH00GQ) at JAMStack*conf*sf last week, that I also recommend checking out.
 
-Owning your own content on Dev.To
----------------------------------
+## Owning your own content on Dev.To
 
 Previously, this was done via two options:
 
@@ -46,8 +40,7 @@ Obviously, your site could be anything that generates an RSS feed, but we know t
 
 But what if you already have existing content on Dev.to? Or what if you'd rather not even have to mess with posting to your JAMStack site and prefer just to use the tools Dev.to provides? There's now an even better way!
 
-Publishing from Dev.to to JAMStack
-----------------------------------
+## Publishing from Dev.to to JAMStack
 
 A few weeks ago, Dev.to and Stackbit [announced](https://dev.to/connecting-with-stackbit) a way to publish Dev.to content to a JAMStack site with just a few clicks, all while ensuring that you own your own content because it all gets placed into your own GitHub account.
 
@@ -58,8 +51,7 @@ A few weeks ago, Dev.to and Stackbit [announced](https://dev.to/connecting-with-
 
 Here's [my Dev.to content on published to a blog](https://neat-yam-e14d8.netlify.com/). Honestly,I think it looks great out-of-the-box but I may want to customize the theme a bit more. Otherwise, the site is essentially ready to publish. The best part is that not only are your existing posts pulled into Dev.to, but any future posts will be as well. This will trigger a new build and publish your site automatically.
 
-Owning your content doesn't require tons of effort
---------------------------------------------------
+## Owning your content doesn't require tons of effort
 
 As I've shown, you have two really easy options available to you if you would like to own your own content but still take advantage of a large community of developers on Dev.to:
 
@@ -74,28 +66,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-3 Strategies for Migrating from Wordpress to JAMstack
-=====================================================
+# 3 Strategies for Migrating from Wordpress to JAMstack
 
 Brian Rinaldi — February 19, 2020
 
@@ -23,10 +16,9 @@ Before we start, it is worth considering that there are a ton of factors that ca
 
 I should also note that the strategies shown here are broad concepts. While I will show code n some cases, I'm only covering the very basics to demonstrate the broader strategy. You can find the repository containing the example code shown below at <https://github.com/remotesynth/Wordpress-to-JAMstack-Options>.
 
-*Note: For a detailed look at what it takes to move a large site with a lot of content, I highly recommend two posts by Sarah Drasner of Netlify that discuss the migration of Smashing Magazine. The first, [How Smashing Magazine Manages Content: Migration From WordPress To JAMstack](https://www.smashingmagazine.com/2020/01/migration-from-wordpress-to-JAMstack/), is a retrospective on the project, how it was accomplished and lessons learned. The second, [How To Create A Headless WordPress Site On The JAMstack](https://www.smashingmagazine.com/2020/02/headless-wordpress-site-JAMstack/) (co-authored by Geoff Graham), goes into great detail about the way they would recommend doing it today given the lessons learned.*
+_Note: For a detailed look at what it takes to move a large site with a lot of content, I highly recommend two posts by Sarah Drasner of Netlify that discuss the migration of Smashing Magazine. The first, [How Smashing Magazine Manages Content: Migration From WordPress To JAMstack](https://www.smashingmagazine.com/2020/01/migration-from-wordpress-to-JAMstack/), is a retrospective on the project, how it was accomplished and lessons learned. The second, [How To Create A Headless WordPress Site On The JAMstack](https://www.smashingmagazine.com/2020/02/headless-wordpress-site-JAMstack/) (co-authored by Geoff Graham), goes into great detail about the way they would recommend doing it today given the lessons learned._
 
-Option 1: Use the Wordpress REST API
-------------------------------------
+## Option 1: Use the Wordpress REST API
 
 Wordpress comes with a [REST API](https://developer.wordpress.org/rest-api/) that gives you access to all the content on the site. This gives Wordpress the ability to be used as a headless CMS. One of the benefits of this strategy is that the Wordpress API delivers the rendered content, meaning that you don't have to worry about transitioning things that might be automatically handled within the content by shortcodes or even most plugins.
 
@@ -103,7 +95,7 @@ Now let's look at the post page, which is handled by `pages/[slug].js` in the Ne
 
 Here I am calling my Wordpress API with the ID of the post that is passed in the URL of the page. In setting both the title and body on the output, I am using the rendered HTML that the Wordpress API provides.
 
-*Note: An alternative to writing the direct calls to the API is to use something like [node-wpapi](https://github.com/WP-API/node-wpapi). This could be useful for use cases that are more complex than my admittedly simple example.*
+_Note: An alternative to writing the direct calls to the API is to use something like [node-wpapi](https://github.com/WP-API/node-wpapi). This could be useful for use cases that are more complex than my admittedly simple example._
 
 While Next.js does a great job of handling server-side rendering and local caching, this is arguably not a JAMstack site yet since the frontend at this dynamic with server-side rendering (SSR) that would require a server. However, Next.js provides the ability to [export a site into static files](https://nextjs.org/learn/excel/static-html-export) that can be hosted without SSR. To do this, we need to add a `next.config.js` file into the root of our site where we can add code and configuration for handling the export.
 
@@ -136,8 +128,7 @@ The site will be exported into the `/out` directory in your project. If you star
 
 One last thing here - if you want to continue to use the Wordpress backend to manage your site, you wouldn't want to run this and then deploy every time someone makes a change, but there are many ways to trigger a build when a change is made in Wordpress. For example, if your site is hosted at Netlify, you could use this [WP Trigger Netlify Build](https://github.com/iamtimsmith/wp-trigger-netlify-build) plugin. Alternatively, you could use something like Zapier or IFTTT to trigger a build. There are a number of other solutions to this depending on where your site is deployed, but the point is, it should require no direct developer intervention to have changes deployed.
 
-Option 2: Export Content to Flat Files
---------------------------------------
+## Option 2: Export Content to Flat Files
 
 In some cases, you may want to have actual physical files of your content for your site. This is useful, for instance, with static site generators like Hugo or Jekyll or if you are doing a one-time export of your content rather than continuing to use the Wordpress backend for managing content. There are multiple ways to handle that.
 
@@ -170,17 +161,15 @@ There's another option if you either want to have fine-grained control over the 
 
 This example utilizes two libraries for managing the conversion. [Turndown](https://github.com/domchristie/turndown) takes the rendered HTML provided by the Wordpress API and turns it into Markdown. In my example, I only tested it with very simple content, so you may want to work closely with its configuration options as, by default, it removes content that it cannot convert to Markdown. It also uses [js-yaml](https://www.npmjs.com/package/js-yaml) to create the frontmatter for each post. In this example, it simply writes the file locally which would then be committed to the JAMstack site's repository. You could (relatively) easily incorporate similar code that uses the [GitHub API](https://developer.github.com/v3/), for instance, and writes the files into the repository to trigger a rebuild. Alternatively, this could be incorporated into a build process using something like [Netlify build plugins](https://www.netlify.com/build/plugins-beta/) to ensure new content is pulled whenever a build is triggered.
 
-*Note: At [Stackbit](https://www.stackbit.com/), we're working on a project that could help with this process as well called [Sourcebit](https://github.com/stackbithq/sourcebit). While it is still a very early release and still in development at the time of this writing, we are exploring adding support for Wordpress as a source plugin.*
+_Note: At [Stackbit](https://www.stackbit.com/), we're working on a project that could help with this process as well called [Sourcebit](https://github.com/stackbithq/sourcebit). While it is still a very early release and still in development at the time of this writing, we are exploring adding support for Wordpress as a source plugin._
 
-Option 3: Import Content to a Headless CMS
-------------------------------------------
+## Option 3: Import Content to a Headless CMS
 
 The prior two options have focused on leaving either the Wordpress backend in place for future content editing or doing a one time export to files. This option provides many of the comforts of the Wordpress backend that you may lose when editing a file-based option, while eliminating the need to continue to host and manage a Wordpress instance to maintain the backend.
 
 The means of importing will differ depending on which headless CMS you choose. In the past I know that some CMS options have maintained tools specifically to import Wordpress while others had community projects that helped with the import process. At a minimum, a headless CMS provides some form of API that can be integrated with the Wordpress API, most likely for a one time import. For example, [this post](https://hoverbaum.net/2018/03/22/Wordpress-to-Contentful-migration/) walks through doing this for Contentful.
 
-What's Next?
-------------
+## What's Next?
 
 Welcome to the JAMstack! The great thing about it is that, now that you are not tied to a monolithic application architecture, you are free to explore - and the ecosystem is vast! You'll likely want to explore how you can leverage serverless functions to handle some of the dynamic functionality that was once likely handled by some form of plugin. The good news is that developers tend to love the developer experience that a decoupled architecture like JAMstack and a headless CMS provides.
 
@@ -192,28 +181,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

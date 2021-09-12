@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-What to Expect from the JAMstack in 2020 - Raymond Camden
-=========================================================
+# What to Expect from the JAMstack in 2020 - Raymond Camden
 
 Brian Rinaldi — December 16, 2019
 
@@ -30,7 +25,7 @@ In my career, I've seen it all. I started building HTML pages back in 95 or so, 
 
 ### What is your current JAMstack stack? What tool(s) have you most excited?
 
-For my blog, I use [Jekyll](https://jekyllrb.com/). But I recently discovered [Eleventy](https://www.11ty.dev/) and I'm incredibly excited about it. I like Jekyll, but never liked working with Ruby, the fact that Eleventy is Node-based is a huge win for me. Also, Eleventy is *incredibly* flexible. Finally, Eleventy solves the "dynamic pages from data" issue in a way that no other SSG has handled as well. As I use more SSGs, I find that I prefer flexible engines over highly opinionated ones.
+For my blog, I use [Jekyll](https://jekyllrb.com/). But I recently discovered [Eleventy](https://www.11ty.dev/) and I'm incredibly excited about it. I like Jekyll, but never liked working with Ruby, the fact that Eleventy is Node-based is a huge win for me. Also, Eleventy is _incredibly_ flexible. Finally, Eleventy solves the "dynamic pages from data" issue in a way that no other SSG has handled as well. As I use more SSGs, I find that I prefer flexible engines over highly opinionated ones.
 
 ### What changes did you see, for better or worse, in 2019 related to the JAMstack ecosystem?
 
@@ -46,28 +41,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

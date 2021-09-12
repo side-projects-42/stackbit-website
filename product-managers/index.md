@@ -98,4 +98,3 @@ If you want to get a site up quickly, pick from one of our themes, click [Create
 Copyright © 2021 Stackbit.  
 💖 Made with Stackbit
 
-<img src="https://www.facebook.com/tr?id=2703040533152181&amp;ev=PageView&amp;noscript=1" width="1" height="1" />

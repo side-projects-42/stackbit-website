@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-What to Expect from the JAMstack in 2020 - Bryan Robinson
-=========================================================
+# What to Expect from the JAMstack in 2020 - Bryan Robinson
 
 Brian Rinaldi — December 18, 2019
 
@@ -46,10 +41,10 @@ With the increase in those exploring the JAMstack and the different use cases th
 
 I’m a fan of the [“Rule of Least Power”](https://blog.logrocket.com/what-the-rule-of-least-power-means-for-modern-developers-b846010a8595/). When picking the right tool for the job, reach for the least power until you reach a situation where you need more. In our JAMstack world it might look something like this:
 
--   Is the site mostly content? -&gt; Static Site Generator/Markdown
--   Do I need some dynamic content? -&gt; “Cloud Database”
--   Do I need simple timed action? -&gt; IFTTT/Serverless Function/Build Hook
--   Do I need complex actions run multiple times a day with many different pieces of functionality? -&gt; Might be time for your own server...
+- Is the site mostly content? -&gt; Static Site Generator/Markdown
+- Do I need some dynamic content? -&gt; “Cloud Database”
+- Do I need simple timed action? -&gt; IFTTT/Serverless Function/Build Hook
+- Do I need complex actions run multiple times a day with many different pieces of functionality? -&gt; Might be time for your own server...
 
 As we explore the edge cases of our stack, it’s important to remember to look for the right tool...even if it’s not a JAM solution.
 
@@ -65,28 +60,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

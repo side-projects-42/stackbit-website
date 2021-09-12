@@ -101,4 +101,3 @@ If you have any questions or suggestions regarding our Privacy Policy, please co
 Copyright © 2021 Stackbit.  
 💖 Made with Stackbit
 
-<img src="https://www.facebook.com/tr?id=2703040533152181&amp;ev=PageView&amp;noscript=1" width="1" height="1" />

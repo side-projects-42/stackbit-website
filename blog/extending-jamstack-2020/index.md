@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Extending JAMstack: 10 APIs and Tools to check out in 2020
-==========================================================
+# Extending JAMstack: 10 APIs and Tools to check out in 2020
 
 Gift Egwuenu — January 13, 2020
 
@@ -20,13 +15,11 @@ The ongoing conversation about JAMstack has moved from being just a stack for cr
 
 The JAMstack ecosystem has evolved over the past few years. It’s been getting more popular as people have moved on from the mistaken notion that only static sites can be rendered using this architecture. We see developers and companies adopting it and creating fast and dynamic web applications with helpful services and APIs while maintaining the benefits of the JAMstack, which prioritizes performance, scalability and developer experience.
 
-The "A" in the JAMstack
------------------------
+## The "A" in the JAMstack
 
 The **A** in **JAMstack** stands for APIs. We no longer need to worry about dealing with traditional back-end - server-side operations can now be abstracted into reusable APIs and accessed over HTTPS with JavaScript. These can be third-party services or your custom function written as [Functions as a Service](https://en.wikipedia.org/wiki/Function_as_a_service) (serverless functions). Let’s explore a list of useful APIs and related tools that can make your JAMstack projects dynamic.
 
-10 APIs to check out in 2020
-----------------------------
+## 10 APIs to check out in 2020
 
 ### 1. [Algolia](https://www.algolia.com/)
 
@@ -88,8 +81,7 @@ Netlify Functions let you deploy Lambda functions without an AWS account and wit
 
 ![Netlify Functions](/images/1578919727-netlifyfunctionssm.png)
 
-Where to Go From Here
----------------------
+## Where to Go From Here
 
 The JAMstack provides a great advantage to both the end-users and developers coupled with a fast and scalable approach. The services here are a part of a myriad list of services available to use in the JAMstack ecosystem. Check out the [New Dynamic directory of tools and services](https://www.thenewdynamic.org/) and the [awesome static website services repository](https://github.com/agarrharr/awesome-static-website-services) for a comprehensive list of other services to explore.
 
@@ -99,28 +91,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

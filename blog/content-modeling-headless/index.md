@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Understanding Content Modeling in a Headless World
-==================================================
+# Understanding Content Modeling in a Headless World
 
 Brian Rinaldi — May 04, 2020
 
@@ -26,8 +21,7 @@ The Jamstack is, obviously, still about building outputs for the web, whatever t
 
 In this post I want to explore why content modeling is important in the Jamstack and how to approach content modeling for headless CMS.
 
-What is a Content Model?
-------------------------
+## What is a Content Model?
 
 A content model is a diagram of your content universe. It describes the various content types that comprise your content, lists their content attributes and shows how the various types relate to one another.
 
@@ -43,7 +37,7 @@ Most content models won't be as simple as the one shown above. For instance, let
 
 Without thinking through a content model, abstractions like the author/speaker one shown in the example above be get easily overlooked during development. Refactoring an existing content model can often be very painful (I know this from personal experience), so planning can save you a lot of time and effort down the road. This is also why it is important not to think of it purely as a description of the pages of your website, even if that may be its primary use initially. Keep in mind that this content may be used in any number of destinations.
 
-*I highly recommend reading [Content Modelling: A Master Skill](https://alistapart.com/article/content-modelling-a-master-skill/) by Rachel Lovinger for A List Apart. It gives an excellent overview of concepts and considerations that expand upon the topics covered here.*
+_I highly recommend reading [Content Modelling: A Master Skill](https://alistapart.com/article/content-modelling-a-master-skill/) by Rachel Lovinger for A List Apart. It gives an excellent overview of concepts and considerations that expand upon the topics covered here._
 
 ### Unstructured Content Versus Structured Content
 
@@ -61,7 +55,7 @@ The better approach, illustrated in the model from the prior section might look 
 
 Since `session` and `speaker` are now separate content types, we can easily manage the layout to be consistent across pages and create separate pages for each session and speaker. Plus, we can now use the same content to populate our event's mobile app without duplicating the effort!
 
-*For a deeper look at structured content, read [Strategies For Headless Projects With Structured Content Management Systems](https://www.smashingmagazine.com/2018/11/structured-content-done-right/) by Knut Melvær of Sanity.*
+_For a deeper look at structured content, read [Strategies For Headless Projects With Structured Content Management Systems](https://www.smashingmagazine.com/2018/11/structured-content-done-right/) by Knut Melvær of Sanity._
 
 ### Balancing Developer Wants with User Needs
 
@@ -83,8 +77,7 @@ This can be very useful if these banners are likely to be reused across multiple
 
 Finding this balance can be difficult but the point is not to go overboard abstracting out content types.
 
-Content Models in Headless CMS
-------------------------------
+## Content Models in Headless CMS
 
 One of the benefits of creating a content model is that it can make the process of setting up your headless CMS much more straightforward. How that happens depends largely on the headless CMS you choose (and there are [a lot of great options](https://bejamas.io/blog/headless-cms/)).
 
@@ -131,8 +124,7 @@ Managing relationships between content types in an API-based CMS is built into t
 
 While the specifics of how the content models are created may change across tools, the benefit of planning ahead with a content model can save a lot of time in development and prevent painful modification to a content model after the content has already been populated.
 
-Summing Up
-----------
+## Summing Up
 
 Developing a content model will save you time and effort when configuring your headless CMS and prevent costly mistakes down the road. If done early in the planning process, it can help define the constraints for design and user experience, inform your technology choices and help clarify business goals. The best part is, content models don't have to be compilcated to be useful. Simply establishing your content types, attributes and relationships is enough. There's no need to necessarily dig deep into data types or validations at this point.
 
@@ -144,28 +136,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

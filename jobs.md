@@ -107,4 +107,3 @@ Stackbit is the first open, complete platform for the Jamstack — it's the easi
 Copyright © 2021 Stackbit.  
 💖 Made with Stackbit
 
-<img src="https://www.facebook.com/tr?id=2703040533152181&amp;ev=PageView&amp;noscript=1" width="1" height="1" />

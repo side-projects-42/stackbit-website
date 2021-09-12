@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-4 New Tools to Watch in the Jamstack Ecosystem
-==============================================
+# 4 New Tools to Watch in the Jamstack Ecosystem
 
 Brian Rinaldi — June 08, 2020
 
@@ -17,8 +10,7 @@ While all of us at [Stackbit](https://www.stackbit.com/) have been firm believer
 
 This year has been filled with new tools and new offerings in the Jamstack ecosystem. Our goal at Stackbit is to let you use the tools you choose, so we're always trying to stay on top of the latest trends in the community. In this post, I want to cover some of the recent tools that have been trending in the Jamstack ecosystem.
 
-RedwoodJS
----------
+## RedwoodJS
 
 ![RedwoodJS](/images/1591622805-redwoodsm.png)
 
@@ -28,8 +20,7 @@ What does this mean in practice? Well, imagine your Jamstack site that requires 
 
 RedwoodJS is still very new but it definitely occupies a unique place in the ecosystem and is worth keeping an eye on.
 
-Bridgetown
-----------
+## Bridgetown
 
 ![Bridgetown](/images/1591622832-bridgetownsm.png)
 
@@ -39,8 +30,7 @@ Bridgetown aims to add some aspects of modern web development that were missing 
 
 It'll be interesting to watch Bridgetown to see how it continues to diverge from its Jekyll origins and to see if this is the modern Ruby-based SSG that developers have been waiting for.
 
-Scully
-------
+## Scully
 
 ![Scully](/images/1591622861-scullysm.png)
 
@@ -50,8 +40,7 @@ Scully's approach differs from other tools in more than just it's use of Angular
 
 While Angular doesn't seem to get the attention of it's framework counterparts lately, it still has a large community and a strong foothold in the enterprise, and Scully's approach seems geared to take advantage of that.
 
-Azure Static Web Apps
----------------------
+## Azure Static Web Apps
 
 ![Azure Static Web Apps](/images/1591622890-azuresm.png)
 
@@ -59,8 +48,7 @@ It has been entirely possible to host Jamstack applications on services like Azu
 
 Some aspects of Static Web Apps make it unique. First, it uses GitHub Actions to enable its CI/CD deployment. Using settings that you configure within Azure, the service generates the GitHub Action necessary to build and deploy your application. This also means that it should be relatively easy to customize the configuration to support any additional requirements you may have. In addition to serverless function creation and deployment similar to Netlify Functions (JavaScript only at the moment, but planned for other languages), the service also provides built-in authentication. This feature uses a JSON file that defines routes within the applicaton that require authentication and what role the user requires to access it.
 
-More to Come For Sure
----------------------
+## More to Come For Sure
 
 Given the growth in adoption of the Jamstack, we're sure to see more tools, services and companies jumping in. We've already worked hard to support a wide range of tools using Stackbit, and, as the ecosystem expands, we'll continue to build tools that help developers bring all the pieces of the Jamstack together. [Why not give it a try](https://app.stackbit.com/create)?
 
@@ -70,28 +58,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

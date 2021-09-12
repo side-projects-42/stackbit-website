@@ -1,30 +1,23 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Tutorial: Adding Stackbit to a Hugo Theme (part 2/2)
-====================================================
+# Tutorial: Adding Stackbit to a Hugo Theme (part 2/2)
 
 Robert Austin — August 26, 2019
 
 This is part 2 of our tutorial on adding Stackbit to an existing Hugo theme. In this tutorial we will model our Hugo themes data and configuration files. We also cover some more advanced model types including Object models and object field models.
 
-Tutorial: Adding Stackbit to a Hugo Theme (part 2/2)
-----------------------------------------------------
+## Tutorial: Adding Stackbit to a Hugo Theme (part 2/2)
 
 This is the second part of a 2 part tutorial on adding Stackbit to an existing Hugo theme. [Read Tutorial Part 1](https://www.stackbit.com/blog/hugo-stackbit-tutorial)
 
-Adding Config & Data Files
---------------------------
+## Adding Config & Data Files
 
 In [Part 1](https://www.stackbit.com/blog/hugo-stackbit-tutorial) we modelled all the markdown files in our theme, but what about data and config files?
 
@@ -102,8 +95,7 @@ Earlier in the tutorial we set the `dataDir` to `dataDir: exampleSite` (at the t
             name: phone
             label: Phone
 
-Configuration Files
--------------------
+## Configuration Files
 
 Most ssgs have a configuration file. Stackbit treats config files as normal data models. Here is the data model for the themes config file located at `exampleSite/config.yaml`.
 
@@ -275,13 +267,13 @@ Here we are going to use a [Object Model](https://docs.stackbit.com/uniform/obje
             label: Parent Menu Identifier
             description: The parent of an entry should be the identifier of another entry.
 
-We've created 2 object models. "site*menus" is a list of menu objects. It includes Main Menu and Footer Menu, which include an object model reference to "site*menu\_items".
+We've created 2 object models. "site*menus" is a list of menu objects. It includes Main Menu and Footer Menu, which include an object model reference to "site*menu_items".
 
 "site*menu*items" is a single object, with the 4 fields that are used in a Hugo menu item.
 
 Now in the CMS you can add new top level Menus ie Sidebar Menu, and you can add, edit and delete individual menu items from existing menus.
 
-Finally we need to add a reference to "site\_menus" to the data model for `config.yaml`
+Finally we need to add a reference to "site_menus" to the data model for `config.yaml`
 
     # stackbit.yaml
     ...
@@ -293,18 +285,16 @@ Finally we need to add a reference to "site\_menus" to the data model for `confi
           name: menu
           label: Menus
 
-Wrapping Up
------------
+## Wrapping Up
 
 Now we've modelled both the themes pages and data. The Uniform theme conversion is complete.
 
 Visit <https://app.stackbit.com/create> and import your theme again.
 
-Documentation
--------------
+## Documentation
 
--   The full Uniform spec is available in our docs <https://docs.stackbit.com/uniform/>
--   The code for this tutorial is available on our Github <https://github.com/stackbithq/uniform-hugo-tutorial>
+- The full Uniform spec is available in our docs <https://docs.stackbit.com/uniform/>
+- The code for this tutorial is available on our Github <https://github.com/stackbithq/uniform-hugo-tutorial>
 
 <span class="post-share-title">Share on:</span>
 
@@ -312,28 +302,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

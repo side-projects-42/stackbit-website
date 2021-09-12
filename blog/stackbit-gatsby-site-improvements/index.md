@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-4 Tips to Improve Your Stackbit Gatsby Site
-===========================================
+# 4 Tips to Improve Your Stackbit Gatsby Site
 
 Brian Rinaldi — June 18, 2020
 
@@ -19,17 +12,16 @@ If you are relatively new to Gatsby, perhaps you're wondering about how to make 
 
 Things like:
 
--   Adding a favicon
--   Adding Google Analytics or other analytics scripts
--   Adding social cards to enhance social media sharing
--   Creating a sitemap to submit to search engines.
+- Adding a favicon
+- Adding Google Analytics or other analytics scripts
+- Adding social cards to enhance social media sharing
+- Creating a sitemap to submit to search engines.
 
 In this post, we'll cover step by step how to do each of these things.
 
-*Note: the examples below were all tested on the Azimuth theme within Stackbit. Other themes use a common structure so in most cases the code and files should largely be the same.*
+_Note: the examples below were all tested on the Azimuth theme within Stackbit. Other themes use a common structure so in most cases the code and files should largely be the same._
 
-Add a favicon
--------------
+## Add a favicon
 
 A favicon is a small icon that will display typically in the tab next to the site's name within the browser, next to the bookmark if the page is bookmarked or on the shortcut if a user saves a shortcut to the site to the desktop of a mobile device. In order to create a favicon, it is best to have multiple versions of the image to match the various sizes needed on differing devices. There are sites that will help you create these such as [favicon.io](https://favicon.io). Let's walk through the steps.
 
@@ -70,8 +62,7 @@ Now when you run `gatsby develop` from the command-line/terminal, you should see
 
 ![a favicon in Chrome](/images/1592484603-favicon.png)
 
-Adding Google Analytics
------------------------
+## Adding Google Analytics
 
 Adding the Google Analytics (or any analytics script really) to a Stackbit site - Gatsby or not - is easy and doesn't require that you edit any code at all. Instead, we'll use a feature in Netlify called [snippet injection](https://docs.netlify.com/site-deploys/post-processing/snippet-injection/). Here are the steps:
 
@@ -89,8 +80,7 @@ Adding the Google Analytics (or any analytics script really) to a Stackbit site 
 
 Your site will now automatically have the analytics code injected on every page.
 
-Add Social Sharing Meta Tags
-----------------------------
+## Add Social Sharing Meta Tags
 
 One of the ways to improve the shareability of your site is to add meta tags that improve the way your content appears when shared on social media such as Twitter and Facebook. If you don't know about these meta tags, [this article by Adam Coti](https://css-tricks.com/essential-meta-tags-social-media/) offers a good primer. But how do you add it to your Gatsby site created by Stackbit? Let's take a look.
 
@@ -218,8 +208,7 @@ Now if you load a blog post on the site, you can see that the necessary SEO meta
 
 ![social share meta tags](/images/1592484729-social.png)
 
-Add a Sitemap
--------------
+## Add a Sitemap
 
 For our last example, we'll add a `sitemap.xml` to the site. This is useful for submitting to search engines like Google that use this to assist in properly crawling your site. Having a sitemap is another way to improve your site SEO. In this case, we will be utilizing a Gatsby plugin called simply [gatsby-plugin-sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/)
 
@@ -263,28 +252,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

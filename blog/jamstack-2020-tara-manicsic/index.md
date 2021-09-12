@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-What to Expect from the JAMstack in 2020 - Tara Manicsic
-========================================================
+# What to Expect from the JAMstack in 2020 - Tara Manicsic
 
 Brian Rinaldi — December 19, 2019
 
@@ -24,7 +19,7 @@ Tara Manicsic of Netlify shares her thoughts on the past year in the JAMstack an
 
 ### Tell us about yourself and what you do? Does JAMstack play a role in your day-to-day work?
 
-Hi, I’m Tara Z, Manicsic and I work on Angular developer experience at Netlify. Our company basically boils down to a bunch of people that are super excited about what the JAMstack brings to web performance, user experience, and developer experience (to be clear, that’s not our official creed 😋). In other words, JAMstack *is* my day-to-day. We all try to build tools and resources to help developers create, maintain, and deliver applications.
+Hi, I’m Tara Z, Manicsic and I work on Angular developer experience at Netlify. Our company basically boils down to a bunch of people that are super excited about what the JAMstack brings to web performance, user experience, and developer experience (to be clear, that’s not our official creed 😋). In other words, JAMstack _is_ my day-to-day. We all try to build tools and resources to help developers create, maintain, and deliver applications.
 
 ### What is your current JAMstack stack? What tool(s) have you most excited?
 
@@ -46,28 +41,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

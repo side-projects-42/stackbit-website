@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Build Your Own JAMstack API with Netlify Functions and Zapier Webhooks, Part 2
-==============================================================================
+# Build Your Own JAMstack API with Netlify Functions and Zapier Webhooks, Part 2
 
 Brian Rinaldi — January 20, 2020
 
@@ -28,8 +23,7 @@ There are a number of ways to achieve this, but, in this tutorial, we'll look at
 
 The sample code from this post is available at <https://github.com/remotesynth/webhooks>.
 
-Setting Up the Netlify Function
--------------------------------
+## Setting Up the Netlify Function
 
 The sample we'll build will use Zapier to watch a list of RSS feeds for changes and then notify a Netlify function that will add the new post title and URL to a data file containing an array of posts. This will then cause the site to update and rebuild.
 
@@ -152,14 +146,13 @@ If you get back success, then we're good to move on to the next step. It's worth
 
 You probably already deployed the function to test it, but there is one problem you may encounter. We're using Octokit but it isn't installed on our instance running the function. So if you called your public URL via Postman right now, you should get an error. There are multiple solutions to this.
 
--   Run the npm install as a prebuild or build step. You can find more details about how to do this in the [support post here](https://community.netlify.com/t/functions-and-node-modules/2323/4). Keep in mind that this may factor into your build minutes, which can incur charges if this process will run frequently.
--   Create a pre-bundled function that includes the dependencies as part of a build step using [Netlify Lambda](https://github.com/netlify/netlify-lambda).
--   Deploy an [unbundled function](https://docs.netlify.com/cli/get-started/#unbundled-javascript-function-deploys) using the Netlify CLI and `netlify deploy`.
+- Run the npm install as a prebuild or build step. You can find more details about how to do this in the [support post here](https://community.netlify.com/t/functions-and-node-modules/2323/4). Keep in mind that this may factor into your build minutes, which can incur charges if this process will run frequently.
+- Create a pre-bundled function that includes the dependencies as part of a build step using [Netlify Lambda](https://github.com/netlify/netlify-lambda).
+- Deploy an [unbundled function](https://docs.netlify.com/cli/get-started/#unbundled-javascript-function-deploys) using the Netlify CLI and `netlify deploy`.
 
 Once we've deployed our function with the necessary dependencies, we should be able to call our function on Netlify from within Postman using a URL structure like `[My Netlify URL]/.netlify/functions/zapierReceive`. This should update your list of URLs and cause the site to rebuild with the new URL added.
 
-Setting Up the Webhook in Zapier
---------------------------------
+## Setting Up the Webhook in Zapier
 
 Now that we have an endpoint to post to (i.e. our Netlify Function), we can set the rest of the process up in Zapier. Start by making a new zap and search for "RSS by Zapier" and then choose "New Items in Multiple Feeds". This task will watch a list of RSS feeds and run when it sees new posts.
 
@@ -187,8 +180,7 @@ Clicking continue will allow you to test and ultimately save your configuration.
 
 ![links displaying on the page](/images/1579533418-receiveconfigurestep9sm.png)
 
-Next Steps
-----------
+## Next Steps
 
 Obviously, this is a very basic example of what you might do using these tools. There are 1,500+ apps that Zapier integrates with, so that's an enormous amount of sources you can integrate with to pull data into your site. For example, you could automatically pull in new images posted to Instagram and push those images to a gallery on your site. Or you could pull in data from a Google Sheet making it easy for an editor to update a list of data that appears on the site. These are just a couple of ideas and, while using Zapier isn't necessarily required to accomplish any of these, it does simplify the process and help you avoid digging into the ins and outs of each specific API.
 
@@ -200,28 +192,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

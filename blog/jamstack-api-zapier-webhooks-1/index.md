@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-Build Your Own JAMstack API with Netlify Functions and Zapier Webhooks, Part 1
-==============================================================================
+# Build Your Own JAMstack API with Netlify Functions and Zapier Webhooks, Part 1
 
 Brian Rinaldi — January 16, 2020
 
@@ -28,8 +23,7 @@ In this tutorial, I'll show you how to set up webhooks by Zapier to send informa
 
 The sample code from this post is available at <https://github.com/remotesynth/webhooks>.
 
-Sending Data via a Webhook
---------------------------
+## Sending Data via a Webhook
 
 The first scenario we'll look at is creating a webhook with an endpoint that receives data from your site and passes that data to an existing service Zapier supports.
 
@@ -187,8 +181,7 @@ I should note that for the purposes of example, this code doesn't include much i
 
 ![Our data in a Google Sheet](/images/1579184357-sendconfigurestep10sm.png)
 
-Next Steps
-----------
+## Next Steps
 
 The awesome thing is that this same process could allow you to easily connect your JAMstack application to any of the services that 1,500+ apps that Zapier has integrations with. This makes a lot of things possible that may have been either difficult or even impossible using existing APIs. You can explore the full code at <https://github.com/remotesynth/webhooks>.
 
@@ -200,28 +193,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

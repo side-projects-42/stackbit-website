@@ -1,13 +1,6 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-Build Your First Sourcebit Plugin
-=================================
+# Build Your First Sourcebit Plugin
 
 Brian Rinaldi — March 23, 2020
 
@@ -19,8 +12,7 @@ Sourcebit has three types of plugins: source plugins; target plugins; and transf
 
 All of this works amazingly if you use one of the preexisting plugins, but what if you want to connect to a source that is not yet supported? Or what if you want to support an SSG that doesn't yet have a target plugin? Well, thankfully, Sourcebit is designed to allow you to build your own plugins. You could even get them added to the [plugin registry](https://github.com/stackbithq/sourcebit/wiki/Plugin-registry) and make them available to any Sourcebit user. In this tutorial, I'll walk you through the steps for building your own plugin.
 
-The Sample Project
-------------------
+## The Sample Project
 
 Sourcebit does already provide a [sample plugin](https://github.com/stackbithq/sourcebit-sample-plugin) that is well documented to help illustrate the various methods and requirements for building a plugin. However, I'd been experimenting with using the [Wordpress API in JAMstack apps](https://www.stackbit.com/blog/wordpress-to-jamstack/), so for this tutorial I thought I would try to build a basic Wordpress API source plugin.
 
@@ -28,15 +20,14 @@ You can find the source for the Wordpress source plugin at <https://github.com/r
 
 The plugin utlizes two libraries:
 
--   [Node WPAPI](https://github.com/WP-API/node-wpapi) helps simplify working with Wordpress API methods within Node.
--   [Turndown](https://github.com/domchristie/turndown) turns HTML into Markdown. This is necessary because the Wordpress API delivers everything from titles to the body in rendered HTML. Note that, while configurable, Turndown can cause a loss in fidelity between the HTML and Markdown.
+- [Node WPAPI](https://github.com/WP-API/node-wpapi) helps simplify working with Wordpress API methods within Node.
+- [Turndown](https://github.com/domchristie/turndown) turns HTML into Markdown. This is necessary because the Wordpress API delivers everything from titles to the body in rendered HTML. Note that, while configurable, Turndown can cause a loss in fidelity between the HTML and Markdown.
 
 As you can see in the following video, here I am importing content from a local Wordpress installation to a Hugo site.
 
 Let's see how this was built.
 
-The Two Parts to a Plugin
--------------------------
+## The Two Parts to a Plugin
 
 It's worth thinking of your plugin as consisting of two separate parts: the first part handles collecting information from the user that is necessary to configure the plugin; and the second part is the code that actually performs the plugin action after the configuration is set.
 
@@ -87,9 +78,9 @@ The [`getSetup` method](https://github.com/stackbithq/sourcebit/wiki/Plugin-API#
 
 The type of questions you may need to ask and the verifications you may need to make will depend largely on what type of plugin you are creating - a source, target or transformation plugin. Sourcebit provides the method with all the tools that it uses to generate the interactive setup process, meaning that you are free to customize this experience as you need to.
 
--   The `chalk` variable contains an instance of the [chalk library](https://github.com/chalk/chalk), which gives each plugin access to an array of text styling options for the CLI. You can reference the [chalk library documentation](https://github.com/chalk/chalk#usage) for details on how to use it.
--   The `ora` variable contains an instance of the [ora library](https://github.com/sindresorhus/ora), which provides a spinner tool used to inform the user when an action is loading as well as confirmation and error responses. For more information on how to use it, check the [ora library documentation](https://github.com/sindresorhus/ora#usage).
--   The `inquirer` variable contains an instance of the [inquirer.js library](https://github.com/SBoudrias/Inquirer.js), which provides the interface for the question and answer interaction via the CLI that is integral to the interactive setup process. Each inquirer prompt can contain questions that offer an [array of properties to customize the behavior](https://github.com/SBoudrias/Inquirer.js#question). In addition, inquirer.js provides a number of different [built-in prompt types](https://github.com/SBoudrias/Inquirer.js#prompt-types). Inquirer also allows for custom prompt types. For instance, some Sourcebit plugins rely on the [inquirer table prompt](https://github.com/eduardoboucas/inquirer-table-prompt) type to allow for selecting options in a table-like format.
+- The `chalk` variable contains an instance of the [chalk library](https://github.com/chalk/chalk), which gives each plugin access to an array of text styling options for the CLI. You can reference the [chalk library documentation](https://github.com/chalk/chalk#usage) for details on how to use it.
+- The `ora` variable contains an instance of the [ora library](https://github.com/sindresorhus/ora), which provides a spinner tool used to inform the user when an action is loading as well as confirmation and error responses. For more information on how to use it, check the [ora library documentation](https://github.com/sindresorhus/ora#usage).
+- The `inquirer` variable contains an instance of the [inquirer.js library](https://github.com/SBoudrias/Inquirer.js), which provides the interface for the question and answer interaction via the CLI that is integral to the interactive setup process. Each inquirer prompt can contain questions that offer an [array of properties to customize the behavior](https://github.com/SBoudrias/Inquirer.js#question). In addition, inquirer.js provides a number of different [built-in prompt types](https://github.com/SBoudrias/Inquirer.js#prompt-types). Inquirer also allows for custom prompt types. For instance, some Sourcebit plugins rely on the [inquirer table prompt](https://github.com/eduardoboucas/inquirer-table-prompt) type to allow for selecting options in a table-like format.
 
 Let's look at an example. For this initial version of the Wordpress plugin, there is only one question: "What is the root URL for your Wordpress API?" This question cannot be left empty and will default to any existing value if the setup was run previously (this is in the `currentOptions` variable). Once a user submits the response, we need to verify that the API is available at the URL provided and either show a success or a fail response.
 
@@ -126,8 +117,8 @@ Once Sourcebit collects the information from the user during the interactive set
 
 However, it is first important to realize two things about these methods and the pulling data:
 
--   Sourcebit also calls both of these methods during the configuration process. This provides details that are used within other aspects of the configuration process. For instance, in order to properly configure a target plugin, Sourcebit needs to know the data models that the source plugin provides. Sourcebit also shows sample entries via the command-line to assist when mapping source content to a target. To do this, Sourcebit gets the data and holds it in memory.
--   To help prevent API overuse and even potential charges associated with that, Sourcebit caches data in a `.sourcebit.cache.json` file. This cache is written during the `fetch` process and retrieved from cache prior to subsequent calls. This functionality is enabled by default when `fetch` is executed with the `--watch` flag, or when `watch: true` is set in the `options` object. Alternatively, you can manually enable it with the `--cache` flag or by setting `cache: true` in `options`.
+- Sourcebit also calls both of these methods during the configuration process. This provides details that are used within other aspects of the configuration process. For instance, in order to properly configure a target plugin, Sourcebit needs to know the data models that the source plugin provides. Sourcebit also shows sample entries via the command-line to assist when mapping source content to a target. To do this, Sourcebit gets the data and holds it in memory.
+- To help prevent API overuse and even potential charges associated with that, Sourcebit caches data in a `.sourcebit.cache.json` file. This cache is written during the `fetch` process and retrieved from cache prior to subsequent calls. This functionality is enabled by default when `fetch` is executed with the `--watch` flag, or when `watch: true` is set in the `options` object. Alternatively, you can manually enable it with the `--cache` flag or by setting `cache: true` in `options`.
 
 #### The `bootstrap` method
 
@@ -137,12 +128,12 @@ This method is also responsible for defining the logic necessary to enable the `
 
 The `bootstrap` method is provided the following parameters:
 
--   `log` is a function for writing log messages that may be visible by the user depending on their verbosity settings.
--   `debug` is a method for writing debug output to the console that are only visible when Sourcebit is being run in debug mode via the `--debug` flag.
--   `getPluginContext` is a function that gets the content and data available within Sourcebit for this plugin (i.e. entries pulled from the source plugin that may already exist in the cache).
--   `setPluginContext` is a function that allows you to overwrite the existing data stored by Sourcebit for this plugin (for example, if an entry was updated).
--   `options` is an object that contains: \_ Configuration values set by the user during setup and stored in the main configuration file. \_ Configuration values set by the user but stored in the `.env` file due to their private nature. \* Options passed when to `fetch` either via the command line or via code. This includes the `watch` flag that indicates that the plugin should watch for continue watching for changes in the source data.
--   `refresh` is a function called when changes are made to the data Sourcebit holds, such as when a change is detected during `watch`.
+- `log` is a function for writing log messages that may be visible by the user depending on their verbosity settings.
+- `debug` is a method for writing debug output to the console that are only visible when Sourcebit is being run in debug mode via the `--debug` flag.
+- `getPluginContext` is a function that gets the content and data available within Sourcebit for this plugin (i.e. entries pulled from the source plugin that may already exist in the cache).
+- `setPluginContext` is a function that allows you to overwrite the existing data stored by Sourcebit for this plugin (for example, if an entry was updated).
+- `options` is an object that contains: \_ Configuration values set by the user during setup and stored in the main configuration file. \_ Configuration values set by the user but stored in the `.env` file due to their private nature. \* Options passed when to `fetch` either via the command line or via code. This includes the `watch` flag that indicates that the plugin should watch for continue watching for changes in the source data.
+- `refresh` is a function called when changes are made to the data Sourcebit holds, such as when a change is detected during `watch`.
 
 Let's look at the `bootstrap` method within the Wordpress plugin as an example (I'll explain the code following).
 
@@ -303,8 +294,7 @@ Let's look at the example in the Wordpress plugin.
 
 While there are quite a few lines of code, as you can see it is primarily taking data received from the Wordpress API and putting it into data structures required for either assets or entries by Sourcebit. Both assets and entries are stored in the `objects` data bucket, so they are combined after normalization and the data object is returned.
 
-Testing a Plugin
-----------------
+## Testing a Plugin
 
 Now that we've finished writing our plugin, how can we test it locally? Sourcebit provides a way of adding a local plugin to be used when running the interactive setup process. First, we need to create a JSON file that contains an array of objects representing the local plugin modules that we'd like to use. For example, the JSON to load my Wordpress on my local machine would be:
 
@@ -331,8 +321,7 @@ After running through the configuration process, you may want to run the `fetch`
 
 For more details on debugging [check the documentation](https://github.com/stackbithq/sourcebit/wiki/Debugging).
 
-Registering a Plugin
---------------------
+## Registering a Plugin
 
 So you've created an awesome plugin and you want to share it with the community. While users can download the plugin and run it locally as shown above, it'd be better if it was a default option within the interactive setup process. This is done by adding your plugin to [Sourcebit's plugin registry](https://github.com/stackbithq/sourcebit/wiki/Plugin-registry).
 
@@ -340,8 +329,7 @@ The plugin registry requires the same information shown in the JSON file above. 
 
 When you think the plugin is ready, you can [add it to the registry file](https://github.com/stackbithq/create-sourcebit/blob/master/plugins.json) and submit a pull request.
 
-We Can't Wait to See What You Create!
--------------------------------------
+## We Can't Wait to See What You Create!
 
 The JAMstack ecosystem has so many amazing options for developers. There are countless headless CMS for content, data stores or APIs for data, and numerous SSGs. That's why Sourcebit was designed to be extensible - so that the community could expand the capabilities of the tool to support whatever SSG, CMS or data source they use or love. Hopefully this tutorial gives you the guidance you need to create your own plugin and share it with the JAMstack community.
 
@@ -351,28 +339,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-

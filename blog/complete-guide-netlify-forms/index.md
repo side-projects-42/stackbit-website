@@ -1,18 +1,13 @@
 This app works best with JavaScript enabled.
 
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-
-
-
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
-
-A Complete Guide to Netlify Forms
-=================================
+# A Complete Guide to Netlify Forms
 
 Brian Rinaldi — August 03, 2020
 
@@ -22,15 +17,13 @@ There are a lot of options for developers building Jamstack sites when they need
 
 In this post, I want to focus on one of those options: [Netlify Forms](https://www.netlify.com/products/forms/). If you are deploying to Netlify, they are extremely easy to set up and use. Even better, if your site is built using Stackbit, all the forms within the generated site code come prewired for Netlify Forms. By understanding how they work, it'll make it easier for you to update existing forms or create new forms on your site.
 
-Netlify Forms Pricing
----------------------
+## Netlify Forms Pricing
 
 Before we dig into code, it's probably worth getting the pricing discussion out of the way. Netlify Forms are free to start, but include 100 submissions per site per month as part of the free plan. This should be sufficient for many sites, but, if you need more, you can purchase 1,000 submissions for $19 and $9 for every 500 additional submissions after that. Full details can be found on [Netlify's pricing page](https://www.netlify.com/pricing/?_ga=2.153282808.1147050974.1595961452-2087123647.1595961452#forms).
 
 I should also note that, while Stackbit deploys to Netlify and Netlify forms are enabled by default, the forms pricng and billing is part of your Netlify account and not connected to your Stackbit account in any way.
 
-Netlify Forms Basics
---------------------
+## Netlify Forms Basics
 
 Much of the power of Netlify Forms comes in how simple they are to implement. Let's take a simple contact form you might see on a typical site (the one below is based upon the contact form Stackbit creates when for projects created in the site builder).
 
@@ -76,8 +69,7 @@ That's all. Now, if I were to submit the form as shown below...
 
 ![viewing the form submission data](/images/contact-verified-sm.png)
 
-Advanced Form Features
-----------------------
+## Advanced Form Features
 
 So, that was easy, but it may not be exactly what you want. For instance, you may want a custom confirmation page and you may want to ensure that bots can't submit your form. Perhaps you may even want to submit the form via JavaScript rather than a standard HTML form post. All of these things are possible, so let's review some of the more advanced functionality available in Netlify Forms.
 
@@ -244,8 +236,7 @@ It is worth noting that the content type is set to `application/x-www-form-urlen
 
 The fetch API returns a JavaScript promise. Assuming the request succeeds, in this case we are just redirecting the user to the value of the `form`'s `action` attribute. In most case, you'll probably want to perform some other kind of response. In addition, our error handler only dumps the error to the console at the moment. You'll want to display some sort of notification to the user that the form submission failed instead, depending on how your form is displayed.
 
-Netlify Forms in React-based Static Site Generators
----------------------------------------------------
+## Netlify Forms in React-based Static Site Generators
 
 Netlify has a [post dedicated to this topic](https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/). Even though it is a few years old, it is still accurate. However, let's look at this topic as it relates to the two most popular React-based SSGs: Gatsby and Next.js.
 
@@ -285,11 +276,11 @@ The only required change to a Gatsby or Next.js form to enable it to be captured
 
 To handle your form submission via JavaScript rather than a standard form post, we'll use code similar to the plain old JavaScript form handling shown previously. Here's what we'll need to handle in order to achieve this:
 
--   Our form will need to have state, which will hold the form inputs from the user.
--   We'll need a method to handle updating the state as the user enters data into the form fields.
--   We'll need an `encode` method to URL encode the form parameters (ours will be taken from the [previously referenced tutorial](https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/)).
--   We'll need a method to handle the form submission when the user clicks submit.
--   Finally, we'll need to wire all of the above up to the existing form.
+- Our form will need to have state, which will hold the form inputs from the user.
+- We'll need a method to handle updating the state as the user enters data into the form fields.
+- We'll need an `encode` method to URL encode the form parameters (ours will be taken from the [previously referenced tutorial](https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/)).
+- We'll need a method to handle the form submission when the user clicks submit.
+- Finally, we'll need to wire all of the above up to the existing form.
 
 The identical code will work for both Next.js and Gatsby sites. Here's the finished code based upon the same contact form we've worked with in the prior examples. Note, however, that we do not need a `method` and `action` on the `form` tag, nor do we need the `form-name` element as this is wired into the submission script.
 
@@ -355,8 +346,7 @@ The identical code will work for both Next.js and Gatsby sites. Here's the finis
         }
     }
 
-Managing Submissions
---------------------
+## Managing Submissions
 
 All form submissions handled via Netlify Forms will be stored and accessible via the Forms tab in your project's Netlify dashboard. From here, you can expand them to view the submission details, delete them or mark them as spam. You can also download all the submissions as a CSV file.
 
@@ -370,8 +360,7 @@ More than likely you'll want to receive some form of notification when a form is
 
 The outgoing webhook offers an opportunity to connect form submissions with any number of tools. For example, you could use a tool like IFTTT or Zapier, both of which offer webhooks, to integrate with the thousands of tools that they have prebuilt integrations for.
 
-Forms Handling in Netlify Functions
------------------------------------
+## Forms Handling in Netlify Functions
 
 Netlify Functions are serverless functions that can easily be deployed with your Netlify project. They can perform all kinds of server-side business logic. They can also respond to [events and triggers](https://docs.netlify.com/functions/trigger-on-events/#available-triggers), including the `submission-created` event that occurs when a form is submitted. Let's see how we can take advantage of this by automatically writing our contact form submissions to a Google Sheet.
 
@@ -383,17 +372,17 @@ Firstly, we'll be working with this [Google Spreadsheet wrapper for Node](https:
 
 There are quite a few requirements for connecting to the Google Sheet that [Shawn covers in his post](https://www.swyx.io/writing/netlify-google-sheets/). They are:
 
--   We may need to create a project in Google if you do not have one already. Go to your [Google APIs dashboard](https://console.developers.google.com/apis/dashboard) and click the project drop down in the upper-left-hand side of the page and then click the "New Project" button.
--   We'll need to [enable the Google Sheets API for our project](https://console.developers.google.com/apis/library/sheets.googleapis.com)
--   We'll need to create service account credentials from the [credentials page in our Google APIs dashboard](https://console.developers.google.com/apis/credentials). Go down to the "Service Accounts" section, click "Manage Service Accounts" and then "Create Service Account". The service account name can be anything you choose. For the role, we can choose Project &gt; Editor. We can just click "Done" when asked to grant user's permission to the service account, leaving this blank.
--   When the service account is created, select the "Actions" dropdown on the row with our new service account and click "Create Key". Choose JSON and download the key file somewhere safe on your computer.
--   Open the file and copy the following items into a `.env` file in your project (be sure that this file is added to your `.gitignore` as you do not want to accidentally check in your credentials to a public repository): \_ The value of `client_email` from the JSON file is `GOOGLE_SERVICE_ACCOUNT_EMAIL` in your `.env` \_ The value of `private_key` in the JSON file is `GOOGLE_PRIVATE_KEY` in the `.env`.
+- We may need to create a project in Google if you do not have one already. Go to your [Google APIs dashboard](https://console.developers.google.com/apis/dashboard) and click the project drop down in the upper-left-hand side of the page and then click the "New Project" button.
+- We'll need to [enable the Google Sheets API for our project](https://console.developers.google.com/apis/library/sheets.googleapis.com)
+- We'll need to create service account credentials from the [credentials page in our Google APIs dashboard](https://console.developers.google.com/apis/credentials). Go down to the "Service Accounts" section, click "Manage Service Accounts" and then "Create Service Account". The service account name can be anything you choose. For the role, we can choose Project &gt; Editor. We can just click "Done" when asked to grant user's permission to the service account, leaving this blank.
+- When the service account is created, select the "Actions" dropdown on the row with our new service account and click "Create Key". Choose JSON and download the key file somewhere safe on your computer.
+- Open the file and copy the following items into a `.env` file in your project (be sure that this file is added to your `.gitignore` as you do not want to accidentally check in your credentials to a public repository): \_ The value of `client_email` from the JSON file is `GOOGLE_SERVICE_ACCOUNT_EMAIL` in your `.env` \_ The value of `private_key` in the JSON file is `GOOGLE_PRIVATE_KEY` in the `.env`.
 
 Ok. I know that's already a lot of steps, but we're almost done. We just need to create the sheet that we'll connect to:
 
--   Create a spreadsheet in Google Sheets (name it whatever you like, mine is "Contact Form Submissions").
--   Add a first row with headers. These need to match the values we'll be sending *exactly* (even case is important here). For our contact form, these should read "name", "email" and "message". You can freeze the header row if you wish by selecting it in Google Sheets and clicking View &gt; Freeze &gt; 1 Row.
--   Copy the ID of the sheet from the URL. For example, my URL is `https://docs.google.com/spreadsheets/d/1sCwnjw0K9a2F9i9oR2MO8tPv_u3X_dIbLa12bnxh2B0/edit#gid=0`, so my sheet ID is `1sCwnjw0K9a2F9i9oR2MO8tPv_u3X_dIbLa12bnxh2B0`. Place this into the `.env` file as `GOOGLE_SPREADSHEET_ID_FROM_URL`.
+- Create a spreadsheet in Google Sheets (name it whatever you like, mine is "Contact Form Submissions").
+- Add a first row with headers. These need to match the values we'll be sending _exactly_ (even case is important here). For our contact form, these should read "name", "email" and "message". You can freeze the header row if you wish by selecting it in Google Sheets and clicking View &gt; Freeze &gt; 1 Row.
+- Copy the ID of the sheet from the URL. For example, my URL is `https://docs.google.com/spreadsheets/d/1sCwnjw0K9a2F9i9oR2MO8tPv_u3X_dIbLa12bnxh2B0/edit#gid=0`, so my sheet ID is `1sCwnjw0K9a2F9i9oR2MO8tPv_u3X_dIbLa12bnxh2B0`. Place this into the `.env` file as `GOOGLE_SPREADSHEET_ID_FROM_URL`.
 
 ### Writing the Function
 
@@ -455,8 +444,7 @@ Here you can see the code in action as I submit the form and it "magically" appe
 
 Obviously, you are not limited to this functionality. This is just one example and you can do any number of amazing things with your form submission data in your Netlify Function. For a very good reference on the data that Netlify makes available in Netlify Forms-related functions, check [this post by Raymond Camden](https://www.raymondcamden.com/2019/01/15/customized-form-handling-on-netlify-with-serverless-functions).
 
-Where to Go From Here
----------------------
+## Where to Go From Here
 
 My goal here was to give you the most comprehensive guide I could to Netlify Forms. The [documentation](https://docs.netlify.com/forms/setup/) is still an important resource. You can also get support for your Netlify Forms questions via [Netlify's community forums](https://community.netlify.com/t/support-guide-form-problems-form-debugging-404-when-submitting/92), but hopefully I have given you everything you need. So, first remember that no one loves filling out forms, and try not to go overboard. Otherwise, just go build some forms!
 
@@ -466,28 +454,6 @@ Tweet
 
 Share
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-
