@@ -1,23 +1,21 @@
 This app works best with JavaScript enabled.
 
-<a href="/" class="masthead-logo"><img src="/images/logo_alt.svg" alt="Stackbit logo" width="133" height="20" /></a>
 
-<span class="screen-reader-text">Show Menu</span><span class="masthead-menu-icon" aria-hidden="true"></span>
 
--   [Pricing](/pricing)
--   [Agencies](/agencies)
--   [Businesses](/businesses)
--   [Documentation](https://www.stackbit.com/docs/)
--   [Sign In](https://app.stackbit.com/)
--   <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
 
-About Stackbit
-==============
+
+- [Pricing](/pricing)
+- [Agencies](/agencies)
+- [Businesses](/businesses)
+- [Documentation](https://www.stackbit.com/docs/)
+- [Sign In](https://app.stackbit.com/)
+- <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent button-component-hollow"><span>Get Started</span></a>
+
+# About Stackbit
 
 On a mission to make the web, better.
 
-Building the Modern Web
------------------------
+## Building the Modern Web
 
 The way we create and engineer websites is changing thanks to the constant evolution of tools, best practices and needs. They're being statically generated, served from CDNs, edited using Headless CMS and wired up with a myriad of developer workflows.
 
@@ -25,8 +23,7 @@ New ideas like the Jamstack, serverless computing and git-based workflows are cr
 
 <a href="https://www.stackbit.com/jobs/" class="button-component button-component-theme-accent"><span>Join Us</span></a>
 
-Meet the Team
--------------
+## Meet the Team
 
 <img src="/images/1562291184-rob.jpg" alt="Robert Austin&#39;s avatar" class="avatar" />
 
@@ -110,8 +107,7 @@ Meet the Team
 
 **You**Join the Team
 
-Join our Team
--------------
+## Join our Team
 
 We are a lean team of explorers, builders, scientists and just plain curious folks who live and breathe the Jamstack.
 
@@ -123,8 +119,7 @@ We help each other, uplift each other, and rely on each other's feedback and exp
 
 <a href="https://www.stackbit.com/jobs/" class="button-component button-component-theme-accent"><span>See Open Positions</span></a>
 
-Our Investors
--------------
+## Our Investors
 
 ![Zeev Ventures](/images/1562293456-zeev-ventures.png)
 
@@ -160,9 +155,7 @@ Our Investors
 
 **Ran Makavy**EVP and Chief Product Officer at Lyft
 
-
-
-> <img src="/images/1566230159-jonny-goodwin.jpg" class="avatar" />[Jonny Goodwin<span class="small">@Jonny\_Goodwin</span>](https://twitter.com/Jonny_Goodwin/status/1108768178899951616)
+> <img src="/images/1566230159-jonny-goodwin.jpg" class="avatar" />[Jonny Goodwin<span class="small">@Jonny_Goodwin</span>](https://twitter.com/Jonny_Goodwin/status/1108768178899951616)
 >
 > [@stackbit](https://twitter.com/stackbit) allows you to easily deploy a static site backed with a CMS. Amazing service.
 
@@ -178,33 +171,10 @@ Our Investors
 >
 > Using [@stackbit](https://twitter.com/stackbit) for the first time after getting into the beta. This is a game changer everyone. [\#JamStack](https://twitter.com/hashtag/JamStack?src=hash)
 
-Create a Jamstack Site
-----------------------
+## Create a Jamstack Site
 
 <a href="https://app.stackbit.com/create" class="button-component button-component-theme-accent"><span>Get Started</span></a>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- -->
 
-
-
 <!-- -->
-
-
-
-
-
-
-
-
