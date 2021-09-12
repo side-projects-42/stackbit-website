@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Import an Existing Site into Stackbit
-=====================================
+# Import an Existing Site into Stackbit
 
 In this tutorial, we'll go through the necessary steps to bring your existing Jamstack site to Stackbit and start taking advantage of Stackbit's editing and collaboration tools.
 
@@ -39,19 +12,17 @@ In this tutorial, we'll go through the necessary steps to bring your existing Ja
 4.  [Learn how Stackbit's editor works](#step_3_learn_how_stackbit_s_editor_works)
 5.  [Publish your site](#step_4_publish_your_site)
 
-<a href="#prerequisites" class="hash-link"><span class="icon-copy"></span></a>Prerequisites
--------------------------------------------------------------------------------------------
+## <a href="#prerequisites" class="hash-link"><span class="icon-copy"></span></a>Prerequisites
 
 Please note the following limitations when importing a site into Stackbit:
 
--   You have access to your website's code repository on [GitHub](https://github.com/). If you don't have one handy, you can fork this [blog boilerplate for Gatsby](https://github.com/gatsbyjs/gatsby-starter-blog).
--   Stackbit supports sites built using one of the following SSGs - Gatsby, Next.js, Eleventy, Gridsome, Hexo, Hugo, Jekyll, Next.js, Nuxt, Sapper, Vuepress.
--   Your site's content must be separated from the presentation. For example, if your site uses React, then the content should be stored separately and passed to React components via props. If you want to learn more about separating content from presentation, read our [conceptual guide](/docs/conceptual-guides/content-presentation-separation) on this subject.
--   Your site's content is stored in files in your site's git repository. These files should have one of the following extensions - `.md`, `.mdx`, `.markdown`, `.yaml`, `.yml`, `.json`, `.toml`. Alternatively, your site's content is managed by one of the supported CMSs - Contentful, Sanity, Forestry, NetlifyCMS.
--   Your site has a working development server that listens to content changes in files or headless CMS and refreshes any opened browser sessions via live-reload or HMR when the content is changed.
+- You have access to your website's code repository on [GitHub](https://github.com/). If you don't have one handy, you can fork this [blog boilerplate for Gatsby](https://github.com/gatsbyjs/gatsby-starter-blog).
+- Stackbit supports sites built using one of the following SSGs - Gatsby, Next.js, Eleventy, Gridsome, Hexo, Hugo, Jekyll, Next.js, Nuxt, Sapper, Vuepress.
+- Your site's content must be separated from the presentation. For example, if your site uses React, then the content should be stored separately and passed to React components via props. If you want to learn more about separating content from presentation, read our [conceptual guide](/docs/conceptual-guides/content-presentation-separation) on this subject.
+- Your site's content is stored in files in your site's git repository. These files should have one of the following extensions - `.md`, `.mdx`, `.markdown`, `.yaml`, `.yml`, `.json`, `.toml`. Alternatively, your site's content is managed by one of the supported CMSs - Contentful, Sanity, Forestry, NetlifyCMS.
+- Your site has a working development server that listens to content changes in files or headless CMS and refreshes any opened browser sessions via live-reload or HMR when the content is changed.
 
-<a href="#step_1_add_a_stackbit_yaml_file_to_your_site" class="hash-link"><span class="icon-copy"></span></a>Step 1: Add a stackbit.yaml file to your site
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_1_add_a_stackbit_yaml_file_to_your_site" class="hash-link"><span class="icon-copy"></span></a>Step 1: Add a stackbit.yaml file to your site
 
 Before importing your site into Stackbit, let's create a configuration file that will tell Stackbit how to import and run the preview of your site correctly and provide advanced features such as the on-page editing experience.
 
@@ -76,8 +47,7 @@ Note that the generated `stackbit.yaml` is the "**best guess**", so it might not
 
 Click [here](/docs/reference/stackbit-cli) to learn more about Stackbit CLI.
 
-<a href="#step_2_import_your_site_into_stackbit" class="hash-link"><span class="icon-copy"></span></a>Step 2: Import your site into Stackbit
---------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_2_import_your_site_into_stackbit" class="hash-link"><span class="icon-copy"></span></a>Step 2: Import your site into Stackbit
 
 Navigate to <https://app.stackbit.com/import> to import your site into Stackbit. You will need to connect Stackbit with your GitHub account. After connecting, select your website's repository from the list of repositories in your GitHub account. Stackbit will load your repository and select the `master` branch for you. From this branch Stackbit will create a new `preview` branch that will be used by Stackbit.
 
@@ -138,8 +108,7 @@ You can open the Logs panel at the left of the screen to see these steps' logs. 
 
 To learn more about how Stackbit Preview works, read our [conceptual guide](/docs/conceptual-guides/site-preview/).
 
-<a href="#step_3_learn_how_stackbit_s_editor_works" class="hash-link"><span class="icon-copy"></span></a>Step 3: Learn how Stackbit's editor works
---------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_3_learn_how_stackbit_s_editor_works" class="hash-link"><span class="icon-copy"></span></a>Step 3: Learn how Stackbit's editor works
 
 After Stackbit loads your site, it will enter the "Edit" mode. In the "Edit" mode, when you move your mouse pointer around, the editor shows rectangular guides around editable content. Clicking inside the rectangular area will activate the on-page editor and let you edit the underlying source value.
 
@@ -172,15 +141,15 @@ Click on a title and change its text to something else, then press enter. When e
 
 When you changed the text, Stackbit did the following steps:
 
--   Stackbit updated the markdown file containing the original text inside the preview server.
--   The SSG server picked up the updated file and updated the live preview via web-socket.
--   Stackbit committed the change within the markdown file into the special `preview` branch and pushed the changes to GitHub.
+- Stackbit updated the markdown file containing the original text inside the preview server.
+- The SSG server picked up the updated file and updated the live preview via web-socket.
+- Stackbit committed the change within the markdown file into the special `preview` branch and pushed the changes to GitHub.
 
 ☝️ Stackbit never commits content changes to the `master` or the `main` branches. This is to ensure that your changes will not be picked up by a serverless deployment platform such as Netlify, affecting your live site.
 
 Let's look at the git commit with the updated markdown file. To quickly open your site's repository, click on the "Settings" button in the top bar. Then click on the "Open" button beside the GitHub repository section.
 
-In GitHub, select the `preview` branch and click the "commits" link to see the latest commits. You should see that the latest commit has the following commit message "***index.md: updated title***":
+In GitHub, select the `preview` branch and click the "commits" link to see the latest commits. You should see that the latest commit has the following commit message "**_index.md: updated title_**":
 
 <span class="gatsby-resp-image-wrapper" style="
                                 position: relative;
@@ -234,40 +203,21 @@ As you can see, Stackbit updated the `title` field committed the change to the `
 
 To learn more about how Stackbit works with file-based content, read our [conceptual guide](/docs/conceptual-guides/file-based-cms/).
 
-<a href="#step_4_publish_your_site" class="hash-link"><span class="icon-copy"></span></a>Step 4: Publish your site
-------------------------------------------------------------------------------------------------------------------
+## <a href="#step_4_publish_your_site" class="hash-link"><span class="icon-copy"></span></a>Step 4: Publish your site
 
 Now, your site is ready to be published. Click the "Publish" button in the top right to publish your site. Stackbit will merge the `preview` branch into the `master` branch.
 
 You can set up your site with a serverless deployment platform such as Netlify or Vercel. These platforms will deploy and publish your site whenever new commits are pushed to the `master` branch, effectively deploying your changes whenever you click the "Publish" button in Stackbit.
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
+## Jump to Section
 
-
-
-
-Jump to Section
----------------
-
--   [Prerequisites](#prerequisites)
--   [Step 1: Add a stackbit.yaml file to your site](#step_1_add_a_stackbit_yaml_file_to_your_site)
-    -   [Install Stackbit CLI](#install_stackbit_cli)
-    -   [Generate the configuration file (stackbit.yaml) for your site or custom starter repository](#generate_the_configuration_file_stackbit_yaml_for_your_site_or_custom_starter_repository)
-    -   [Add the stackbit.yaml to your repository](#add_the_stackbit_yaml_to_your_repository)
--   [Step 2: Import your site into Stackbit](#step_2_import_your_site_into_stackbit)
--   [Step 3: Learn how Stackbit's editor works](#step_3_learn_how_stackbit_s_editor_works)
--   [Step 4: Publish your site](#step_4_publish_your_site)
-
-
-
-
-
-
-
-
-
-
-
-
+- [Prerequisites](#prerequisites)
+- [Step 1: Add a stackbit.yaml file to your site](#step_1_add_a_stackbit_yaml_file_to_your_site)
+  - [Install Stackbit CLI](#install_stackbit_cli)
+  - [Generate the configuration file (stackbit.yaml) for your site or custom starter repository](#generate_the_configuration_file_stackbit_yaml_for_your_site_or_custom_starter_repository)
+  - [Add the stackbit.yaml to your repository](#add_the_stackbit_yaml_to_your_repository)
+- [Step 2: Import your site into Stackbit](#step_2_import_your_site_into_stackbit)
+- [Step 3: Learn how Stackbit's editor works](#step_3_learn_how_stackbit_s_editor_works)
+- [Step 4: Publish your site](#step_4_publish_your_site)

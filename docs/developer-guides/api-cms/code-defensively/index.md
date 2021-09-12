@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-How to Prevent Run-time Errors When Pulling Content From a Headless CMS
-=======================================================================
+# How to Prevent Run-time Errors When Pulling Content From a Headless CMS
 
 What happens if improper data makes it through to the frontend. There are three scenarios to think of:
 
@@ -39,8 +12,7 @@ What happens if improper data makes it through to the frontend. There are three 
 
 The way to achieve this is to code defensively.
 
-<a href="#code_defensively" class="hash-link"><span class="icon-copy"></span></a>Code Defensively
--------------------------------------------------------------------------------------------------
+## <a href="#code_defensively" class="hash-link"><span class="icon-copy"></span></a>Code Defensively
 
 Content models may change or disappear or you may be attempting to preview a draft that has not been run through validation. These can cause your site build to fail if not properly accounted for and can lead to major headaches. The way to deal with that is to write a "defensive app" that can handle these changes without failing.
 
@@ -49,30 +21,12 @@ Content models may change or disappear or you may be attempting to preview a dra
 
 But how can you code defensively when dealing with these sorts of issues. Here are some tips.
 
--   Use conditional rendering to determine if the conditions are met before displaying content. For example, here's [how to do conditional rendering in React](https://reactpatterns.com/#conditional-rendering), but templating for other SSGs offer similar capabilities.
--   Leverage tools that can simplify data access in complex structures. For example, in JavaScript-based tools you can use [lodash's get function](https://lodash.com/docs/4.17.15#get). Other tools provide similar functions like [default](https://gohugo.io/functions/default/) and [isset](https://gohugo.io/functions/isset/) is Hugo.
--   Avoid tight coupling by normalizing data as much as possible in the data layer. If you are using React, you would likely create a data layer within React that would handle any data interactions (here's an [8 part series on creating a data layer in React](https://www.bignerdranch.com/blog/react-data-layer-series-part-1/)). If you are using something like Hugo or Jekyll, your data layer could exist within serverless functions that call the API and populate the content within your build process. This data layer will ensure that data is passed consistently and you are protected (as best you can be) from changes in the underlying content model, irregular or missing data in a response or changes to the API.
+- Use conditional rendering to determine if the conditions are met before displaying content. For example, here's [how to do conditional rendering in React](https://reactpatterns.com/#conditional-rendering), but templating for other SSGs offer similar capabilities.
+- Leverage tools that can simplify data access in complex structures. For example, in JavaScript-based tools you can use [lodash's get function](https://lodash.com/docs/4.17.15#get). Other tools provide similar functions like [default](https://gohugo.io/functions/default/) and [isset](https://gohugo.io/functions/isset/) is Hugo.
+- Avoid tight coupling by normalizing data as much as possible in the data layer. If you are using React, you would likely create a data layer within React that would handle any data interactions (here's an [8 part series on creating a data layer in React](https://www.bignerdranch.com/blog/react-data-layer-series-part-1/)). If you are using something like Hugo or Jekyll, your data layer could exist within serverless functions that call the API and populate the content within your build process. This data layer will ensure that data is passed consistently and you are protected (as best you can be) from changes in the underlying content model, irregular or missing data in a response or changes to the API.
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
+## Jump to Section
 
-
-
-
-Jump to Section
----------------
-
--   [Code Defensively](#code_defensively)
-
-
-
-
-
-
-
-
-
-
-
-
+- [Code Defensively](#code_defensively)

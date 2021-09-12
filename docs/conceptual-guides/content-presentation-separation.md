@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Separating Content from Presentation
-====================================
+# Separating Content from Presentation
 
 Back in the days, when everyone talked about [separating content from presentation](https://en.wikipedia.org/wiki/Separation_of_content_and_presentation), they usually meant separating HTML (content) from CSS (presentation). Some came up with ideas for separation between [content, structure, and presentation](https://alistapart.com/article/separationdilemma/). All that is still correct, but to make the content truly separated from the presentation, it should be separated from its surrounding HTML entirely.
 
@@ -91,24 +64,6 @@ Once we have our post content in a separate markdown file we can now load it and
 
 There are multiple ways to load and inject markdown files into your page templates. Every Static Site Generator has its own way of doing that. Some SSGs, such as Hugo and Jekyll, were built around reading content from markdown files. Others, such as Gatsby and Next.js, require some setup to do that. Read [this guide](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/) to learn how to add markdown pages in Gatsby, and [this one](https://nextjs.org/blog/markdown) to learn how to do the same in Next.js.
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
-
-
-
-
-Jump to Section
----------------
-
-
-
-
-
-
-
-
-
-
-
-
+## Jump to Section

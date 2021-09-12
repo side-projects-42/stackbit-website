@@ -1,40 +1,12 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-File-Based CMS
-==============
+# File-Based CMS
 
 As explained in the [Site Preview](/docs/conceptual-guides/site-preview) conceptual guide, Stackbit shows your website's preview by cloning your site's repository and running the SSG development server. When your site's content is stored in files within your site's repository, any changes you make to your site's content via Stackbit are written back to your content files, committed, and pushed to the source repository.
 
-<a href="#the_preview_branch" class="hash-link"><span class="icon-copy"></span></a>The `preview` branch
--------------------------------------------------------------------------------------------------------
+## <a href="#the_preview_branch" class="hash-link"><span class="icon-copy"></span></a>The `preview` branch
 
 To ensure that the changes you make to your site within Stackbit will not be immediately deployed and published by serverless deployment platform such as Netlify, Stackbit commits and pushes all content changes to a special `preview` branch. In other words, the `preview` branch stores the "unpublished" content of your site.
 
@@ -69,26 +41,8 @@ The following diagram shows the flow described above.
 
 ![Preview Branch Diagram](/docs/253459844bd217295ea585bd9007dc5f/preview-branch-diagram.svg)
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
+## Jump to Section
 
-
-
-
-Jump to Section
----------------
-
--   [The preview branch](#the_preview_branch)
-
-
-
-
-
-
-
-
-
-
-
-
+- [The preview branch](#the_preview_branch)

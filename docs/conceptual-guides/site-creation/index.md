@@ -1,35 +1,8 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Site Creation
-=============
+# Site Creation
 
 Stackbit can convert a Jamstack theme located in a git repository into a functioning Jamstack site.
 
@@ -65,24 +38,6 @@ When you import a theme into Stackbit, it will validate the format of your `stac
 
 After Stackbit creates a new site, the `stackbit.yaml` continues to serve Stackbit Studio.
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
-
-
-
-
-Jump to Section
----------------
-
-
-
-
-
-
-
-
-
-
-
-
+## Jump to Section
