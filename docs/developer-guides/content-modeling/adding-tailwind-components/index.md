@@ -1,42 +1,14 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-How to add a new Tailwind component to your site on Stackbit
-============================================================
+# How to add a new Tailwind component to your site on Stackbit
 
 You have a Jamstack site. You're using Gatsby as your static site generator and Contentful to manage your content. You like Tailwind because its community offers a lot of solid visual components. You'd like to expose some of those components in your site so your team can just grab them and add them to pages in your site.
 
 In this guide, we're going to see how to add a Tailwind component to your site on Stackbit.
 
-<a href="#step_1_create_a_new_content_type_for_the_component_on_contentful" class="hash-link"><span class="icon-copy"></span></a>Step 1: Create a new content type for the component on Contentful
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_1_create_a_new_content_type_for_the_component_on_contentful" class="hash-link"><span class="icon-copy"></span></a>Step 1: Create a new content type for the component on Contentful
 
 Pick a beautiful component from a library like [Tailwind UI](https://tailwindui.com/preview). For this guide, we chose [Tailwind UI's first "features" component](https://tailwindui.com/components/marketing/sections/feature-sections).
 
@@ -226,14 +198,13 @@ Feel free to publish them, if you'd like. Or, to see draft content before publis
                                   /docs/static/ed660c99f8187961aec0549050361da8/738b8/contentful-add-features-list-data.png 639w
                                 " /></span>
 
-If you're working with a sectioned page builder theme, add your new content, such as a "Features List" record, to the sections list of an existing page on your site but *don't* publish the page just yet. Wait until you've put the accompanying Gatsby code into production.
+If you're working with a sectioned page builder theme, add your new content, such as a "Features List" record, to the sections list of an existing page on your site but _don't_ publish the page just yet. Wait until you've put the accompanying Gatsby code into production.
 
-<a href="#step_2_add_the_new_component_to_gatsby" class="hash-link"><span class="icon-copy"></span></a>Step 2: Add the new component to Gatsby
-----------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_2_add_the_new_component_to_gatsby" class="hash-link"><span class="icon-copy"></span></a>Step 2: Add the new component to Gatsby
 
 ### <a href="#prerequisite_install_tailwind_css" class="hash-link"><span class="icon-copy"></span></a>Prerequisite: install Tailwind CSS
 
-Before editing your site's theme, be sure to install [Tailwind CSS for Gatsby](https://tailwindcss.com/docs/guides/gatsby) into the "preview" branch of your site *(the one Stackbit's previews are rendering)*.
+Before editing your site's theme, be sure to install [Tailwind CSS for Gatsby](https://tailwindcss.com/docs/guides/gatsby) into the "preview" branch of your site _(the one Stackbit's previews are rendering)_.
 
 To validate your installation, use Stackbit's code editor to add the following HTML somewhere in your home page:
 
@@ -269,14 +240,14 @@ If "Hello World" appears surrounded by a purple background and dashed border in 
                                   /docs/static/29348d0b58cc4cda7164a63c563eb451/9e32a/hello-rounded.png 412w
                                 " /></span>
 
--   Don't see it? Try restarting Stackbit's preview engine and/or reloading the browser page.
--   Updating, but slowly? Try [Tailwind's just-in-time mode](https://tailwindcss.com/docs/just-in-time-mode) for faster edits.
+- Don't see it? Try restarting Stackbit's preview engine and/or reloading the browser page.
+- Updating, but slowly? Try [Tailwind's just-in-time mode](https://tailwindcss.com/docs/just-in-time-mode) for faster edits.
 
 ### <a href="#create_new_gatsby_components" class="hash-link"><span class="icon-copy"></span></a>Create new Gatsby components
 
 Using the [Stackbit code editor](https://www.stackbit.com/blog/vs-code-experience-to-stackbit-editor/), create a new Gatsby template file to render your component -- or maybe more, if your component inherently involves nesting of repeated sub-components.
 
-We're calling the file that will render the overall component `src/components/FeaturesList.jsx` *(plural)*, and the file that will render each feature within it `src/components/FeatureItem.jsx` *(singular)*.
+We're calling the file that will render the overall component `src/components/FeaturesList.jsx` _(plural)_, and the file that will render each feature within it `src/components/FeatureItem.jsx` _(singular)_.
 
 <span class="gatsby-resp-image-wrapper" style="
                                 position: relative;
@@ -313,7 +284,7 @@ If a component includes elements that can be repeated with code, like the featur
 
 [Tailwind UI offers React samples for components](https://blog.tailwindcss.com/tailwind-ui-now-with-react-and-vue-support), so this work may be mostly done for you, depending on the Tailwind component library you're using.
 
-Make sure each new template file also exports a GraphQL fragment to tell the page rendering it what fields you created on your content type in Contentful. *([Here's a great article about colocating fragments with the code they support](https://dev.to/ricardoromox/colocated-fragments-organizing-your-graphql-queries-in-react-24a6), a [position also endorsed by Apollo at GraphQL.com](https://www.graphql.com/articles/best-practices-for-graphql-clients).)*
+Make sure each new template file also exports a GraphQL fragment to tell the page rendering it what fields you created on your content type in Contentful. _([Here's a great article about colocating fragments with the code they support](https://dev.to/ricardoromox/colocated-fragments-organizing-your-graphql-queries-in-react-24a6), a [position also endorsed by Apollo at GraphQL.com](https://www.graphql.com/articles/best-practices-for-graphql-clients).)_
 
 Here's what our `FeatureItem.jsx` file looks like:
 
@@ -358,7 +329,7 @@ Here's what our `FeatureItem.jsx` file looks like:
       }
     `;
 
-*(Note: you need to install the [gatsby-transformer-inline-svg](https://www.gatsbyjs.com/plugins/gatsby-transformer-inline-svg/) Gatsby plugin for `image.svg.content` to be available to your GraphQL fragment.)*
+_(Note: you need to install the [gatsby-transformer-inline-svg](https://www.gatsbyjs.com/plugins/gatsby-transformer-inline-svg/) Gatsby plugin for `image.svg.content` to be available to your GraphQL fragment.)_
 
 And here's what our our `FeaturesList.jsx` file looks like -- note how it uses `.map()` to repeatedly call `<FeatureItem />`:
 
@@ -409,7 +380,7 @@ And here's what our our `FeaturesList.jsx` file looks like -- note how it uses `
       }
     `;
 
-Sometimes, Gatsby can't quite keep up with your changes, even if your code is perfect. If you run into problems that don't make sense *(e.g. Gatsby not recognizing a Contentful GraphQL endpoint that definitely exists)*, try refreshing your browser page. If that doesn't help, restart the Stackbit preview engine:
+Sometimes, Gatsby can't quite keep up with your changes, even if your code is perfect. If you run into problems that don't make sense _(e.g. Gatsby not recognizing a Contentful GraphQL endpoint that definitely exists)_, try refreshing your browser page. If that doesn't help, restart the Stackbit preview engine:
 
 1.  Click the **settings gear icon** in the upper left corner
 2.  Click its **Advanced** tab at the upper left of the pop-up
@@ -443,19 +414,19 @@ Now we need to summon `Features.jsx` from an existing page template, passing it 
 
 For this example, we'll simply embed a reference to `Feature` directly into `src/pages/index.js`.
 
--   We need to import our new component into `index.js`:
+- We need to import our new component into `index.js`:
 
-        import Features from '../components/Features';
+      import Features from '../components/Features';
 
--   Right below `<Hero />`, we'll pass this piece of content to our new `<Features />` component:
+- Right below `<Hero />`, we'll pass this piece of content to our new `<Features />` component:
 
-        <FeaturesList {...data.singlefeatureslist} />
+      <FeaturesList {...data.singlefeatureslist} />
 
--   Inside the definition of `query`, we'll edit the `HomeQuery` GraphQL query by adding a definition for a `singlefeatureslist` property right below the existing `portfolio` property. The new code fetches the first result from Gatsby's query against Contentful's "Features" content, ignoring any other query results that may exist:
+- Inside the definition of `query`, we'll edit the `HomeQuery` GraphQL query by adding a definition for a `singlefeatureslist` property right below the existing `portfolio` property. The new code fetches the first result from Gatsby's query against Contentful's "Features" content, ignoring any other query results that may exist:
 
-          singlefeatureslist: contentfulFeaturesList {
-            ...FeaturesListFragment
-          }
+        singlefeatureslist: contentfulFeaturesList {
+          ...FeaturesListFragment
+        }
 
 Here is the new & improved `index.js`:
 
@@ -532,8 +503,7 @@ At this point, your new component should show up in your site preview in Stackbi
 
 If you don't see your new component, try restarting Stackbit's preview engine and/or reloading the browser page.
 
-<a href="#step_3_profit_edit_your_site_in_stackbit" class="hash-link"><span class="icon-copy"></span></a>Step 3: Profit: edit your site in Stackbit
----------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_3_profit_edit_your_site_in_stackbit" class="hash-link"><span class="icon-copy"></span></a>Step 3: Profit: edit your site in Stackbit
 
 If you haven't already, make the page editable by clicking the **Content** tab at the top center, to ensure you leave the **Code** tab you've been working with.
 
@@ -564,38 +534,19 @@ If you'd like, take a look at Contentful -- your changes from Stackbit will show
 
 Looking great? Publish your changes using Stackbit. Your edits to Gatsby and your data in Contentful should all go live. 🎉
 
-<a href="#helpful_resources" class="hash-link"><span class="icon-copy"></span></a>Helpful resources
----------------------------------------------------------------------------------------------------
+## <a href="#helpful_resources" class="hash-link"><span class="icon-copy"></span></a>Helpful resources
 
--   Not on Stackbit yet? Bring your site -- check out our [Getting Started Tutorial](/docs/getting-started/)
--   Ready to add multiple sections? [Section an existing theme](/docs/developer-guides/content-modeling/adding-sections-existing-theme)
+- Not on Stackbit yet? Bring your site -- check out our [Getting Started Tutorial](/docs/getting-started/)
+- Ready to add multiple sections? [Section an existing theme](/docs/developer-guides/content-modeling/adding-sections-existing-theme)
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
+## Jump to Section
 
-
-
-
-Jump to Section
----------------
-
--   [Step 1: Create a new content type for the component on Contentful](#step_1_create_a_new_content_type_for_the_component_on_contentful)
--   [Step 2: Add the new component to Gatsby](#step_2_add_the_new_component_to_gatsby)
-    -   [Prerequisite: install Tailwind CSS](#prerequisite_install_tailwind_css)
-    -   [Create new Gatsby components](#create_new_gatsby_components)
-    -   [Summon the new components from your theme](#summon_the_new_components_from_your_theme)
--   [Step 3: Profit: edit your site in Stackbit](#step_3_profit_edit_your_site_in_stackbit)
--   [Helpful resources](#helpful_resources)
-
-
-
-
-
-
-
-
-
-
-
-
+- [Step 1: Create a new content type for the component on Contentful](#step_1_create_a_new_content_type_for_the_component_on_contentful)
+- [Step 2: Add the new component to Gatsby](#step_2_add_the_new_component_to_gatsby)
+  - [Prerequisite: install Tailwind CSS](#prerequisite_install_tailwind_css)
+  - [Create new Gatsby components](#create_new_gatsby_components)
+  - [Summon the new components from your theme](#summon_the_new_components_from_your_theme)
+- [Step 3: Profit: edit your site in Stackbit](#step_3_profit_edit_your_site_in_stackbit)
+- [Helpful resources](#helpful_resources)

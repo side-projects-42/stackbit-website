@@ -1,42 +1,14 @@
 This app works best with JavaScript enabled.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![Stackbit](/docs/images/stackbit-crane-sm.png)
 
-Sectioning an existing theme for components
-===========================================
+# Sectioning an existing theme for components
 
 You've learned [how to add a Tailwind component to an existing theme](/docs/developer-guides/content-modeling/adding-tailwind-components/), and you've seen how [flexible sectioned page builder models give themes empower content authors](/docs/developer-guides/content-modeling/building-with-components/) to create beautiful web sites without requiring additional developer time. Let's put the two concepts together and add sectioning to a Tailwind theme where it didn't exist.
 
 **Follow along** with [this Gatsby + Contentful + Tailwind starter](https://github.com/stackbit-themes/gatsby-contentful-portfolio). You can [create it in Stackbit](https://app.stackbit.com/create?theme=https://github.com/stackbit-themes/gatsby-contentful-portfolio&utm_source=tailwind-sections-kb&utm_medium=referral) to start right away.
 
-<a href="#step_1_design_your_sections" class="hash-link"><span class="icon-copy"></span></a>Step 1: Design your sections
-------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_1_design_your_sections" class="hash-link"><span class="icon-copy"></span></a>Step 1: Design your sections
 
 In the Gatsby theme to which we previously [added a Tailwind UI component](/docs/developer-guides/content-modeling/adding-tailwind-components/), the site's **Home** page was a hard-coded `/src/pages/index.js` file:
 
@@ -79,12 +51,11 @@ On the Gatsby side, "**Home**" is already pretty well-divided into `<Hero/>`, `<
 
 To truly fit into a sectioned page builder model, even the option to show `<Cards/>` on a given page needs to exist as a Contentful content type. Maybe it doesn't have any siginificant fields -- just a "yes, show me" Boolean -- but the content type needs to exist.
 
-<a href="#step_2_create_new_content_types_on_contentful" class="hash-link"><span class="icon-copy"></span></a>Step 2: Create new content types on Contentful
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_2_create_new_content_types_on_contentful" class="hash-link"><span class="icon-copy"></span></a>Step 2: Create new content types on Contentful
 
 ### <a href="#content_types" class="hash-link"><span class="icon-copy"></span></a>Content types
 
-Now that the conceptual modeling is done, head to Contentful and create 6 new content types: **Hero**, **Portfolio Teaser**, **Newsletter** *(to section the existing page)*, **Features List**, **Feature Item** *(to add a Tailwind UI component)*, and **Flexible Page** *(to tie everything together)*:
+Now that the conceptual modeling is done, head to Contentful and create 6 new content types: **Hero**, **Portfolio Teaser**, **Newsletter** _(to section the existing page)_, **Features List**, **Feature Item** _(to add a Tailwind UI component)_, and **Flexible Page** _(to tie everything together)_:
 
 <span class="gatsby-resp-image-wrapper" style="
                                 position: relative;
@@ -116,7 +87,7 @@ Now that the conceptual modeling is done, head to Contentful and create 6 new co
 
 #### Portfolio Teaser
 
-1.  `Show?` → *(Boolean)*
+1.  `Show?` → _(Boolean)_
 
 #### Newsletter
 
@@ -190,8 +161,7 @@ When you create a **Flexible Page**, title it "**Home**", and give it a slug of 
                                     /docs/static/411393052e4611f0ebfa792f72b914be/394f7/contentful-data.png 707w
                                   " /></a></span>
 
-<a href="#step_3_update_your_gatsby_theme" class="hash-link"><span class="icon-copy"></span></a>Step 3: Update your Gatsby theme
---------------------------------------------------------------------------------------------------------------------------------
+## <a href="#step_3_update_your_gatsby_theme" class="hash-link"><span class="icon-copy"></span></a>Step 3: Update your Gatsby theme
 
 ### <a href="#hello_world" class="hash-link"><span class="icon-copy"></span></a>Hello world
 
@@ -221,7 +191,7 @@ First, using the [Stackbit code editor](https://www.stackbit.com/blog/vs-code-ex
 
 If you prefer, you can edit the preview branch of the GitHub repository Stackbit is managing for you through your favorite development workflow.
 
-Here's how `flexible-page.jsx` should look *(we'll add to it later)*:
+Here's how `flexible-page.jsx` should look _(we'll add to it later)_:
 
     // src/templates/flexible-page.jsx
     import { graphql } from 'gatsby';
@@ -334,7 +304,7 @@ We won't need to worry about this for `stackbit.yaml` -- it's clever enough to f
 
 Also note that we're starting by putting our flexible pages under a sub-folder called `/flex`, to avoid conflicts with existing hard-coded Gatsby pages. We'll change that later once we know everything's working and delete the hard-coded pages.
 
-Third, add the following lines of code to the end of `stackbit.yaml` *(indent it at the same level that `portfolio` above it is indented)*:
+Third, add the following lines of code to the end of `stackbit.yaml` _(indent it at the same level that `portfolio` above it is indented)_:
 
     flexiblePage:
       type: page
@@ -530,7 +500,7 @@ Now that you've successfully added a new page type to Gatsby, go back to Stackbi
       }
     `;
 
-If the now-blank hero section on `src/pages/index.js` bothers you, replace `<Hero />` with `<Hero title="Hi 👋"                               subtitle="Welcome" />`.
+If the now-blank hero section on `src/pages/index.js` bothers you, replace `<Hero />` with `<Hero title="Hi 👋" subtitle="Welcome" />`.
 
 ☝️ Note that we lost the accessibility we'd had with the hard-coded `role` and `aria-label` surrounding our emoji.
 
@@ -612,7 +582,7 @@ Third, add the following GraphQL fragment to the end of the file:
       }
     `;
 
-As with the **Hero** section, if you find the blank newsletter prompt in `index.jsx` disconcerting, replace `<Newsletter />` with `<Newsletter title="Sign up now"                               emailPrompt="Email here"                               buttonText="Submit email" />`.
+As with the **Hero** section, if you find the blank newsletter prompt in `index.jsx` disconcerting, replace `<Newsletter />` with `<Newsletter title="Sign up now" emailPrompt="Email here" buttonText="Submit email" />`.
 
 #### Create src/components/FeatureItem.jsx
 
@@ -657,7 +627,7 @@ As with the **Hero** section, if you find the blank newsletter prompt in `index.
       }
     `;
 
-*(Note: you need to install the [gatsby-transformer-inline-svg](https://www.gatsbyjs.com/plugins/gatsby-transformer-inline-svg/) Gatsby plugin for `image.svg.content` to be available to your GraphQL fragment.)*
+_(Note: you need to install the [gatsby-transformer-inline-svg](https://www.gatsbyjs.com/plugins/gatsby-transformer-inline-svg/) Gatsby plugin for `image.svg.content` to be available to your GraphQL fragment.)_
 
 #### Create src/components/FeaturesList.jsx
 
@@ -779,7 +749,7 @@ As with the **Hero** section, if you find the blank newsletter prompt in `index.
 
 Now that you've edited the Gatsby theme, leave the **Code** tab by clicking the **Content** tab again, expand the caret by **Page** at left to enter site navigation, and click on `/flex`.
 
-The page should look a lot like the original home page. *(Visually, you might want to touch up the JSX in a few components, since the copy-paste examples in this guide were simplified for readability and to respect licensing.)*
+The page should look a lot like the original home page. _(Visually, you might want to touch up the JSX in a few components, since the copy-paste examples in this guide were simplified for readability and to respect licensing.)_
 
 <span class="gatsby-resp-image-wrapper" style="
                                 position: relative;
@@ -803,7 +773,7 @@ The page should look a lot like the original home page. *(Visually, you might wa
                                     /docs/static/5b056f076f6ef2acf50c5c83c674e6df/aa61c/stackbit-flex-proper.png 1065w
                                   " /></a></span>
 
-You can use Stackbit to add, remove, and rearrange sections. Try navigating to **Contact** *(under `/flex` in the site nav at left)* and adding some sections.
+You can use Stackbit to add, remove, and rearrange sections. Try navigating to **Contact** _(under `/flex` in the site nav at left)_ and adding some sections.
 
 ### <a href="#final_touches" class="hash-link"><span class="icon-copy"></span></a>Final touches
 
@@ -882,40 +852,21 @@ Now that it's so easy for content authors to add pages that use flexible Tailwin
 
 Incorporating Tailwind components into a Jamstack theme enables end-users to be creative and effective, quickly spinning up pages to fit a variety of impromptu needs. Stackbit provides immediate visual feedback reflecting their work results, empowering everyone to make modern websites an integral part of their strategy.
 
-<a href="#helpful_resources" class="hash-link"><span class="icon-copy"></span></a>Helpful resources
----------------------------------------------------------------------------------------------------
+## <a href="#helpful_resources" class="hash-link"><span class="icon-copy"></span></a>Helpful resources
 
--   Not on Stackbit yet? [Bring your site](/docs/developer-guides/basics/import-your-site/)
--   Need a deeper dive on Tailwind? [Add a Tailwind component to an existing theme](/docs/developer-guides/content-modeling/adding-tailwind-components/)
+- Not on Stackbit yet? [Bring your site](/docs/developer-guides/basics/import-your-site/)
+- Need a deeper dive on Tailwind? [Add a Tailwind component to an existing theme](/docs/developer-guides/content-modeling/adding-tailwind-components/)
 
-Did you find this page useful?
-------------------------------
+## Did you find this page useful?
 
+## Jump to Section
 
-
-
-
-Jump to Section
----------------
-
--   [Step 1: Design your sections](#step_1_design_your_sections)
--   [Step 2: Create new content types on Contentful](#step_2_create_new_content_types_on_contentful)
-    -   [Content types](#content_types)
-    -   [Initial data](#initial_data)
--   [Step 3: Update your Gatsby theme](#step_3_update_your_gatsby_theme)
-    -   [Hello world](#hello_world)
-    -   [Major edits](#major_edits)
-    -   [Final touches](#final_touches)
--   [Helpful resources](#helpful_resources)
-
-
-
-
-
-
-
-
-
-
-
-
+- [Step 1: Design your sections](#step_1_design_your_sections)
+- [Step 2: Create new content types on Contentful](#step_2_create_new_content_types_on_contentful)
+  - [Content types](#content_types)
+  - [Initial data](#initial_data)
+- [Step 3: Update your Gatsby theme](#step_3_update_your_gatsby_theme)
+  - [Hello world](#hello_world)
+  - [Major edits](#major_edits)
+  - [Final touches](#final_touches)
+- [Helpful resources](#helpful_resources)
